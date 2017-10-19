@@ -80,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
     <None Include="Registration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Registration.feature.cs</LastGenOutput>

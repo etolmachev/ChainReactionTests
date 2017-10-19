@@ -82,20 +82,6 @@
     <Compile Include="RegistrationStepDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Default.srprofile">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="packages.config" />
-    <None Include="runtests.cmd" />
-    <None Include="SpecRunTestProfile.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SpecRunTestProfile_2011_09.xsd">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
