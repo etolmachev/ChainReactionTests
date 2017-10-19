@@ -1,6 +1,5 @@
 ﻿Feature: Registration
 
-@mytag
 Scenario: Verify goto sign up
 	Given I navigate to the page "www.chainreactioncycles.com/signin"
 	And I see the page is loaded
