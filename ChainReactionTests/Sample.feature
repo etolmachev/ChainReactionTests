@@ -14,7 +14,7 @@ Scenario: Verify Login
 
 	When I set following parameters on Sign In page
 		| Name     | Value |
-		| email    |       |
-		| password |       |
+		| email    |otbtguukb@emltmp.com|
+		| password |123123123|
 	And I click Sign In button
-	Then I See My Account page is loaded
+	##Then I see the main page is loaded

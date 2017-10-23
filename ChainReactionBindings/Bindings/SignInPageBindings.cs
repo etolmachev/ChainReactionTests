@@ -46,5 +46,11 @@ namespace ChainReactionBindings.Bindings
 			page.SignInClick();
 		}
 
+	    [When(@"I click on Create Account button")]
+	    public void WhenIClickCreateAccountButton()
+	    {
+            page.CreateAccountClick();
+	    }
+
 	}
 }
