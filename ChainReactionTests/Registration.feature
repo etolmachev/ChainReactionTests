@@ -23,7 +23,7 @@ Scenario:  Verify Register
 Scenario: Verify Login and Logout
 	Given I start the browser
 	When I Navigate to the url "http://www.chainreactioncycles.com/ru/en"
-	And I See the main page is loaded
+	Then I See the main page is loaded
 
 	When I Click on RubRub dropdown
 	And I select "English" language and click Update button
@@ -37,7 +37,7 @@ Scenario: Verify Login and Logout
 		| email  |   |
 		| pass  |   |
 	And I Click Sign In button
-	Then I See the message on Sing In page
+	Then I See the "The Email Address Or Password You Entered Is Incorrect" on Sing In page
 
 	When I set following parameters on Sign In page
 		| Field | Value |
