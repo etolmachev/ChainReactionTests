@@ -84,7 +84,6 @@
     <Compile Include="Bindings\TopMenuBindings\TopMenuBindings.cs" />
     <Compile Include="Bindings\CommonBindings\CommonBindings.cs" />
     <Compile Include="TestBase\Browser.cs" />
-    <Compile Include="Bindings\RegistrationStepDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBase\Cleanup.cs" />
     <Compile Include="TestBase\Pages\BasePage.cs" />
@@ -92,9 +91,7 @@
     <Compile Include="TestBase\Pages\SignInPage.cs" />
     <Compile Include="TestBase\Pages\TopMenu.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bindings\LoginBindings\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
