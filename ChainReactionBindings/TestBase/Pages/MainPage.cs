@@ -6,15 +6,16 @@ namespace ChainReactionBindings.TestBase.Pages
 	{
 		public string BestSellersId = "div.crcBestSellersTitle";
 
-		public IWebElement BestSellers;
+		public HtmlElement BestSellers;
 
 		public MainPage()
 		{
-			BestSellers = Browser.Driver.FindElement(By.CssSelector(BestSellersId));
+			BestSellers = new HtmlElement(By.CssSelector(BestSellersId));
 		}
 
 		public bool PageLoaded()
 		{
+			Browser.WaitReadyState();
 			if (BestSellers.Displayed)
 			{
 				return true;

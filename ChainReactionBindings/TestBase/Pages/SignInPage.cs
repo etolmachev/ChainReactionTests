@@ -8,19 +8,20 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string PasswordInputId = "#newpassword";
 		public string SignInButtonId = "#loginFormSubmit";
 
-		public IWebElement EmailInputElement;
-		public IWebElement PassElement;
-		public IWebElement SignInButtonElement;
+		public HtmlElement EmailInputElement;
+		public HtmlElement PassElement;
+		public HtmlElement SignInButtonElement;
 
 		public SignInPage()
 		{
-			EmailInputElement = Browser.Driver.FindElement(By.CssSelector(EmailInputId));
-			PassElement = Browser.Driver.FindElement(By.CssSelector(PasswordInputId));
-			SignInButtonElement = Browser.Driver.FindElement(By.CssSelector(SignInButtonId));
+			EmailInputElement = new HtmlElement(By.CssSelector(EmailInputId));
+			PassElement = new HtmlElement(By.CssSelector(PasswordInputId));
+			SignInButtonElement = new HtmlElement(By.CssSelector(SignInButtonId));
 		}
 
 		public bool PageLoaded()
 		{
+			Browser.WaitReadyState();
 			if (EmailInputElement.Displayed)
 			{
 				return true;

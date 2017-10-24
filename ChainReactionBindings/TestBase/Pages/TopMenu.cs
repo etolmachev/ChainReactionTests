@@ -9,17 +9,17 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string SignInId = "li.signin_createact";
 		public string RubRubId = "li.crcHeaderCountryCurrency";
 
-		public IWebElement ShopByCategoryElement;
-		public IWebElement BrandsElement;
-		public IWebElement SignInElement;
-		public IWebElement RubRubElement;
+		public HtmlElement ShopByCategoryElement;
+		public HtmlElement BrandsElement;
+		public HtmlElement SignInElement;
+		public HtmlElement RubRubElement;
 
 		public TopMenu()
 		{
-			ShopByCategoryElement = Browser.Driver.FindElement(By.CssSelector(ShopByCategoryId));
-			BrandsElement = Browser.Driver.FindElement(By.CssSelector(BrandsId));
-			SignInElement = Browser.Driver.FindElement(By.CssSelector(SignInId));
-			RubRubElement = Browser.Driver.FindElement(By.CssSelector(RubRubId));
+			ShopByCategoryElement = new HtmlElement(By.CssSelector(ShopByCategoryId));
+			BrandsElement = new HtmlElement(By.CssSelector(BrandsId));
+			SignInElement = new HtmlElement(By.CssSelector(SignInId));
+			RubRubElement = new HtmlElement(By.CssSelector(RubRubId));
 		}
 
 		//public bool PageLoaded()
