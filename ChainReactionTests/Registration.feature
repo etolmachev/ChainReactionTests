@@ -18,8 +18,8 @@ Scenario:  Verify Register
 		| Name | Value |
 		| first  | test  |
 		| last  | test  |
-		| email |psoes@dropmail.me|
-		|confirmEmail|psoes@dropmail.me|
+		| email |psoesxe|
+		|confirmEmail|psoesxe|
 		|password|1231231234|
 		|confirmPassword|1231231234|
 	And I click Apply button

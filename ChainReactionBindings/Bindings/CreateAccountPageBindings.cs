@@ -21,11 +21,12 @@ namespace ChainReactionBindings.Bindings
         [When(@"I set following parameters on Create Account page")]
         public void WhenISetFollowingParametersOnCreateAccountPage(Table table)
         {
-            foreach (var row in table.Rows)
+	        string randNumber = page.Random(3);
+			foreach (var row in table.Rows)
 			{
 				var fieldName = row["Name"];
 				var fieldValue = row["Value"];
-
+				
 				switch (fieldName)
 				{
 					case "first":
@@ -35,10 +36,10 @@ namespace ChainReactionBindings.Bindings
 						page.LastNameElement.SendKeys(fieldValue);
 						break;
 				    case "email":
-				        page.EmailElement.SendKeys(fieldValue);
+				        page.EmailElement.SendKeys(fieldValue + "+" + randNumber + "@gmail.com");
 				        break;
 				    case "confirmEmail":
-				        page.ConfirmEmailElement.SendKeys(fieldValue);
+				        page.ConfirmEmailElement.SendKeys(fieldValue + "+" + randNumber + "@gmail.com");
 				        break;
 				    case "password":
 				        page.PasswordElement.SendKeys(fieldValue);

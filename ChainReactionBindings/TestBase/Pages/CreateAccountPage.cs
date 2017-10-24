@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -43,6 +44,17 @@ namespace ChainReactionBindings.TestBase.Pages
         {
             ApplyButtonElement.Click();
         }
+
+	    public string Random(int count)
+	    {
+		    string numberForEmail = "";
+			for (int i = 0; i < count; i++)
+		    {
+				Random r = new Random();
+				numberForEmail += r.Next(1, 4).ToString();
+		    }
+		    return numberForEmail;
+	    }
 
     }
 }
