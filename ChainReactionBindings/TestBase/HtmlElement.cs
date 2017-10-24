@@ -13,7 +13,6 @@ namespace ChainReactionBindings.TestBase
 
 		private By _elementLocator;
 		private IWebElement _wrappedElement;
-		private string Name { get; set; }
 
 		public IWebElement WrappedElement
 		{

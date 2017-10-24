@@ -34,6 +34,7 @@ namespace ChainReactionBindings.TestBase.Pages
             ConfirmPasswordElement = Browser.Driver.FindElement(By.CssSelector(ConfirmPasswordId));
             ApplyButtonElement = Browser.Driver.FindElement(By.CssSelector(ApplyButtonId));
         }
+
         public bool PageLoaded()
         {
             if (FirstNameElement.Displayed)
