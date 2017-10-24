@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -17,22 +12,22 @@ namespace ChainReactionBindings.TestBase.Pages
         public string ConfirmPasswordId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmPassword']";
         public string ApplyButtonId = "input.blue_btn";
 
-        public IWebElement FirstNameElement;
-        public IWebElement LastNameElement;
-        public IWebElement EmailElement;
-        public IWebElement ConfirmEmailElement;
-        public IWebElement PasswordElement;
-        public IWebElement ConfirmPasswordElement;
-        public IWebElement ApplyButtonElement;
+        public HtmlElement FirstNameElement;
+        public HtmlElement LastNameElement;
+        public HtmlElement EmailElement;
+        public HtmlElement ConfirmEmailElement;
+        public HtmlElement PasswordElement;
+        public HtmlElement ConfirmPasswordElement;
+        public HtmlElement ApplyButtonElement;
         public CreateAccountPage()
         {
-            FirstNameElement = Browser.Driver.FindElement(By.CssSelector(FirstNameId));
-            LastNameElement = Browser.Driver.FindElement(By.CssSelector(LastNameId));
-            EmailElement = Browser.Driver.FindElement(By.CssSelector(EmailId));
-            ConfirmEmailElement = Browser.Driver.FindElement(By.CssSelector(ConfirmEmailId));
-            PasswordElement = Browser.Driver.FindElement(By.CssSelector(PasswordId));
-            ConfirmPasswordElement = Browser.Driver.FindElement(By.CssSelector(ConfirmPasswordId));
-            ApplyButtonElement = Browser.Driver.FindElement(By.CssSelector(ApplyButtonId));
+            FirstNameElement = new HtmlElement(By.CssSelector(FirstNameId));
+            LastNameElement = new HtmlElement(By.CssSelector(LastNameId));
+            EmailElement = new HtmlElement(By.CssSelector(EmailId));
+            ConfirmEmailElement = new HtmlElement(By.CssSelector(ConfirmEmailId));
+            PasswordElement = new HtmlElement(By.CssSelector(PasswordId));
+            ConfirmPasswordElement = new HtmlElement(By.CssSelector(ConfirmPasswordId));
+            ApplyButtonElement = new HtmlElement(By.CssSelector(ApplyButtonId));
         }
 
         public bool PageLoaded()

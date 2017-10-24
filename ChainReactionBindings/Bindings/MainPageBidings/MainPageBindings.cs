@@ -18,5 +18,11 @@ namespace ChainReactionBindings.Bindings.MainPageBidings
 				throw new Exception("Main page is not loaded!");
 			}
 		}
+
+		[When(@"I click Logout button")]
+		public void WhenIClickLogoutButton()
+		{
+			page.LogoutClick();
+		}
 	}
 }

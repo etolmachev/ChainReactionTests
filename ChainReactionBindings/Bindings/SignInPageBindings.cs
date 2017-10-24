@@ -1,5 +1,7 @@
 ﻿using System;
 using ChainReactionBindings.TestBase.Pages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting.Web;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.Bindings
@@ -21,6 +23,8 @@ namespace ChainReactionBindings.Bindings
 		[When(@"I set following parameters on Sign In page")]
 		public void WhenISetFollowingParametersOnSignInPage(Table table)
 		{
+			page.EmailInputElement.Clear();
+			page.PasswordElement.Clear();
 			foreach (var row in table.Rows)
 			{
 				var fieldName = row["Name"];
@@ -32,7 +36,7 @@ namespace ChainReactionBindings.Bindings
 						page.EmailInputElement.SendKeys(fieldValue);
 						break;
 					case "password":
-						page.PassElement.SendKeys(fieldValue);
+						page.PasswordElement.SendKeys(fieldValue);
 						break;
 					default:
 						throw new Exception(string.Format("Field {0} is not implemented", fieldName));
@@ -46,7 +50,26 @@ namespace ChainReactionBindings.Bindings
 			page.SignInClick();
 		}
 
-	    [When(@"I click on Create Account button")]
+		[Then(@"I see the The Email Address Or Password You Entered Is Incorrect message on Sing In page")]
+		public void ThenISeeTheEmailAddressOrPasswordYouEnteredIsIncorrect()
+		{
+			Assert.AreEqual("Неправильный Email Или Пароль", page.CommonErrorElement.Text);
+		}
+
+		[Then(@"I see Please Enter Your Email Address To Continue message on Sign In page")]
+		public void ThenISeePleaseEnterYourEmailAddressToContinueMessageOnSignInPage()
+		{
+			Assert.AreEqual("Пожалуйста, Укажите Ваш Адрес Электронной Почты", page.ErrorEmailElement.Text);
+			page.EmailInputElement.Clear();
+		}
+
+		[Then(@"I see Please Enter Your Password To Continue message on Sign In page")]
+		public void ThenISeePleaseEnterYourPasswordToContinueMessageOnSignInPage()
+		{
+			Assert.AreEqual("Чтобы Продолжить, Пожалуйста, Введите Ваш Пароль", page.ErrorPasswordElement.Text);
+		}
+
+		[When(@"I click on Create Account button")]
 	    public void WhenIClickCreateAccountButton()
 	    {
             page.CreateAccountClick();

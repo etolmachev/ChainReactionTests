@@ -6,11 +6,11 @@ namespace ChainReactionBindings.TestBase.Pages
     {
         public string PersonalInfoId = "span.content_head";
 
-        public IWebElement PersonalInfoElement;
+        public HtmlElement PersonalInfoElement;
 
         public MyAccountPage()
         {
-            PersonalInfoElement = Browser.Driver.FindElement(By.CssSelector(PersonalInfoId));
+            PersonalInfoElement = new HtmlElement(By.CssSelector(PersonalInfoId));
         }
         public bool PageLoaded()
         {

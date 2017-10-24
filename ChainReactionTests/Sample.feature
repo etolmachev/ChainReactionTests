@@ -17,4 +17,4 @@ Scenario: Verify Login
 		| email    |otbtguukb@emltmp.com|
 		| password |123123123|
 	And I click Sign In button
-	##Then I see the main page is loaded
+	Then I see the main page is loaded
