@@ -79,7 +79,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Bindings\CreateAccountPageBindings.cs" />
     <Compile Include="Bindings\MainPageBidings\MainPageBindings.cs" />
+    <Compile Include="Bindings\MyAccountPageBindings.cs" />
     <Compile Include="Bindings\SignInPageBindings.cs" />
     <Compile Include="Bindings\TopMenuBindings\TopMenuBindings.cs" />
     <Compile Include="Bindings\CommonBindings\CommonBindings.cs" />
@@ -88,7 +90,9 @@
     <Compile Include="TestBase\Cleanup.cs" />
     <Compile Include="TestBase\HtmlElement.cs" />
     <Compile Include="TestBase\Pages\BasePage.cs" />
+    <Compile Include="TestBase\Pages\CreateAccountPage.cs" />
     <Compile Include="TestBase\Pages\MainPage.cs" />
+    <Compile Include="TestBase\Pages\MyAccountPage.cs" />
     <Compile Include="TestBase\Pages\SignInPage.cs" />
     <Compile Include="TestBase\Pages\TopMenu.cs" />
   </ItemGroup>
