@@ -23,8 +23,7 @@ namespace ChainReactionBindings.Bindings
 		[When(@"I set following parameters on Sign In page")]
 		public void WhenISetFollowingParametersOnSignInPage(Table table)
 		{
-			page.EmailInputElement.Clear();
-			page.PasswordElement.Clear();
+			
 			foreach (var row in table.Rows)
 			{
 				var fieldName = row["Name"];
@@ -50,23 +49,23 @@ namespace ChainReactionBindings.Bindings
 			page.SignInClick();
 		}
 
-		[Then(@"I see the The Email Address Or Password You Entered Is Incorrect message on Sing In page")]
-		public void ThenISeeTheEmailAddressOrPasswordYouEnteredIsIncorrect()
+		[Then(@"I see the ""(.*)"" message on Sing In page")]
+		public void ThenISeeTheEmailAddressOrPasswordYouEnteredIsIncorrect(string textMessage)
 		{
-			Assert.AreEqual("Неправильный Email Или Пароль", page.CommonErrorElement.Text);
+			Assert.AreEqual(textMessage, page.CommonErrorElement.Text);
 		}
 
-		[Then(@"I see Please Enter Your Email Address To Continue message on Sign In page")]
-		public void ThenISeePleaseEnterYourEmailAddressToContinueMessageOnSignInPage()
+		[Then(@"I see ""(.*)"" message on Sign In page")]
+		public void ThenISeePleaseEnterYourEmailAddressToContinueMessageOnSignInPage(string textMessage)
 		{
-			Assert.AreEqual("Пожалуйста, Укажите Ваш Адрес Электронной Почты", page.ErrorEmailElement.Text);
+			Assert.AreEqual(textMessage, page.ErrorEmailElement.Text);
 			page.EmailInputElement.Clear();
 		}
 
-		[Then(@"I see Please Enter Your Password To Continue message on Sign In page")]
-		public void ThenISeePleaseEnterYourPasswordToContinueMessageOnSignInPage()
+		[Then(@"I see ""(.*)"" message on Sign In")]
+		public void ThenISeePleaseEnterYourPasswordToContinueMessageOnSignInPage(string textMessage)
 		{
-			Assert.AreEqual("Чтобы Продолжить, Пожалуйста, Введите Ваш Пароль", page.ErrorPasswordElement.Text);
+			Assert.AreEqual(textMessage, page.ErrorPasswordElement.Text);
 		}
 
 		[When(@"I click on Create Account button")]

@@ -1,5 +1,6 @@
 ﻿using System;
 using ChainReactionBindings.TestBase.Pages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.Bindings
@@ -21,7 +22,7 @@ namespace ChainReactionBindings.Bindings
         [When(@"I set following parameters on Create Account page")]
         public void WhenISetFollowingParametersOnCreateAccountPage(Table table)
         {
-	        string randNumber = page.Random(3);
+	        string randNumber = Random(3);
 			foreach (var row in table.Rows)
 			{
 				var fieldName = row["Name"];
@@ -59,5 +60,48 @@ namespace ChainReactionBindings.Bindings
             page.ApplyClick();
         }
 
-    }
+	    [Then(@"I see ""(.*)"" message on Create Account page")]
+	    public void SeeMessageOnCreateAccountPage(string textMessage)
+	    {
+		    switch (textMessage)
+		    {
+				case "Please Enter Your First Name":
+					Assert.AreEqual(textMessage, page.FirstNameErrorElement.Text);
+					break;
+				case "Please Enter Your Last Name":
+					Assert.AreEqual(textMessage, page.LastNameErrorElement.Text);
+					break;
+			    case "Please Enter Your Email Address":
+				    Assert.AreEqual(textMessage, page.EmailErrorElement.Text);
+					break;
+			    case "Please Enter Password":
+				    Assert.AreEqual(textMessage, page.PasswordErrorElement.Text);
+					break;
+			    case "Please Enter At Least 8 Characters":
+				    Assert.AreEqual(textMessage, page.PasswordErrorElement.Text);
+				    break;
+				case "Confirm Password And New Password Does Not Match":
+				    Assert.AreEqual(textMessage, page.ConfirmPasswordErrorElement.Text);
+					break;
+			    case "Email Address And Confirm Email Address Does Not Match":
+				    Assert.AreEqual(textMessage, page.ConfirmEmailErrorElement.Text);
+				    break;
+				default: throw new Exception(string.Format("Message {0} is not implemented", textMessage));
+			}
+			
+	    }
+
+	    public string Random(int count)
+	    {
+		    string numberForEmail = "";
+		    for (int i = 0; i < count; i++)
+		    {
+			    Random r = new Random();
+			    int s = r.Next(1, 4);
+				numberForEmail += s.ToString();
+		    }
+		    return numberForEmail;
+	    }
+
+	}
 }

@@ -12,14 +12,26 @@ namespace ChainReactionBindings.TestBase.Pages
         public string PasswordId = "#newpassword";
         public string ConfirmPasswordId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmPassword']";
         public string ApplyButtonId = "input.blue_btn";
+	    public string FirstNameErrorId = "label[for= 'firstname']";
+	    public string LastNameErrorId = "label[for='lastName']";
+	    public string EmailErrorId = "label[for='email']";
+	    public string ConfirmEmaileErrorId = "label[for='confirmEmail']";
+	    public string PasswordErrorId = "label[for='password']";
+	    public string ConfirmPasswordErrorId = "label[for='confirmPassword']";
 
-        public HtmlElement FirstNameElement;
+		public HtmlElement FirstNameElement;
         public HtmlElement LastNameElement;
         public HtmlElement EmailElement;
         public HtmlElement ConfirmEmailElement;
         public HtmlElement PasswordElement;
         public HtmlElement ConfirmPasswordElement;
         public HtmlElement ApplyButtonElement;
+	    public HtmlElement FirstNameErrorElement;
+	    public HtmlElement LastNameErrorElement;
+	    public HtmlElement EmailErrorElement;
+	    public HtmlElement ConfirmEmailErrorElement;
+	    public HtmlElement PasswordErrorElement;
+	    public HtmlElement ConfirmPasswordErrorElement;
         public CreateAccountPage()
         {
             FirstNameElement = new HtmlElement(By.CssSelector(FirstNameId));
@@ -29,6 +41,12 @@ namespace ChainReactionBindings.TestBase.Pages
             PasswordElement = new HtmlElement(By.CssSelector(PasswordId));
             ConfirmPasswordElement = new HtmlElement(By.CssSelector(ConfirmPasswordId));
             ApplyButtonElement = new HtmlElement(By.CssSelector(ApplyButtonId));
+			FirstNameErrorElement = new HtmlElement(By.CssSelector(FirstNameErrorId));
+			LastNameErrorElement = new HtmlElement(By.CssSelector(LastNameErrorId));
+			EmailErrorElement = new HtmlElement(By.CssSelector(EmailErrorId));
+			ConfirmEmailErrorElement = new HtmlElement(By.CssSelector(ConfirmEmaileErrorId));
+			PasswordErrorElement = new HtmlElement(By.CssSelector(PasswordErrorId));
+			ConfirmPasswordErrorElement = new HtmlElement(By.CssSelector(ConfirmPasswordErrorId));
         }
 
         public bool PageLoaded()
@@ -44,17 +62,6 @@ namespace ChainReactionBindings.TestBase.Pages
         {
             ApplyButtonElement.Click();
         }
-
-	    public string Random(int count)
-	    {
-		    string numberForEmail = "";
-			for (int i = 0; i < count; i++)
-		    {
-				Random r = new Random();
-				numberForEmail += r.Next(1, 4).ToString();
-		    }
-		    return numberForEmail;
-	    }
-
+    
     }
 }
