@@ -18,8 +18,8 @@ Scenario:  Verify Register with all fields
 		| Name         | Value      |
 		| first        | test       |
 		| last         | test       |
-		| email        | psoesxew1    |
-		| confirmEmail | psoesxew1   |
+		| email        | psoesxewx    |
+		| confirmEmail | psoesxewx   |
 		| password     | 1231231234 |
 		|confirmPassword|1231231234|
 	And I click Apply button
@@ -176,7 +176,6 @@ Scenario:  Verify Register without Last Name
 		|confirmPassword|1231231234|
 	And I click Apply button
 	Then I see "Please Enter Your Last Name" message on Create Account page
-
 
 Scenario:  Verify Register without matching Email and Confirm Email
 	Given I open browser

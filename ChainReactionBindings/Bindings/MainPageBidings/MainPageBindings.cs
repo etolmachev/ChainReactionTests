@@ -1,5 +1,4 @@
 ﻿using System;
-using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
 using TechTalk.SpecFlow;
 

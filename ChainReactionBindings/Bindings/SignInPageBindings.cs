@@ -1,7 +1,6 @@
 ﻿using System;
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Web;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.Bindings

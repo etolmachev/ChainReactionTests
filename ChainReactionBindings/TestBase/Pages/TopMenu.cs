@@ -28,15 +28,6 @@ namespace ChainReactionBindings.TestBase.Pages
 			RubRubElement = new HtmlElement(By.CssSelector(RubRubId));
 		}
 
-		//public bool PageLoaded()
-		//{
-		//	if (BrandsElement.Displayed)
-		//	{
-		//		return true;
-		//	}
-		//	return false;
-		//}
-
 		public void ClickSignIn()
 		{
 			SignInElement.Click();
@@ -45,11 +36,6 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void OpenRub()
 		{
 			RubRubElement.Click();
-		}
-
-		public void SelectLanguage()
-		{
-			SelectLanguageElement.Click();
 		}
 
 		public void Update()
