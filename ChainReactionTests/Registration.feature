@@ -195,7 +195,7 @@ Scenario:  Verify Register without matching Email and Confirm Email
 		| Name         | Value      |
 		| first        |    test    |
 		| last         | test       |
-		| email        |    |
+		| email        | pso |
 		| confirmEmail | psoesxew   |
 		| password     | 1231231234 |
 		|confirmPassword|1231231234|
@@ -273,7 +273,7 @@ Scenario:  Verify Register with short Password
 		| email        | psoesxew    |
 		| confirmEmail | psoesxew   |
 		| password     |123|
-		|confirmPassword||
+		|confirmPassword|123|
 	And I click Apply button
 	Then I see "Please Enter At Least 8 Characters" message on Create Account page
 
