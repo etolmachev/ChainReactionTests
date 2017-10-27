@@ -12,7 +12,7 @@ namespace ChainReactionBindings.Bindings.MainPageBidings
 		[Then(@"I see the main page is loaded")]
 		public void MainPageLoaded()
 		{
-			if (!page.PageLoaded())
+			if (!page.MainPageLoaded())
 			{
 				throw new Exception("Main page is not loaded!");
 			}

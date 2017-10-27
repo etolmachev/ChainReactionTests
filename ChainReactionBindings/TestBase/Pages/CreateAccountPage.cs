@@ -2,7 +2,7 @@
 
 namespace ChainReactionBindings.TestBase.Pages
 {
-    public class CreateAccountPage
+    public class CreateAccountPage : BasePage
     {
         public string FirstNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.firstName']";
         public string LastNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.lastName']";
@@ -48,13 +48,9 @@ namespace ChainReactionBindings.TestBase.Pages
 			ConfirmPasswordErrorElement = new HtmlElement(By.CssSelector(ConfirmPasswordErrorId));
         }
 
-        public bool PageLoaded()
+        public bool CreateAccountPageLoaded()
         {
-            if (FirstNameElement.Displayed)
-            {
-                return true;
-            }
-            return false;
+	        return PageLoaded(FirstNameElement);
         }
 
         public void ApplyClick()

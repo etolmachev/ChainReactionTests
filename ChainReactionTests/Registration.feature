@@ -18,8 +18,8 @@ Scenario:  Verify Register with all fields
 		| Name         | Value      |
 		| first        | test       |
 		| last         | test       |
-		| email        | psoesxewx    |
-		| confirmEmail | psoesxewx   |
+		| email        | psoesxewxq    |
+		| confirmEmail | psoesxewxq   |
 		| password     | 1231231234 |
 		|confirmPassword|1231231234|
 	And I click Apply button

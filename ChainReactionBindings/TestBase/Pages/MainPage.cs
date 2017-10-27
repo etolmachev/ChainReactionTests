@@ -2,7 +2,7 @@
 
 namespace ChainReactionBindings.TestBase.Pages
 {
-	public class MainPage
+	public class MainPage : BasePage
 	{
 		public string BestSellersId = "div.crcBestSellersTitle";
 		public string LogoutId = "#logout_id";
@@ -16,7 +16,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			LogoutElement = new HtmlElement(By.CssSelector(LogoutId));
 		}
 
-		public bool PageLoaded()
+		/*public bool PageLoaded()
 		{
 			Browser.WaitReadyState();
 			if (BestSellers.Displayed)
@@ -24,6 +24,10 @@ namespace ChainReactionBindings.TestBase.Pages
 				return true;
 			}
 			return false;
+		}*/
+		public bool MainPageLoaded()
+		{
+			return PageLoaded(BestSellers);
 		}
 
 		public void LogoutClick()

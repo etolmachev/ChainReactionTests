@@ -2,7 +2,7 @@
 
 namespace ChainReactionBindings.TestBase.Pages
 {
-    public class MyAccountPage
+    public class MyAccountPage : BasePage
     {
         public string PersonalInfoId = "span.content_head";
 
@@ -12,13 +12,9 @@ namespace ChainReactionBindings.TestBase.Pages
         {
             PersonalInfoElement = new HtmlElement(By.CssSelector(PersonalInfoId));
         }
-        public bool PageLoaded()
+        public bool MyAccountPageLoaded()
         {
-            if (PersonalInfoElement.Displayed)
-            {
-                return true;
-            }
-            return false;
+	        return PageLoaded(PersonalInfoElement);
         }
     }
 }

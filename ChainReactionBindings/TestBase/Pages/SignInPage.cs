@@ -2,7 +2,7 @@
 
 namespace ChainReactionBindings.TestBase.Pages
 {
-	public class SignInPage
+	public class SignInPage : BasePage
 	{
 		public string EmailInputId = "input[name='/atg/userprofiling/ProfileFormHandler.value.login']";
 		public string PasswordInputId = "#newpassword";
@@ -31,14 +31,9 @@ namespace ChainReactionBindings.TestBase.Pages
 			ErrorPasswordElement = new HtmlElement(By.XPath(ErrorPasswordId));
 		}
 
-		public bool PageLoaded()
+		public bool SignInPageLoaded()
 		{
-			Browser.WaitReadyState();
-			if (EmailInputElement.Displayed)
-			{
-				return true;
-			}
-			return false;
+			return PageLoaded(EmailInputElement);
 		}
 
 		public void SignInClick()
