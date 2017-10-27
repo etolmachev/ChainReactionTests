@@ -6,6 +6,17 @@
 
 		public BasePage()
 		{
+
+		}
+
+		public bool PageLoaded(HtmlElement element)
+		{
+			Browser.WaitReadyState();
+			if (element.Displayed)
+			{
+				return true;
+			}
+			return false;
 		}
 	}
 }

@@ -1,5 +1,4 @@
 ﻿using ChainReactionBindings.TestBase;
-using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.CommonBindings

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
-    public class CreateAccountPage
+    public class CreateAccountPage : BasePage
     {
         public string FirstNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.firstName']";
         public string LastNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.lastName']";
@@ -16,38 +11,52 @@ namespace ChainReactionBindings.TestBase.Pages
         public string PasswordId = "#newpassword";
         public string ConfirmPasswordId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmPassword']";
         public string ApplyButtonId = "input.blue_btn";
+	    public string FirstNameErrorId = "label[for= 'firstname']";
+	    public string LastNameErrorId = "label[for='lastName']";
+	    public string EmailErrorId = "label[for='email']";
+	    public string ConfirmEmaileErrorId = "label[for='confirmEmail']";
+	    public string PasswordErrorId = "label[for='password']";
+	    public string ConfirmPasswordErrorId = "label[for='confirmPassword']";
 
-        public IWebElement FirstNameElement;
-        public IWebElement LastNameElement;
-        public IWebElement EmailElement;
-        public IWebElement ConfirmEmailElement;
-        public IWebElement PasswordElement;
-        public IWebElement ConfirmPasswordElement;
-        public IWebElement ApplyButtonElement;
+		public HtmlElement FirstNameElement;
+        public HtmlElement LastNameElement;
+        public HtmlElement EmailElement;
+        public HtmlElement ConfirmEmailElement;
+        public HtmlElement PasswordElement;
+        public HtmlElement ConfirmPasswordElement;
+        public HtmlElement ApplyButtonElement;
+	    public HtmlElement FirstNameErrorElement;
+	    public HtmlElement LastNameErrorElement;
+	    public HtmlElement EmailErrorElement;
+	    public HtmlElement ConfirmEmailErrorElement;
+	    public HtmlElement PasswordErrorElement;
+	    public HtmlElement ConfirmPasswordErrorElement;
         public CreateAccountPage()
         {
-            FirstNameElement = Browser.Driver.FindElement(By.CssSelector(FirstNameId));
-            LastNameElement = Browser.Driver.FindElement(By.CssSelector(LastNameId));
-            EmailElement = Browser.Driver.FindElement(By.CssSelector(EmailId));
-            ConfirmEmailElement = Browser.Driver.FindElement(By.CssSelector(ConfirmEmailId));
-            PasswordElement = Browser.Driver.FindElement(By.CssSelector(PasswordId));
-            ConfirmPasswordElement = Browser.Driver.FindElement(By.CssSelector(ConfirmPasswordId));
-            ApplyButtonElement = Browser.Driver.FindElement(By.CssSelector(ApplyButtonId));
+            FirstNameElement = new HtmlElement(By.CssSelector(FirstNameId));
+            LastNameElement = new HtmlElement(By.CssSelector(LastNameId));
+            EmailElement = new HtmlElement(By.CssSelector(EmailId));
+            ConfirmEmailElement = new HtmlElement(By.CssSelector(ConfirmEmailId));
+            PasswordElement = new HtmlElement(By.CssSelector(PasswordId));
+            ConfirmPasswordElement = new HtmlElement(By.CssSelector(ConfirmPasswordId));
+            ApplyButtonElement = new HtmlElement(By.CssSelector(ApplyButtonId));
+			FirstNameErrorElement = new HtmlElement(By.CssSelector(FirstNameErrorId));
+			LastNameErrorElement = new HtmlElement(By.CssSelector(LastNameErrorId));
+			EmailErrorElement = new HtmlElement(By.CssSelector(EmailErrorId));
+			ConfirmEmailErrorElement = new HtmlElement(By.CssSelector(ConfirmEmaileErrorId));
+			PasswordErrorElement = new HtmlElement(By.CssSelector(PasswordErrorId));
+			ConfirmPasswordErrorElement = new HtmlElement(By.CssSelector(ConfirmPasswordErrorId));
         }
 
-        public bool PageLoaded()
+        public bool CreateAccountPageLoaded()
         {
-            if (FirstNameElement.Displayed)
-            {
-                return true;
-            }
-            return false;
+	        return PageLoaded(FirstNameElement);
         }
 
         public void ApplyClick()
         {
             ApplyButtonElement.Click();
         }
-
+    
     }
 }

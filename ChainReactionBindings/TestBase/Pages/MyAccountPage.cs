@@ -2,23 +2,19 @@
 
 namespace ChainReactionBindings.TestBase.Pages
 {
-    public class MyAccountPage
+    public class MyAccountPage : BasePage
     {
         public string PersonalInfoId = "span.content_head";
 
-        public IWebElement PersonalInfoElement;
+        public HtmlElement PersonalInfoElement;
 
         public MyAccountPage()
         {
-            PersonalInfoElement = Browser.Driver.FindElement(By.CssSelector(PersonalInfoId));
+            PersonalInfoElement = new HtmlElement(By.CssSelector(PersonalInfoId));
         }
-        public bool PageLoaded()
+        public bool MyAccountPageLoaded()
         {
-            if (PersonalInfoElement.Displayed)
-            {
-                return true;
-            }
-            return false;
+	        return PageLoaded(PersonalInfoElement);
         }
     }
 }

@@ -25,6 +25,7 @@ namespace ChainReactionBindings.TestBase
 
 		public static void Quit()
 		{
+			IsInitialized = false;
 			Driver.Quit();
 		}
 

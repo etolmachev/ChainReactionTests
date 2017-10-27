@@ -12,7 +12,7 @@ namespace ChainReactionBindings.Bindings
         [Then(@"I see My Account page is loaded")]
         public void ThenISeeMyAccountPageIsLoaded()
         {
-            if (!page.PageLoaded())
+            if (!page.MyAccountPageLoaded())
             {
                 throw new Exception("Sign in page is not loaded!");
             }
