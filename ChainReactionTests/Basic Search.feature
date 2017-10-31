@@ -58,4 +58,3 @@ Scenario: Verify search by product attribute
 	And I see "1" items on search page
 	And I dont see items name include "123"
 
-

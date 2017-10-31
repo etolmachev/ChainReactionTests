@@ -51,9 +51,9 @@ namespace ChainReactionBindings.Bindings
 		}
 
 		[Then(@"I see ""(.*)"" items on search page")]
-		public void ThenISeeItemsOnSearchPage(string count)
+		public void ThenISeeItemsOnSearchPage(int count)
 		{
-			Assert.AreEqual(count, page.ItemsCountElement.FindElements(By.ClassName("products_details_container")).Count.ToString());
+			Assert.AreEqual(count, page.ItemsCountElement.FindElements(By.ClassName("products_details_container")).Count);
 		}
 
 		[Then(@"I see items name include ""(.*)""")]
