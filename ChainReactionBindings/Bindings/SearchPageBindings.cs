@@ -33,21 +33,15 @@ namespace ChainReactionBindings.Bindings
 			}
 		}
 
-		[Then(@"I see ""(.*)"" message on search page")]
-		public void ThenISeeMessageOnSearchPage(string text)
+		[Then(@"I see ""(.*)"" message on search page for ""(.*)""")]
+		public void ThenISeeMessageOnSearchPage(string text, string searchText)
 		{
-			switch (text)
+			string message = text + " results for " + searchText;
+			if (text != "0")
 			{
-				case "1183 results for 'bike'":
-					Assert.AreEqual(text, page.SearchResultElement.Text);
-					break;
-				case "0 results for \"auto and shirt\"":
-					Assert.AreEqual(text, page.NotFoundMessageElement.Text);
-					break;
-				default:
-					throw new Exception(string.Format("Field {0} is not implemented", text));
+				Assert.AreEqual(message, page.SearchResultElement.Text);
 			}
-			
+			else Assert.AreEqual(message, page.NotFoundMessageElement.Text);
 		}
 
 		[Then(@"I see ""(.*)"" items on search page")]

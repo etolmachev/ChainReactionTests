@@ -12,7 +12,7 @@ Scenario: Verify search by name of goods
 	When I enter "bike" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "1183 results for 'bike'" message on search page
+	And I see "1183" message on search page for "'bike'"
 
 Scenario: Verify equal names of search text and result text
 	Given I open browser
@@ -41,7 +41,7 @@ Scenario: Verify result for nonexisten goods
 	When I enter "auto and shirt" in the search text
 	And I click Search button
 	Then I see the empty search page is loaded
-	And I see "0 results for "auto and shirt"" message on search page
+	And I see "0" message on search page for ""auto and shirt""
 
 Scenario: Verify search by product attribute
 	Given I open browser
@@ -57,4 +57,3 @@ Scenario: Verify search by product attribute
 	Then I see the search page is loaded
 	And I see "1" items on search page
 	And I dont see items name include "123"
-
