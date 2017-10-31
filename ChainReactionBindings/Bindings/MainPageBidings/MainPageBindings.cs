@@ -23,5 +23,17 @@ namespace ChainReactionBindings.Bindings.MainPageBidings
 		{
 			page.LogoutClick();
 		}
+
+		[When(@"I enter ""(.*)"" in the search text")]
+		public void WhenIEnterSearchKeywordInTheSearchText(string text)
+		{
+			page.InputTextElement.SendKeys(text);
+		}
+
+		[When(@"I click Search button")]
+		public void WhenIClickSearchButton()
+		{
+			page.SearchClick();
+		}
 	}
 }

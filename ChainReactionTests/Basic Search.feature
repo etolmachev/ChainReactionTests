@@ -27,7 +27,7 @@ Scenario: Verify equal names of search text and result text
 	And I click Search button
 	Then I see the search page is loaded
 	And I see "2" items on search page
-	And I see items name incluse "Bike Cave"
+	And I see items name include "Bike Cave"
 
 Scenario: Verify result for nonexisten goods
 	Given I open browser
@@ -40,7 +40,7 @@ Scenario: Verify result for nonexisten goods
 
 	When I enter "auto and shirt" in the search text
 	And I click Search button
-	Then I see the search page is loaded
+	Then I see the empty search page is loaded
 	And I see "0 results for "auto and shirt"" message on search page
 
 Scenario: Verify search by product attribute
