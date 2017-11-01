@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using TechTalk.SpecRun.SpecFlowPlugin.Generator;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -44,6 +40,18 @@ namespace ChainReactionBindings.Bindings
 			else Assert.AreEqual(message, page.NotFoundMessageElement.Text);
 		}
 
+		[Then(@"I see ""(.*)"" message on search page")]
+		public void ThenISeeMessageOnSearchPage(string text)
+		{
+			Assert.AreEqual(text, page.SearchResultElement.Text);
+
+		}
+		[Then(@"I see ""(.*)"" on search page")]
+		public void ThenISeeOnSearchPage(string text)
+		{
+			Assert.AreEqual(text, page.CategoryResultElement.Text);
+
+		}
 		[Then(@"I see ""(.*)"" items on search page")]
 		public void ThenISeeItemsOnSearchPage(int count)
 		{
