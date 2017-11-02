@@ -39,7 +39,7 @@ Scenario Template: Verify Item Details of bike product
 		| Vitus Bikes Sommet CR FS Bike | 138999.00 RUB | 4.3    | Black - Grey              | 27.5" (650b) |
 		| Nukeproof Mega 290 Factory    | 225000.00 RUB | 0      | Desert Camo Brown - Olive | 29"          |
 
-Scenario: Verify Item Details of water bottle product
+Scenario Template: Verify Item Details of water bottle product
 
 	When I enter "<Name>" in the search text
 	And I click Search button
