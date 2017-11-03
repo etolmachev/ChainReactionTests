@@ -9,12 +9,12 @@ Background:
 	And I click Update button
 	Then I see the main page is loaded
 
-Scenario Template: Verify search by name of goods
+Scenario: Verify search by name of goods
 
 	When I enter "bike" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "1183 results for 'bike'" message on search page
+	And I see "1283 results for 'bike'" message on search page
 
 Scenario: Verify equal names of search text and result text
 
@@ -53,10 +53,10 @@ Scenario Template: Verify equal names of search text and result text - by name
 	And I see items name include "<ResultValue>"
 
 	Scenarios: 
-		| SearchValue | Amount | ResultVavue |
-		| animal bike | 17     | Animal Bike |
-		| ANIMAL BikE | 17     | Animal Bike |
-		|   auto      |   2    |      Auto   |
+		| SearchValue | Amount | ResultValue |
+		| animal bike | 18     | Animal Bike |
+		| ANIMAL BikE | 18     | Animal Bike |
+		|   auto      |   3    |      Auto   |
 
 #Need to implement
 Scenario Template: Verify equal names of search text and result text - by category
@@ -71,6 +71,5 @@ Scenario Template: Verify equal names of search text and result text - by catego
 	Scenarios: 
 		| SearchValue  | Amount | ResultValue  |
 		| Bike Cave    | 2      | Bike Cave    |
-		| Animal Bikes | 17     | Animal Bikes |
 		| BiKE CavE   | 2      | Bike Cave   |
 

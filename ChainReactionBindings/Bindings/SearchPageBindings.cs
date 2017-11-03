@@ -43,7 +43,7 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see ""(.*)"" message on search page")]
 		public void ThenISeeMessageOnSearchPage(string text)
 		{
-			Assert.AreEqual(text, page.SearchResultElement.Text);
+			Assert.AreEqual(text.ToLower(), page.SearchResultElement.Text.ToLower());
 
 		}
 		[Then(@"I see ""(.*)"" on search page")]
@@ -64,7 +64,7 @@ namespace ChainReactionBindings.Bindings
 			var itemsDesc = page.ItemsCountElement.FindElements(By.ClassName("description"));
 			foreach (var item in itemsDesc)
 			{
-				Assert.IsTrue(item.Text.Contains(text));
+				Assert.IsTrue(item.Text.ToLower().Contains(text.ToLower()));
 			}
 		}
 
