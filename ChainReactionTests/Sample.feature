@@ -1,9 +1,5 @@
 ﻿Feature: Sample
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
 
-@mytag
 Scenario: Sample verify
 	Given I open browser
 	When I navigate to the page "http://www.chainreactioncycles.com/ru/en"
