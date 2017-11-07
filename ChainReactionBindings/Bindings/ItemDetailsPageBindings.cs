@@ -1,0 +1,150 @@
+﻿using System;
+using System.ComponentModel;
+using ChainReactionBindings.TestBase;
+using ChainReactionBindings.TestBase.Pages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using TechTalk.SpecFlow;
+
+namespace ChainReactionBindings.Bindings
+{
+	[Binding]
+	class ItemDetailsPageBindings
+	{
+		ItemDetailsPage page = new ItemDetailsPage();
+
+		[Then(@"I see the product page for ""(.*)"" is loaded")]
+		public void ThenISeeTheProductPage(string name)
+		{
+			page.ItemDetailsPageLoaded();
+			Assert.AreEqual(name, page.ProductTitileElement.Text);
+		}
+
+		[Then(@"I see details on product page")]
+		public void ThenISeeDetailsOnProductPage(Table table)
+		{
+			foreach (var row in table.Rows)
+			{
+				var fieldName = row["Details"];
+				var fieldValue = row["Value"];
+				switch (fieldName)
+				{
+					case "Price":
+						Assert.AreEqual(fieldValue, page.PriceElement.Text);
+						break;
+					case "Rating":
+						Assert.AreEqual(fieldValue, page.RatingElement.Text);
+						break;
+					case "Colour":
+						Assert.AreEqual(fieldValue, page.ColourElement.Text);
+						break;
+					case "Wheel Size":
+						Assert.AreEqual(fieldValue, page.WheelSizeElement.Text);
+						break;
+					case "Size":
+						Assert.AreEqual(fieldValue, page.BottleSizeElement.Text);
+						break;
+					default:
+						throw new Exception(string.Format("Field {0} is not implemented", fieldName));
+				}
+			}
+		}
+
+		[When(@"I select option with value ""(.*)"" on product page")]
+		public void WhenISelectOption(string value)
+		{
+			page.ChangeOption();
+		}
+
+		[Then(@"I see new details on product page")]
+		public void ThenISeeNewDetailsOnProductPage(Table table)
+		{
+			foreach (var row in table.Rows)
+			{
+				var fieldName = row["Details"];
+				var fieldValue = row["Value"];
+				switch (fieldName)
+				{
+					case "Frame Size":
+						Assert.AreEqual(page.NewFrameSizeElement.Text, fieldValue);
+						break;
+					case "Colour":
+						Assert.AreEqual(page.NewColourElement.Text, fieldValue);
+						break;
+					case "Size":
+						Assert.AreEqual(page.NewSizeElement.Text, fieldValue);
+						break;
+				}
+				
+			}
+		}
+
+		[When(@"I click on Read all reviews")]
+		public void WhenIClickOnReadAllReviews()
+		{
+			page.SeeReviews();
+			page.CountReviewsElement = new HtmlElement(By.CssSelector(page.CountReviewsId));
+		}
+
+		[When(@"I click on Empty Reviews")]
+		public void WhenIClickOnReviews()
+		{
+			page.OpenEmptyReviews();
+		}
+
+		[Then(@"I see the following values in Ratings summary on product page")]
+		public void WhenISeeTheFollowingValuesInRatingsSummaryOnProductPage(Table table)
+		{
+			foreach (var row in table.Rows)
+			{
+				var fieldName = row["Field"];
+				var fieldValue = row["Value"];
+				switch (fieldName)
+				{
+					case "Rating":
+						Assert.AreEqual(fieldValue, page.RatingElement.Text);
+						break;
+					case "Reviews":
+						Assert.AreEqual(fieldValue, page.CountReviewsElement.Text);
+						break;
+				}
+			}
+		}
+
+		[When(@"I click Size Chart")]
+		public void WhenIClickSizeChart()
+		{
+			page.OpenSizeChart();
+			page.TopLogoElement = new HtmlElement(By.CssSelector(page.TopLogoId));
+		}
+
+		[Then(@"I see chart is opened")]
+		public void ThenISeeSizeChartIsOpened()
+		{
+			Assert.IsTrue(page.TopLogoElement.Displayed);
+		}
+
+		[When(@"I scroll to element")]
+		public void ThenIScrollToElement()
+		{
+			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPList"));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
+		}
+
+		[Then(@"I don't see Ratings summary on product page")]
+		public void ThenIDoNotSeeRatingsSummary()
+		{
+			Assert.IsNull(page.CountReviewsElement);
+		}
+
+		[Then(@"I see Write A Review button")]
+		public void ThenISeeWriteAReviewButton()
+		{
+			page.WriteReviewButtonElement = new HtmlElement(By.XPath(page.WriteReviewButtonId));
+			Assert.IsNotNull(page.WriteReviewButtonElement);
+		}
+	}
+}

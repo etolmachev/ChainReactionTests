@@ -71,7 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Basic Search.feature</DependentUpon>
     </Compile>
-        <Compile Include="Item Details.feature.cs">
+    <Compile Include="Item Details.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Item Details.feature</DependentUpon>

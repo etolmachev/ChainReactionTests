@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Threading;
 using ChainReactionBindings.TestBase;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.CommonBindings
@@ -28,5 +31,12 @@ namespace ChainReactionBindings.CommonBindings
 		{
 			ScenarioContext.Current.Add(Utils.ResolveExpression(key), Utils.ResolveExpression(value));
 		}
+
+		[Then(@"I wait for ""(.*)"" seconds")]
+		public void ThenIWaitForSeconds(int seconds)
+		{
+			Thread.Sleep(TimeSpan.FromSeconds(seconds));
+		}
+
 	}
 }

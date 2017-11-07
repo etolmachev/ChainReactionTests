@@ -77,5 +77,19 @@ namespace ChainReactionBindings.Bindings
 				Assert.IsFalse(item.Text.Contains(text));
 			}
 		}
+
+		[When(@"I click on product with name ""(.*)"" from search results")]
+		public void WhenIClickOnProductWithName(string name)
+		{
+			var allItems = page.ItemsCountElement.FindElements(By.ClassName("description"));
+			foreach (var item in allItems)
+			{
+				if (item.Text.ToLower().Contains(name.ToLower()))
+				{
+					page.GoToDetails();
+				}
+			}
+		}
+
 	}
 }

@@ -30,10 +30,16 @@ namespace ChainReactionBindings.Bindings
 
 				switch (fieldName)
 				{
-					case "email":
+					case "Price":
 						page.EmailInputElement.SendKeys(fieldValue);
 						break;
-					case "password":
+					case "Rating":
+						page.PasswordElement.SendKeys(fieldValue);
+						break;
+					case "Colour":
+						page.PasswordElement.SendKeys(fieldValue);
+						break;
+					case "Wheel Size":
 						page.PasswordElement.SendKeys(fieldValue);
 						break;
 					default:

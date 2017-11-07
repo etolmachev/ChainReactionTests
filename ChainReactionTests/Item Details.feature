@@ -35,9 +35,9 @@ Scenario Template: Verify Item Details of bike product
 		| Wheel Size | <WheelSize> |
 
 	Scenarios: 
-		| Name                          | Price         | Rating | Colour                    | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike | 138999.00 RUB | 4.3    | Black - Grey              | 27.5" (650b) |
-		| Nukeproof Mega 290 Factory    | 225000.00 RUB | 0      | Desert Camo Brown - Olive | 29"          |
+		| Name                                                     | Price         | Rating  | Colour       | WheelSize    |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.3 / 5 | Black - Grey | 27.5" (650b) |
+		| Nukeproof Pulse Comp DH Bike 2017                        | 139907.49 RUB | 5 / 5   | Lime - Red   | 27.5" (650b) |
 
 Scenario Template: Verify Item Details of water bottle product
 
@@ -55,8 +55,8 @@ Scenario Template: Verify Item Details of water bottle product
 
 	Scenarios:
 	| Name                             | Price                    | Rating | Size  |
-	| camelbak podium bottle 710ml     | 489.49                   | 4.7    | 710ml |
-	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.3    | 610ml |
+	| Camelbak Podium Bottle 710ml     | 489.49 RUB               | 4.7 / 5    | 710ml |
+	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.3 / 5    | 610ml |
 
 Scenario Template: Verify change options of products
 
@@ -67,16 +67,16 @@ Scenario Template: Verify change options of products
 	When I click on product with name "<Name>" from search results
 	Then I see the product page for "<Name>" is loaded
 
-	When I select option "<Option>" with value "<Value>" on product page
-	And I see details on product page
+	When I select option with value "<Value>" on product page
+	Then I see new details on product page
 		| Details  | Value    |
 		| <Option> | <Value>  |
 
 	Scenarios: 
-		| Name                                        | Option     | Value        |
-		| Vitus Bikes Sommet CR FS Bike               | frame size | 48cm (19")   |
-		| camelbak podium bottle 710ml                | colour     | Clear Carbon |
-		| Gore Bike Wear Element Urban GWS Hoody AW17 | size       | M            |
+		| Name                                                     | Option     | Value        |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 48cm (19")   |
+		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Carbon |
+		| Gore Bike Wear Element Urban GWS Hoody AW17              | Size       | M            |
 
 Scenario Template: Verify Reviews summary of product
 	When I enter "<Product>" in the search text
@@ -86,16 +86,17 @@ Scenario Template: Verify Reviews summary of product
 	When I click on product with name "<Product>" from search results
 	Then I see the product page for "<Product>" is loaded
 	
-	When I click "Customer Reviews (<Count>)"
+	When I click on Read all reviews 
+	Then I wait for "5" seconds
 	Then I see the following values in Ratings summary on product page
 		| Field   | Value           |
-		| Raiting | 4.7 / 5         |
+		| Rating | <Rating>         |
 		| Reviews | <Count> reviews |
 
 	Scenarios: 
-		| Product                       | Count |
-		| Vitus Bikes Sommet CR FS Bike | 3     |
-		| Pedros Chain Pig Machine Kit  | 4     |
+		| Product                                                  | Count | Rating  |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 3     | 4.3 / 5 |
+		| Pedros Chain Pig Machine Kit                             | 4     | 2.8 / 5 |
 	 
 Scenario Template: Verify product without rating summary and reviewes
 	When I enter "<Product>" in the search text
@@ -105,7 +106,9 @@ Scenario Template: Verify product without rating summary and reviewes
 	When I click on product with name "<Product>" from search results
 	Then I see the product page for "<Product>" is loaded
 
-	When I click "Customer Reviews (0)"
+	When I scroll to element
+	Then I wait for "1" seconds
+	When I click on Empty Reviews 
 	Then I don't see Ratings summary on product page
 	And I see Write A Review button
 
@@ -123,9 +126,10 @@ Scenario Template: Verify open Size Chart for product
 	Then I see the product page for "<Product>" is loaded
 
 	When I click Size Chart
+	Then I wait for "5" seconds
 	Then I see chart is opened 
 
 	Scenarios: 
-		| Product                                     |
-		| Vitus Bikes Sommet CR FS Bike               |
-		| Gore Bike Wear Element Urban GWS Hoody AW17 |
+		| Product                                                  |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 |
+		| Gore Bike Wear Element Urban GWS Hoody AW17              |

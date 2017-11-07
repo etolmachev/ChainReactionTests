@@ -9,12 +9,14 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string ItemsCountId = "#grid-view";
 		public string NotFoundMessageId = ".page_head";
 		public string CategoryResultId = ".page_heading";
+		public string ProductDescriptionId = "li.description";
 
 		public HtmlElement ViewLabelElement;
 		public HtmlElement ItemsCountElement;
 		public HtmlElement SearchResultElement;
 		public HtmlElement NotFoundMessageElement;
 		public HtmlElement CategoryResultElement;
+		public HtmlElement ProductDescriptionElement;
 
 		public SearchPage()
 		{
@@ -23,6 +25,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			SearchResultElement = new HtmlElement(By.CssSelector(SearchResultId));
 			NotFoundMessageElement = new HtmlElement(By.CssSelector(NotFoundMessageId));
 			CategoryResultElement = new HtmlElement(By.CssSelector(CategoryResultId));
+			ProductDescriptionElement = new HtmlElement(By.CssSelector(ProductDescriptionId));
 		}
 
 		public bool SearchPageLoaded()
@@ -32,6 +35,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		public bool EmptySearchPageLoaded()
 		{
 			return PageLoaded(NotFoundMessageElement);
+		}
+		public void GoToDetails()
+		{
+			ProductDescriptionElement.Click();	
 		}
 	}
 }
