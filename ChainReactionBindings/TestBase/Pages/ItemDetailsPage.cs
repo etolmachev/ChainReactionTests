@@ -21,6 +21,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string ContainerId = ".pdpcontent_container";
 		public string EmptyReviewsId = "#crcPDPBottomTabsReviewsLink";
 		public string WriteReviewButtonId = "//div[@class='BVRRDisplayContentNoReviews']/a[@name='BV_TrackingTag_Review_Display_WriteReview']";
+		public string NoReviewsId = "#BVRRDisplayContentNoReviewsID";
 
 		public HtmlElement ProductTitileElement;
 		public HtmlElement PriceElement;
@@ -39,6 +40,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement WriteReviewButtonElement;
 		public HtmlElement NewColourElement;
 		public HtmlElement NewSizeElement;
+		public HtmlElement NoReviewsElement;
 		public ItemDetailsPage()
 		{
 			ProductTitileElement = new HtmlElement(By.CssSelector(ProductTitleId));
@@ -56,6 +58,9 @@ namespace ChainReactionBindings.TestBase.Pages
 			NewColourElement = new HtmlElement(By.XPath(NewColourId));
 			NewSizeElement = new HtmlElement(By.XPath(NewSizeId));
 			TopLogoElement = new HtmlElement(By.CssSelector(TopLogoId));
+			CountReviewsElement = new HtmlElement(By.CssSelector(CountReviewsId));
+			NoReviewsElement = new HtmlElement(By.CssSelector(NoReviewsId));
+			WriteReviewButtonElement = new HtmlElement(By.XPath(WriteReviewButtonId));
 		}
 
 		public bool ItemDetailsPageLoaded()

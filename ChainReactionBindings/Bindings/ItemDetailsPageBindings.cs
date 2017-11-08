@@ -51,8 +51,8 @@ namespace ChainReactionBindings.Bindings
 			}
 		}
 
-		[When(@"I select option with value ""(.*)"" on product page")]
-		public void WhenISelectOption(string value)
+		[When(@"I select second option on product page")]
+		public void WhenISelectOption()
 		{
 			page.ChangeOption();
 		}
@@ -75,6 +75,8 @@ namespace ChainReactionBindings.Bindings
 					case "Size":
 						Assert.AreEqual(page.NewSizeElement.Text, fieldValue);
 						break;
+					default:
+						throw new Exception(string.Format("Field {0} is not implemented", fieldName));
 				}
 				
 			}
@@ -84,7 +86,6 @@ namespace ChainReactionBindings.Bindings
 		public void WhenIClickOnReadAllReviews()
 		{
 			page.SeeReviews();
-			page.CountReviewsElement = new HtmlElement(By.CssSelector(page.CountReviewsId));
 		}
 
 		[When(@"I click on Empty Reviews")]
@@ -108,6 +109,8 @@ namespace ChainReactionBindings.Bindings
 					case "Reviews":
 						Assert.AreEqual(fieldValue, page.CountReviewsElement.Text);
 						break;
+					default:
+						throw new Exception(string.Format("Field {0} is not implemented", fieldName));
 				}
 			}
 		}
@@ -136,13 +139,12 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I don't see Ratings summary on product page")]
 		public void ThenIDoNotSeeRatingsSummary()
 		{
-			Assert.IsNull(page.CountReviewsElement);
+			Assert.IsTrue(page.NoReviewsElement.Displayed);
 		}
 
 		[Then(@"I see Write A Review button")]
 		public void ThenISeeWriteAReviewButton()
 		{
-			page.WriteReviewButtonElement = new HtmlElement(By.XPath(page.WriteReviewButtonId));
 			Assert.IsNotNull(page.WriteReviewButtonElement);
 		}
 	}

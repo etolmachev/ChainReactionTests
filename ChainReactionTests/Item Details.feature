@@ -35,9 +35,9 @@ Scenario Template: Verify Item Details of bike product
 		| Wheel Size | <WheelSize> |
 
 	Scenarios: 
-		| Name                                                     | Price         | Rating  | Colour       | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.3 / 5 | Black - Grey | 27.5" (650b) |
-		| Nukeproof Pulse Comp DH Bike 2017                        | 139907.49 RUB | 5 / 5   | Lime - Red   | 27.5" (650b) |
+		| Name                                                     | Price         | Rating  | Colour         | WheelSize    |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.3 / 5 | Black - Grey   | 27.5" (650b) |
+		| Nukeproof Mega 275 Pro Bike 2017                         | 139907.49 RUB | 4.8 / 5 | Black - Bronze | 27.5" (650b) |
 
 Scenario Template: Verify Item Details of water bottle product
 
@@ -67,7 +67,7 @@ Scenario Template: Verify change options of products
 	When I click on product with name "<Name>" from search results
 	Then I see the product page for "<Name>" is loaded
 
-	When I select option with value "<Value>" on product page
+	When I select second option on product page
 	Then I see new details on product page
 		| Details  | Value    |
 		| <Option> | <Value>  |
@@ -87,7 +87,6 @@ Scenario Template: Verify Reviews summary of product
 	Then I see the product page for "<Product>" is loaded
 	
 	When I click on Read all reviews 
-	Then I wait for "5" seconds
 	Then I see the following values in Ratings summary on product page
 		| Field   | Value           |
 		| Rating | <Rating>         |
@@ -107,7 +106,6 @@ Scenario Template: Verify product without rating summary and reviewes
 	Then I see the product page for "<Product>" is loaded
 
 	When I scroll to element
-	Then I wait for "1" seconds
 	When I click on Empty Reviews 
 	Then I don't see Ratings summary on product page
 	And I see Write A Review button
@@ -126,7 +124,6 @@ Scenario Template: Verify open Size Chart for product
 	Then I see the product page for "<Product>" is loaded
 
 	When I click Size Chart
-	Then I wait for "5" seconds
 	Then I see chart is opened 
 
 	Scenarios: 
