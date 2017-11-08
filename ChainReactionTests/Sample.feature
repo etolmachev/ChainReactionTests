@@ -13,8 +13,8 @@ Scenario: Sample verify
 	Then I see the Sign In page is loaded
 
 	When I set following parameters on Sign In page
-		| Name     | Value |
-		| email    |otbtguukb@emltmp.com|
-		| password |123123123|
+		| Name     | Value                |
+		| email    | otbtguukb@emltmp.com |
+		| password | 123123123            |
 	And I click Sign In button
 	Then I see the main page is loaded
