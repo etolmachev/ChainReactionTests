@@ -116,13 +116,12 @@ namespace ChainReactionBindings.Bindings
 		public void WhenIClickSizeChart()
 		{
 			page.OpenSizeChart();
-			page.TopLogoElement = new HtmlElement(By.CssSelector(page.TopLogoId));
 		}
 
 		[Then(@"I see chart is opened")]
 		public void ThenISeeSizeChartIsOpened()
 		{
-			Assert.IsTrue(page.TopLogoElement.Displayed);
+			page.TopLogoElement.WaitElementAppears(30);
 		}
 
 		[When(@"I scroll to element")]

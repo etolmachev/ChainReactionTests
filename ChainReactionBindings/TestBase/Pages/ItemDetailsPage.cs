@@ -55,6 +55,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			EmptyReviewsElement = new HtmlElement(By.CssSelector(EmptyReviewsId));
 			NewColourElement = new HtmlElement(By.XPath(NewColourId));
 			NewSizeElement = new HtmlElement(By.XPath(NewSizeId));
+			TopLogoElement = new HtmlElement(By.CssSelector(TopLogoId));
 		}
 
 		public bool ItemDetailsPageLoaded()

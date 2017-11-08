@@ -46,6 +46,7 @@ namespace ChainReactionBindings.Bindings
 			Assert.AreEqual(text.ToLower(), page.SearchResultElement.Text.ToLower());
 
 		}
+
 		[Then(@"I see ""(.*)"" on search page")]
 		public void ThenISeeOnSearchPage(string text)
 		{
