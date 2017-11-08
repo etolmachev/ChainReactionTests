@@ -1,4 +1,5 @@
 ﻿using System;
+using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
@@ -22,11 +23,10 @@ namespace ChainReactionBindings.Bindings
         [When(@"I set following parameters on Create Account page")]
         public void WhenISetFollowingParametersOnCreateAccountPage(Table table)
         {
-	        string randNumber = Random(3);
 			foreach (var row in table.Rows)
 			{
 				var fieldName = row["Name"];
-				var fieldValue = row["Value"];
+				var fieldValue = Utils.ResolveExpression(row["Value"]);
 				
 				switch (fieldName)
 				{
@@ -37,10 +37,10 @@ namespace ChainReactionBindings.Bindings
 						page.LastNameElement.SendKeys(fieldValue);
 						break;
 				    case "email":
-				        page.EmailElement.SendKeys(fieldValue + "+" + randNumber + "@gmail.com");
+				        page.EmailElement.SendKeys(fieldValue);
 				        break;
 				    case "confirmEmail":
-				        page.ConfirmEmailElement.SendKeys(fieldValue + "+" + randNumber + "@gmail.com");
+				        page.ConfirmEmailElement.SendKeys(fieldValue);
 				        break;
 				    case "password":
 				        page.PasswordElement.SendKeys(fieldValue);
@@ -90,18 +90,5 @@ namespace ChainReactionBindings.Bindings
 			}
 			
 	    }
-
-	    public string Random(int count)
-	    {
-		    string numberForEmail = "";
-		    for (int i = 0; i < count; i++)
-		    {
-			    Random r = new Random();
-			    int s = r.Next(1, 4);
-				numberForEmail += s.ToString();
-		    }
-		    return numberForEmail;
-	    }
-
 	}
 }

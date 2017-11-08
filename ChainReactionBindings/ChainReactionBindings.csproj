@@ -93,6 +93,7 @@
     <Compile Include="TestBase\Pages\SearchPage.cs" />
     <Compile Include="TestBase\Pages\SignInPage.cs" />
     <Compile Include="TestBase\Pages\TopMenu.cs" />
+    <Compile Include="TestBase\Utils.cs" />
   </ItemGroup>
   <ItemGroup />
   <Choose>

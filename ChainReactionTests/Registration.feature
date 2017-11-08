@@ -14,14 +14,15 @@ Scenario:  Verify Register with all fields
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
+	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
-		| Name         | Value      |
-		| first        | test       |
-		| last         | test       |
-		| email        | psoesxewxq    |
-		| confirmEmail | psoesxewxq   |
-		| password     | 1231231234 |
-		|confirmPassword|1231231234|
+		| Name            | Value              |
+		| first           | test               |
+		| last            | test               |
+		| email           | {{email::context}} |
+		| confirmEmail    | {{email::context}} |
+		| password        | 1231231234         |
+		| confirmPassword | 1231231234         |
 	And I click Apply button
 	Then I see My Account page is loaded
 

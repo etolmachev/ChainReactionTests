@@ -20,5 +20,11 @@ namespace ChainReactionBindings.CommonBindings
 		{
 			Browser.Driver.Navigate().GoToUrl(url);
 		}
+
+		[When(@"I add ""(.*)"" value with ""(.*)"" key to Scenario Context")]
+		public void AddToScenarioContext(string value, string key)
+		{
+			ScenarioContext.Current.Add(Utils.ResolveExpression(key), Utils.ResolveExpression(value));
+		}
 	}
 }
