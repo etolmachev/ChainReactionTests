@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
@@ -69,6 +70,20 @@ namespace ChainReactionBindings.TestBase
 					string.Join(", ", _elementLocator)));
 			}
 			WrappedElement = element;
+		}
+
+		public void WaitElementAppears(int timeout)
+		{
+			int t = timeout;
+			while (t > 0 && !WrappedElement.Displayed)
+			{
+				Thread.Sleep(TimeSpan.FromSeconds(1));
+				t--;
+			}
+			if (!WrappedElement.Displayed)
+			{
+				throw new Exception(string.Format("Element isn't displayed after {0} seconds", timeout));
+			}
 		}
 
 		//Implement Interface properties and methods
