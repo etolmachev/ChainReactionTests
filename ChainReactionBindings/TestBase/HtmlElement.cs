@@ -72,7 +72,7 @@ namespace ChainReactionBindings.TestBase
 			WrappedElement = element;
 		}
 
-		public void WaitElementAppears(int timeout)
+		public void WaitElementAppears(int timeout = 30)
 		{
 			int t = timeout;
 			while (t > 0 && !WrappedElement.Displayed)
