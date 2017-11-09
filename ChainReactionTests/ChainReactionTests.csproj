@@ -87,6 +87,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sample.feature</DependentUpon>
     </Compile>
+    <Compile Include="Wishlist.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Wishlist.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -107,6 +112,10 @@
     <None Include="Sample.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Sample.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Wishlist.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Wishlist.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
