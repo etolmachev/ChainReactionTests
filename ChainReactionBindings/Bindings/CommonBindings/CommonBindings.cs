@@ -1,4 +1,5 @@
-﻿using ChainReactionBindings.TestBase;
+﻿using System;
+using ChainReactionBindings.TestBase;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.CommonBindings
@@ -12,6 +13,7 @@ namespace ChainReactionBindings.CommonBindings
 			if (!Browser.IsInitialized)
 			{
 				Browser.BuildBrowser();
+				Browser.Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
 			}
 		}
 

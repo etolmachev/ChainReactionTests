@@ -284,7 +284,6 @@ Scenario:  Verify Register with short Password
 	And I click Apply button
 	Then I see "Please Enter At Least 8 Characters" message on Create Account page
 
-#remove ignore when utils will be implemented
 Scenario:  Verify Register without Email
 	Given I open browser
 	When I navigate to the page "http://www.chainreactioncycles.com/ru/en"
