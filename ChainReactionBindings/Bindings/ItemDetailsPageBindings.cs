@@ -145,7 +145,7 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see Write A Review button")]
 		public void ThenISeeWriteAReviewButton()
 		{
-			Assert.IsNotNull(page.WriteReviewButtonElement);
+			Assert.IsTrue(page.WriteReviewButtonElement.Displayed);
 		}
 	}
 }
