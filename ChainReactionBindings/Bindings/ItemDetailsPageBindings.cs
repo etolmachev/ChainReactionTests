@@ -147,5 +147,12 @@ namespace ChainReactionBindings.Bindings
 		{
 			Assert.IsTrue(page.WriteReviewButtonElement.Displayed);
 		}
+
+		[When(@"I click Add To Wishlist button")]
+		public void WhenIClickAddToWishlistButton()
+		{
+			page.AddToWishlist();
+		}
+
 	}
 }

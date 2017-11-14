@@ -19,6 +19,84 @@ Background:
 	When I click on Sign In on top menu
 	Then I see the Sign In page is loaded
 
+#given account without wishlist
+Scenario: Verify see an empty list of wishilist
+	When I set following parameters on Sign In page
+		| Name     | Value                |
+		| email    | onlnnqbg@yomail.info |
+		| password | 1234567890           |
+	And I click Sign In button
+	Then I see the main page is loaded
+
+	When I click Wishlist button
+	Then I see the wishlist page is loaded
+	Then I see empty list of wishlist with message "YOU HAVE NO ITEMS ON YOUR WISH LIST"
+
+#given account without wishlist
+Scenario: Verify unable to add good in nonexisten wishlist
+	When I set following parameters on Sign In page
+		| Name     | Value                |
+		| email    | onlnnqbg@yomail.info |
+		| password | 1234567890           |
+	And I click Sign In button
+	Then I see the main page is loaded
+
+	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	And I click Search button
+	Then I see the search page is loaded
+
+	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
+	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
+
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
+
+	When I click Add To List button
+	Then I wait for "1" seconds
+	Then I see "Please enter wish list name." message on wishlist popup
+
+#given account without wishlist
+Scenario: Verify create new wishlist
+	When I set following parameters on Sign In page
+		| Name     | Value                |
+		| email    | onlnnqbg@yomail.info |
+		| password | 1234567890           |
+	And I click Sign In button
+	Then I see the main page is loaded
+
+	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	And I click Search button
+	Then I see the search page is loaded
+
+	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
+	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
+
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
+
+	When I enter name of wishlist "My Wishlist" in the create text
+	And I click Create And Add To List button
+	Then I see "Item added to wishlist" message on wishlist popup
+	And I click Close button
+	Then I wait for "1" seconds
+
+	When I click Wishlist button
+	Then I see my wishlist with "1" items
+
+	When I click Delete button on wishlist with name "My Wishlist"
+	Then I wait for "1" seconds
+	When I click Confirm button
+
+#given account with 1 wishlist
+Scenario: Verify add good in wishlist
 	When I set following parameters on Sign In page
 		| Name     | Value                |
 		| email    | otbtguukb@emltmp.com |
@@ -26,13 +104,6 @@ Background:
 	And I click Sign In button
 	Then I see the main page is loaded
 
-#given account without wishlist
-Scenario: Verify see an empty list of wishilist
-	When I click Wishilist button
-	Then I see empty list of wishilist
-
-#given account without wishlist
-Scenario: Verify unable to add good in nonexisten wishlist
 	When I enter "Camelbak Podium Bottle 710ml" in the search text
 	And I click Search button
 	Then I see the search page is loaded
@@ -40,17 +111,65 @@ Scenario: Verify unable to add good in nonexisten wishlist
 	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
 	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
 
-	When I click Add To Wishilist button
-	Then I see add to wishlist popup
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
 
-	When I choose good and click Add To Wishlist button
-	Then I see select wishlist popup
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
 
-	When I click Add To List button
-	Then I see "Please enter wish list name." message on wishlist popup
+	When I select wishlist with name "My Wishlist"
+	And I click Add To List button
+	Then I see "Item added to wishlist" message on wishlist popup
+	And I click Close button
+	Then I wait for "1" seconds
 
-#given account without wishlist
-Scenario: Verify create new wishlist
+	When I click Wishlist button
+	Then I see "1" wishlist in list of wishilist
+	And I see "1" items in wishlist with name "My Wishlist"
+
+#given account with 2 wishlists
+Scenario: Verify select wishlist to add new good
+	When I set following parameters on Sign In page
+		| Name     | Value                |
+		| email    | cbrbxqqlb@emltmp.com |
+		| password | 123qweasd            |
+	And I click Sign In button
+	Then I see the main page is loaded
+
+	When I enter "Animal Bikes T1 BMX Tyre" in the search text
+	And I click Search button
+	Then I see the search page is loaded
+
+	When I click on product with name "Animal Bikes T1 BMX Tyre" from search results
+	Then I see the product page for "Animal Bikes T1 BMX Tyre" is loaded
+
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
+
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
+
+	When I select wishlist with name "Second Wishlist"
+	And I click Add To List button
+	Then I see "Item added to wishlist" message on wishlist popup
+	And I click Close button
+	Then I wait for "1" seconds
+
+	When I click Wishlist button
+	Then I see "2" wishlist in list of wishilist
+	And I see "1" items in wishlist with name "Second Wishlist"
+
+#given account with 1 wishlist
+Scenario: Verify see details of goods in wishlist
+	When I set following parameters on Sign In page
+		| Name     | Value                |
+		| email    | otbtguukb@emltmp.com |
+		| password | 123123123            |
+	And I click Sign In button
+	Then I see the main page is loaded
+
 	When I enter "Camelbak Podium Bottle 710ml" in the search text
 	And I click Search button
 	Then I see the search page is loaded
@@ -58,106 +177,64 @@ Scenario: Verify create new wishlist
 	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
 	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
 
-	When I click Add To Wishilist button
-	Then I see add to wishlist popup
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
 
-	When I choose good and click Add To Wishlist button
-	Then I see select wishlist popup
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
+
+	When I select wishlist with name "My Wishlist"
+	And I click Add To List button
+	Then I see "Item added to wishlist" message on wishlist popup
+	And I click Close button
+	Then I wait for "1" seconds
+
+	When I click Wishlist button
+	Then I see "1" wishlist in list of wishilist
+	And I see "1" items in wishlist with name "My Wishlist"
+
+	When I click View List button on wishlist with name "My Wishlist"
+	Then I see the wishlist page is loaded
+	And I see details of goods in wishlist
+	| Details | Value                        |
+	| Title   | Camelbak Podium Bottle 710ml |
+	| Price   | From RUB489.49               |
+
+#given account with 1 wishlist
+Scenario: Verify delete wishilist
+	When I set following parameters on Sign In page
+		| Name     | Value                |
+		| email    | onlnnqbg@yomail.info |
+		| password | 1234567890           |
+	And I click Sign In button
+	Then I see the main page is loaded
+
+	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	And I click Search button
+	Then I see the search page is loaded
+
+	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
+	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
+
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "My Wishlist" in the create text
 	And I click Create And Add To List button
 	Then I see "Item added to wishlist" message on wishlist popup
 	And I click Close button
+	Then I wait for "1" seconds
 
-	When I click Wishilist button
-	Then I see my wishlist without items
-
-#given account with 1 wishlist
-Scenario: Verify add good in wishlist
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
-	And I click Search button
-	Then I see the search page is loaded
-
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
-
-	When I click Add To Wishilist button
-	Then I see add to wishlist popup
-
-	When I choose good and click Add To Wishlist button
-	Then I see wishlist popup
-
-	When I select wishlist with name "My Wishlist"
-	And I click Add To List button
-	Then I see "Item added to wishlist" message on wishlist popup
-	And I click Close button
-
-	When I click Wishilist button
-	Then I see list with names of wishilist
-	And I see "1" item in wishlist with name "My Wishlist"
-
-#given account with 2 wishlists
-Scenario: Verify select wishlist to add new good
-
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
-	And I click Search button
-	Then I see the search page is loaded
-
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
-
-	When I click Add To Wishilist button
-	Then I see add to wishlist popup
-
-	When I choose good and click Add To Wishlist button
-	Then I see select wishlist popup
-
-	When I enter name of wishlist "Second Wishlist" in the create text
-	And I click Create And Add To List button
-	Then I see "Item added to wishlist" message on wishlist popup
-	And I click Close button
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
-
-	When I click Wishilist button
-	Then I see list with names of wishilist
-	And I see "1" item in wishlist with name "Second Wishlist"
-
-#given account with 1 wishlist
-Scenario: Verify see details of goods in wishlist
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
-	And I click Search button
-	Then I see the search page is loaded
-
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
-
-	When I click Add To Wishilist button
-	Then I see add to wishlist popup
-
-	When I choose good and click Add To Wishlist button
-	Then I see wishlist popup
-
-	When I select wishlist with name "My Wishlist"
-	And I click Add To List button
-	Then I see "Item added to wishlist" message on wishlist popup
-	And I click Close button
-
-	When I click Wishilist button
-	Then I see list with names of wishilist
-	And I see "1" item in wishlist with name "My Wishlist"
-
-	When I click View List button on wishlist with name "My Wishlist"
-	Then I see wishlist page is loaded
-	And I see details of goods in wishlist
-	| Details | Value                        |
-	| Title   | Camelbak Podium Bottle 710ml |
-	| Quanity | 1                            |
-
-#given account with 1 wishlist
-Scenario: Verify delete wishilist
-
-	When I click Wishilist button
-	Then I see list of wishilist
+	When I click Wishlist button
+	Then I see the wishlist page is loaded
+	And I see "1" wishlist in list of wishilist
 
 	When I click Delete button on wishlist with name "My Wishlist"
-	Then I see empty list of wishilist
+	Then I wait for "1" seconds
+	When I click Confirm button
+	Then I see empty list of wishlist with message "YOU HAVE NO ITEMS ON YOUR WISH LIST"

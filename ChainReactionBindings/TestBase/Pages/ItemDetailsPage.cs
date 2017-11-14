@@ -22,6 +22,8 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string EmptyReviewsId = "#crcPDPBottomTabsReviewsLink";
 		public string WriteReviewButtonId = "//div[@class='BVRRDisplayContentNoReviews']/a[@name='BV_TrackingTag_Review_Display_WriteReview']";
 		public string NoReviewsId = "#BVRRDisplayContentNoReviewsID";
+		public string AddToWishlistButtonId = ".crcLoggedIn";
+		
 
 		public HtmlElement ProductTitileElement;
 		public HtmlElement PriceElement;
@@ -41,6 +43,8 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement NewColourElement;
 		public HtmlElement NewSizeElement;
 		public HtmlElement NoReviewsElement;
+		public HtmlElement AddToWishlistButtonElement;
+		
 		public ItemDetailsPage()
 		{
 			ProductTitileElement = new HtmlElement(By.CssSelector(ProductTitleId));
@@ -61,6 +65,8 @@ namespace ChainReactionBindings.TestBase.Pages
 			CountReviewsElement = new HtmlElement(By.CssSelector(CountReviewsId));
 			NoReviewsElement = new HtmlElement(By.CssSelector(NoReviewsId));
 			WriteReviewButtonElement = new HtmlElement(By.XPath(WriteReviewButtonId));
+			AddToWishlistButtonElement = new HtmlElement(By.CssSelector(AddToWishlistButtonId));
+			
 		}
 
 		public bool ItemDetailsPageLoaded()
@@ -86,6 +92,11 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void OpenEmptyReviews()
 		{
 			EmptyReviewsElement.Click();
+		}
+
+		public void AddToWishlist()
+		{
+			AddToWishlistButtonElement.Click();
 		}
 	}
 }
