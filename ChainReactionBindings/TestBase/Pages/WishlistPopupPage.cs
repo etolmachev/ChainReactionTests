@@ -5,16 +5,16 @@ namespace ChainReactionBindings.TestBase.Pages
 {
 	class WishlistPopupPage : BasePage
 	{
-		public string AddPopupId = ".addto_wishlist_pop.addcart";
-		public string AddToWishlistInPopId = ".email_alert";
-		public string SelectPopId = ".addtoWishlist";
-		public string AddToListButtonId = "input[value='Add to List']";
-		public string ErrorMessageId = "span[style='color: red']";
-		public string NewWishlistNameId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.eventName']";
-		public string CreateAndAddToListButtonId = "input[value='Create & Add to List']";
-		public string SuccessMessageId = ".suc_msg";
-		public string CloseButtonId = ".blue_btn.cancel";
-		public string SelectWishlistId = "select[name='/atg/commerce/gifts/GiftlistFormHandler.giftlistId'";
+		private string AddPopupId = ".addto_wishlist_pop.addcart";
+		private string AddToWishlistInPopId = ".email_alert";
+		private string SelectPopId = ".addtoWishlist";
+		private string AddToListButtonId = "input[value='Add to List']";
+		private string ErrorMessageId = "span[style='color: red']";
+		private string NewWishlistNameId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.eventName']";
+		private string CreateAndAddToListButtonId = "input[value='Create & Add to List']";
+		private string SuccessMessageId = ".suc_msg";
+		private string CloseButtonId = ".blue_btn.cancel";
+		private string SelectWishlistId = "select[name='/atg/commerce/gifts/GiftlistFormHandler.giftlistId'";
 
 		public HtmlElement AddPopupElement;
 		public HtmlElement AddToWishlistInPopElement;

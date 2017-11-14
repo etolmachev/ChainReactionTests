@@ -1,18 +1,17 @@
-﻿using System.Runtime.InteropServices;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
 	class WishlistPage: BasePage
 	{
-		public string WishlistHeaderId = ".user_profile_headding2";
-		public string EmptyWishlistId = "div.wishlist_noitem_container p";
-		public string CountItemsId = ".wishlist_col3";
-		public string TableOfWishlistId = ".wishlist_container.mtb3";
-		public string FindWishlistId = "//tr[./td/div/a[text()='{0}']]";
-		public string ItemsTitleId = "h4";
-		public string PriceId = ".fromamt";
-		public string DeleteConfirmButtonId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.deleteGiftlist']";
+		private string WishlistHeaderId = ".user_profile_headding2";
+		private string EmptyWishlistId = "div.wishlist_noitem_container p";
+		private string CountItemsId = ".wishlist_col3";
+		private string TableOfWishlistId = ".wishlist_container.mtb3";
+		private string FindWishlistId = "//tr[./td/div/a[text()='{0}']]";
+		private string ItemsTitleId = "h4";
+		private string PriceId = ".fromamt";
+		private string DeleteConfirmButtonId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.deleteGiftlist']";
 
 		public HtmlElement WishlistHeaderElement;
 		public HtmlElement EmptyWishlistElement;
@@ -57,6 +56,21 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void ConfirmDelete()
 		{
 			DeleteConfirmElement.Click();
+		}
+		public IWebElement GetViewButton(HtmlElement el)
+		{
+			var element = el.FindElement(By.ClassName("blue_btn2"));
+			return element;
+		}
+		public IWebElement GetCountItems(HtmlElement el)
+		{
+			var element = el.FindElement(By.CssSelector(CountItemsId));
+			return element;
+		}
+		public IWebElement DeleteWishlist(HtmlElement el)
+		{
+			var element = el.FindElement(By.ClassName("wishlist_remove"));
+			return element;
 		}
 	}
 }

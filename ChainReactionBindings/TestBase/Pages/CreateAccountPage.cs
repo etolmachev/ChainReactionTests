@@ -4,19 +4,19 @@ namespace ChainReactionBindings.TestBase.Pages
 {
     public class CreateAccountPage : BasePage
     {
-        public string FirstNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.firstName']";
-        public string LastNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.lastName']";
-        public string EmailId = "input[name='/atg/userprofiling/ProfileFormHandler.value.email']";
-        public string ConfirmEmailId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmEmail']";
-        public string PasswordId = "#newpassword";
-        public string ConfirmPasswordId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmPassword']";
-        public string ApplyButtonId = "input.blue_btn";
-	    public string FirstNameErrorId = "label[for= 'firstname']";
-	    public string LastNameErrorId = "label[for='lastName']";
-	    public string EmailErrorId = "label[for='email']";
-	    public string ConfirmEmaileErrorId = "label[for='confirmEmail']";
-	    public string PasswordErrorId = "label[for='password']";
-	    public string ConfirmPasswordErrorId = "label[for='confirmPassword']";
+        private string FirstNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.firstName']";
+        private string LastNameId = "input[name='/atg/userprofiling/ProfileFormHandler.value.lastName']";
+        private string EmailId = "input[name='/atg/userprofiling/ProfileFormHandler.value.email']";
+        private string ConfirmEmailId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmEmail']";
+        private string PasswordId = "#newpassword";
+        private string ConfirmPasswordId = "input[name='/atg/userprofiling/ProfileFormHandler.value.confirmPassword']";
+        private string ApplyButtonId = "input.blue_btn";
+	    private string FirstNameErrorId = "label[for= 'firstname']";
+	    private string LastNameErrorId = "label[for='lastName']";
+	    private string EmailErrorId = "label[for='email']";
+	    private string ConfirmEmaileErrorId = "label[for='confirmEmail']";
+	    private string PasswordErrorId = "label[for='password']";
+	    private string ConfirmPasswordErrorId = "label[for='confirmPassword']";
 
 		public HtmlElement FirstNameElement;
         public HtmlElement LastNameElement;

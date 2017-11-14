@@ -32,6 +32,11 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 			page.UpdateButtonElement = new HtmlElement(By.CssSelector(page.UpdateButtonId));
 			page.Update();
 		}
+		[When(@"I click Wishlist button on Top menu")]
+		public void WhenIClickWishlistButton()
+		{
+			page.WishlistClick();
+		}
 
 	}
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -34,7 +32,7 @@ namespace ChainReactionBindings.Bindings
 			Assert.AreEqual(count, page.CountItemsElement.Text);
 		}
 
-		[Then(@"I see ""(.*)"" wishlist in list of wishilist")]
+		[Then(@"I see ""(.*)"" wishlists")]
 		public void SeeWishlistInListOfWishlist(int count)
 		{
 			Assert.AreEqual(count, page.TableOfWishlistElement.FindElements(By.ClassName("wishlist_col2")).Count);
@@ -44,7 +42,7 @@ namespace ChainReactionBindings.Bindings
 		public void SeeItemsInWishlistWithName(string count, string name)
 		{
 			var el = page.FindWishlist(name);
-			var countItems = el.FindElement(By.CssSelector(page.CountItemsId));
+			var countItems = page.GetCountItems(el);
 			Assert.AreEqual(count, countItems.Text);
 		}
 
@@ -52,7 +50,7 @@ namespace ChainReactionBindings.Bindings
 		public void ClickViewListButtonOnWishlistWithName(string name)
 		{
 			var el = page.FindWishlist(name);
-			var viewButton = el.FindElement(By.ClassName("blue_btn2"));
+			var viewButton = page.GetViewButton(el);
 			page.ViewList(viewButton);
 		}
 
@@ -81,7 +79,7 @@ namespace ChainReactionBindings.Bindings
 		public void ClickDeleteButtonOnWishlistWithName(string name)
 		{
 			var el = page.FindWishlist(name);
-			var deleteWishlist = el.FindElement(By.ClassName("wishlist_remove"));
+			var deleteWishlist = page.DeleteWishlist(el);
 			page.DeleteWishlist(deleteWishlist);
 		}
 

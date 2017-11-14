@@ -36,10 +36,5 @@ namespace ChainReactionBindings.Bindings.MainPageBidings
 			page.SearchClick();
 		}
 
-		[When(@"I click Wishlist button")]
-		public void WhenIClickWishlistButton()
-		{
-			page.WishlistClick();
-		}
 	}
 }

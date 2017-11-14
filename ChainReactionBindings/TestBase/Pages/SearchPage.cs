@@ -4,12 +4,12 @@ namespace ChainReactionBindings.TestBase.Pages
 {
 	class SearchPage : BasePage
 	{
-		public string ViewLabelId = ".viewLabel";
-		public string SearchResultId = "#search_page_title";
-		public string ItemsCountId = "#grid-view";
-		public string NotFoundMessageId = ".page_head";
-		public string CategoryResultId = ".page_heading";
-		public string ProductDescriptionId = "li.description";
+		private string ViewLabelId = ".viewLabel";
+		private string SearchResultId = "#search_page_title";
+		private string ItemsCountId = "#grid-view";
+		private string NotFoundMessageId = ".page_head";
+		private string CategoryResultId = ".page_heading";
+		private string ProductDescriptionId = "li.description";
 
 		public HtmlElement ViewLabelElement;
 		public HtmlElement ItemsCountElement;

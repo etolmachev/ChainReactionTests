@@ -4,13 +4,13 @@ namespace ChainReactionBindings.TestBase.Pages
 {
 	public class SignInPage : BasePage
 	{
-		public string EmailInputId = "input[name='/atg/userprofiling/ProfileFormHandler.value.login']";
-		public string PasswordInputId = "#newpassword";
-		public string SignInButtonId = "#loginFormSubmit";	    
-		public string CreateAccountButtonId = "#confirmCreateAccount";
-		public string CommonErrorId = "//form[@id='loginform']/p[position()=1]/label";
-		public string ErrorEmailId = "//form[@id='loginform']/p[position()=3]/label";
-		public string ErrorPasswordId = "//form[@id='loginform']/p[position()=4]/label";
+		private string EmailInputId = "input[name='/atg/userprofiling/ProfileFormHandler.value.login']";
+		private string PasswordInputId = "#newpassword";
+		private string SignInButtonId = "#loginFormSubmit";	    
+		private string CreateAccountButtonId = "#confirmCreateAccount";
+		private string CommonErrorId = "//form[@id='loginform']/p[position()=1]/label";
+		private string ErrorEmailId = "//form[@id='loginform']/p[position()=3]/label";
+		private string ErrorPasswordId = "//form[@id='loginform']/p[position()=4]/label";
 
 		public HtmlElement EmailInputElement;
 		public HtmlElement PasswordElement;

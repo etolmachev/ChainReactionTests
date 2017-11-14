@@ -15,7 +15,6 @@ namespace ChainReactionBindings.Bindings
 		public void ThenISeeAddToWishlistPopupIsLoaded()
 		{
 			page.WishlistPopupPageLoaded();
-			//Assert.IsTrue(page.AddPopupElement.Displayed);
 		}
 
 		[When(@"I choose first good and click Add To Wishlist button")]
@@ -28,7 +27,6 @@ namespace ChainReactionBindings.Bindings
 		public void ThenISeeSelectWishlistPopupIsLoaded()
 		{
 			page.SelectPopElement.WaitElementAppears(10);
-			Assert.IsTrue(page.SelectPopElement.Displayed);
 		}
 
 		[When(@"I click Add To List button")]

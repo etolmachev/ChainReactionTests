@@ -28,7 +28,7 @@ Scenario: Verify see an empty list of wishilist
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I click Wishlist button
+	When I click Wishlist button on Top menu
 	Then I see the wishlist page is loaded
 	Then I see empty list of wishlist with message "YOU HAVE NO ITEMS ON YOUR WISH LIST"
 
@@ -88,7 +88,7 @@ Scenario: Verify create new wishlist
 	And I click Close button
 	Then I wait for "1" seconds
 
-	When I click Wishlist button
+	When I click Wishlist button on Top menu
 	Then I see my wishlist with "1" items
 
 	When I click Delete button on wishlist with name "My Wishlist"
@@ -124,18 +124,51 @@ Scenario: Verify add good in wishlist
 	And I click Close button
 	Then I wait for "1" seconds
 
-	When I click Wishlist button
-	Then I see "1" wishlist in list of wishilist
+	When I click Wishlist button on Top menu
+	Then I see "1" wishlists
 	And I see "1" items in wishlist with name "My Wishlist"
 
 #given account with 2 wishlists
 Scenario: Verify select wishlist to add new good
 	When I set following parameters on Sign In page
 		| Name     | Value                |
-		| email    | cbrbxqqlb@emltmp.com |
-		| password | 123qweasd            |
+		| email    | onlnnqbg@yomail.info |
+		| password | 1234567890           |
 	And I click Sign In button
 	Then I see the main page is loaded
+
+	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	And I click Search button
+	Then I see the search page is loaded
+
+	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
+	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
+
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
+
+	When I enter name of wishlist "First Wishlist" in the create text
+	And I click Create And Add To List button
+	Then I see "Item added to wishlist" message on wishlist popup
+	And I click Close button
+	Then I wait for "1" seconds
+
+	When I click Add To Wishlist button
+	Then I see add to wishlist popup is loaded
+	Then I wait for "1" seconds
+
+	When I choose first good and click Add To Wishlist button
+	Then I see select wishlist popup is loaded
+
+	When I enter name of wishlist "Second Wishlist" in the create text
+	And I click Create And Add To List button
+	Then I see "Item added to wishlist" message on wishlist popup
+	And I click Close button
+	Then I wait for "1" seconds
 
 	When I enter "Animal Bikes T1 BMX Tyre" in the search text
 	And I click Search button
@@ -157,9 +190,17 @@ Scenario: Verify select wishlist to add new good
 	And I click Close button
 	Then I wait for "1" seconds
 
-	When I click Wishlist button
-	Then I see "2" wishlist in list of wishilist
-	And I see "1" items in wishlist with name "Second Wishlist"
+	When I click Wishlist button on Top menu
+	Then I see "2" wishlists
+	And I see "2" items in wishlist with name "Second Wishlist"
+
+	When I click Delete button on wishlist with name "First Wishlist"
+	Then I wait for "1" seconds
+	When I click Confirm button
+
+	When I click Delete button on wishlist with name "Second Wishlist"
+	Then I wait for "1" seconds
+	When I click Confirm button
 
 #given account with 1 wishlist
 Scenario: Verify see details of goods in wishlist
@@ -190,8 +231,8 @@ Scenario: Verify see details of goods in wishlist
 	And I click Close button
 	Then I wait for "1" seconds
 
-	When I click Wishlist button
-	Then I see "1" wishlist in list of wishilist
+	When I click Wishlist button on Top menu
+	Then I see "1" wishlists
 	And I see "1" items in wishlist with name "My Wishlist"
 
 	When I click View List button on wishlist with name "My Wishlist"
@@ -230,9 +271,9 @@ Scenario: Verify delete wishilist
 	And I click Close button
 	Then I wait for "1" seconds
 
-	When I click Wishlist button
+	When I click Wishlist button on Top menu
 	Then I see the wishlist page is loaded
-	And I see "1" wishlist in list of wishilist
+	And I see "1" wishlists
 
 	When I click Delete button on wishlist with name "My Wishlist"
 	Then I wait for "1" seconds
