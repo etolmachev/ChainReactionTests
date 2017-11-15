@@ -37,7 +37,7 @@ Scenario Template: Verify Item Details of bike product
 	Scenarios: 
 		| Name                                                     | Price         | Rating  | Colour         | WheelSize    |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.6 / 5 | Black - Grey   | 27.5" (650b) |
-		| Nukeproof Mega 275 Pro Bike 2017                         | 139907.49 RUB | 4.8 / 5 | Black - Bronze | 27.5" (650b) |
+		| Intense Spider 275C NM Expert Bike                         | 171999.00 RUB - 191999.00 RUB | 5 / 5 | Silver | 27.5" (650b) |
 
 Scenario Template: Verify Item Details of water bottle product
 
@@ -74,7 +74,7 @@ Scenario Template: Verify change options of products
 
 	Scenarios: 
 		| Name                                                     | Option     | Value        |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 48cm (19")   |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 43cm (17")   |
 		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Carbon |
 		| Gore Bike Wear Element Urban GWS Hoody AW17              | Size       | M            |
 
