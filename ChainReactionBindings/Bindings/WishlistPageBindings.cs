@@ -50,8 +50,7 @@ namespace ChainReactionBindings.Bindings
 		public void ClickViewListButtonOnWishlistWithName(string name)
 		{
 			var el = page.FindWishlist(name);
-			var viewButton = page.GetViewButton(el);
-			page.ViewList(viewButton);
+			page.ViewList(el);
 		}
 
 		[Then(@"I see details of goods in wishlist")]
@@ -79,8 +78,7 @@ namespace ChainReactionBindings.Bindings
 		public void ClickDeleteButtonOnWishlistWithName(string name)
 		{
 			var el = page.FindWishlist(name);
-			var deleteWishlist = page.DeleteWishlist(el);
-			page.DeleteWishlist(deleteWishlist);
+			page.DeleteWishlist(el);
 		}
 
 		[When(@"I click Confirm button")]

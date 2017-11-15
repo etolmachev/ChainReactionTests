@@ -36,7 +36,7 @@ Scenario Template: Verify Item Details of bike product
 
 	Scenarios: 
 		| Name                                                     | Price         | Rating  | Colour         | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.3 / 5 | Black - Grey   | 27.5" (650b) |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.6 / 5 | Black - Grey   | 27.5" (650b) |
 		| Nukeproof Mega 275 Pro Bike 2017                         | 139907.49 RUB | 4.8 / 5 | Black - Bronze | 27.5" (650b) |
 
 Scenario Template: Verify Item Details of water bottle product
@@ -56,7 +56,7 @@ Scenario Template: Verify Item Details of water bottle product
 	Scenarios:
 	| Name                             | Price                    | Rating | Size  |
 	| Camelbak Podium Bottle 710ml     | 489.49 RUB               | 4.7 / 5    | 710ml |
-	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.3 / 5    | 610ml |
+	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.1 / 5    | 610ml |
 
 Scenario Template: Verify change options of products
 
@@ -94,7 +94,7 @@ Scenario Template: Verify Reviews summary of product
 
 	Scenarios: 
 		| Product                                                  | Count | Rating  |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 3     | 4.3 / 5 |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 5     | 4.6 / 5 |
 		| Pedros Chain Pig Machine Kit                             | 4     | 2.8 / 5 |
 	 
 Scenario Template: Verify product without rating summary and reviewes

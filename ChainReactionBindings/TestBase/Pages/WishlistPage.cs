@@ -43,14 +43,16 @@ namespace ChainReactionBindings.TestBase.Pages
 			return element;
 		}
 
-		public void ViewList(IWebElement elem)
+		public void ViewList(HtmlElement el)
 		{
-			elem.Click();
+			var element = el.FindElement(By.ClassName("blue_btn2"));
+			element.Click();
 		}
 
-		public void DeleteWishlist(IWebElement elem)
+		public void DeleteWishlist(HtmlElement el)
 		{
-			elem.Click();
+			var element = el.FindElement(By.ClassName("wishlist_remove"));
+			element.Click();
 		}
 
 		public void ConfirmDelete()
@@ -65,11 +67,6 @@ namespace ChainReactionBindings.TestBase.Pages
 		public IWebElement GetCountItems(HtmlElement el)
 		{
 			var element = el.FindElement(By.CssSelector(CountItemsId));
-			return element;
-		}
-		public IWebElement DeleteWishlist(HtmlElement el)
-		{
-			var element = el.FindElement(By.ClassName("wishlist_remove"));
 			return element;
 		}
 	}
