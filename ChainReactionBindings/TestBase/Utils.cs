@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.TestBase
@@ -37,6 +38,7 @@ namespace ChainReactionBindings.TestBase
 			for (int i = 0; i < count; i++)
 			{
 				Random r = new Random();
+				Thread.Sleep(TimeSpan.FromMilliseconds(500));
 				int s = r.Next(0, 9);
 				numberForEmail += s.ToString();
 			}
