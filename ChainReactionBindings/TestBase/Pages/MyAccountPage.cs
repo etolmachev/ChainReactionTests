@@ -4,7 +4,7 @@ namespace ChainReactionBindings.TestBase.Pages
 {
     public class MyAccountPage : BasePage
     {
-        public string PersonalInfoId = "span.content_head";
+        private string PersonalInfoId = "span.content_head";
 
         public HtmlElement PersonalInfoElement;
 

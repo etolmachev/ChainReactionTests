@@ -4,24 +4,26 @@ namespace ChainReactionBindings.TestBase.Pages
 {
 	class ItemDetailsPage : BasePage
 	{
-		public string ProductTitleId = "li.crcPDPTitle";
-		public string PriceId = "li.crcPDPPriceCurrent";
-		public string RatingId = ".crcRatingOutOf5";
-		public string ColourId = "div.crcPDPVariantColour span.crcPDPVariantLabelSelected";
-		public string WheelSizeId = "div.crcPDPVariantDefault span.crcPDPVariantLabelSelected";
-		public string BottleSizeId = ".crcPDPVariantLabelSelected";
-		public string NewOptionId = "//div[@class='crcPDPVariantOption' and position()=2]";
-		public string NewFrameSizeId = "//div[@class='crcPDPVariant crcPDPVariantDefault']/span[@class='crcPDPVariantLabelSelected']";
-		public string NewColourId = "//div[@class='crcPDPVariant crcPDPVariantColour']/span[@class='crcPDPVariantLabelSelected']";
-		public string NewSizeId = "//div[@class='crcPDPVariant crcPDPVariantSize']/span[@class='crcPDPVariantLabelSelected']";
-		public string CustomerReviewsId = ".crcRatingReviewAll";
-		public string CountReviewsId = "div#BVRRCustomNumReviews span.BVRRCount.BVRRNonZeroCount";
-		public string SizeChartId = ".crcPDPVariantSizeGuide";
-		public string TopLogoId = "#toplogo";
-		public string ContainerId = ".pdpcontent_container";
-		public string EmptyReviewsId = "#crcPDPBottomTabsReviewsLink";
-		public string WriteReviewButtonId = "//div[@class='BVRRDisplayContentNoReviews']/a[@name='BV_TrackingTag_Review_Display_WriteReview']";
-		public string NoReviewsId = "#BVRRDisplayContentNoReviewsID";
+		private string ProductTitleId = "li.crcPDPTitle";
+		private string PriceId = "li.crcPDPPriceCurrent";
+		private string RatingId = ".crcRatingOutOf5";
+		private string ColourId = "div.crcPDPVariantColour span.crcPDPVariantLabelSelected";
+		private string WheelSizeId = "div.crcPDPVariantDefault span.crcPDPVariantLabelSelected";
+		private string BottleSizeId = ".crcPDPVariantLabelSelected";
+		private string NewOptionId = "//div[@class='crcPDPVariantOption' and position()=2]";
+		private string NewFrameSizeId = "//div[@class='crcPDPVariant crcPDPVariantDefault']/span[@class='crcPDPVariantLabelSelected']";
+		private string NewColourId = "//div[@class='crcPDPVariant crcPDPVariantColour']/span[@class='crcPDPVariantLabelSelected']";
+		private string NewSizeId = "//div[@class='crcPDPVariant crcPDPVariantSize']/span[@class='crcPDPVariantLabelSelected']";
+		private string CustomerReviewsId = ".crcRatingReviewAll";
+		private string CountReviewsId = "div#BVRRCustomNumReviews span.BVRRCount.BVRRNonZeroCount";
+		private string SizeChartId = ".crcPDPVariantSizeGuide";
+		private string TopLogoId = "#toplogo";
+		private string ContainerId = ".pdpcontent_container";
+		private string EmptyReviewsId = "#crcPDPBottomTabsReviewsLink";
+		private string WriteReviewButtonId = "//div[@class='BVRRDisplayContentNoReviews']/a[@name='BV_TrackingTag_Review_Display_WriteReview']";
+		private string NoReviewsId = "#BVRRDisplayContentNoReviewsID";
+		private string AddToWishlistButtonId = ".crcLoggedIn";
+		
 
 		public HtmlElement ProductTitileElement;
 		public HtmlElement PriceElement;
@@ -41,6 +43,8 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement NewColourElement;
 		public HtmlElement NewSizeElement;
 		public HtmlElement NoReviewsElement;
+		public HtmlElement AddToWishlistButtonElement;
+		
 		public ItemDetailsPage()
 		{
 			ProductTitileElement = new HtmlElement(By.CssSelector(ProductTitleId));
@@ -61,6 +65,8 @@ namespace ChainReactionBindings.TestBase.Pages
 			CountReviewsElement = new HtmlElement(By.CssSelector(CountReviewsId));
 			NoReviewsElement = new HtmlElement(By.CssSelector(NoReviewsId));
 			WriteReviewButtonElement = new HtmlElement(By.XPath(WriteReviewButtonId));
+			AddToWishlistButtonElement = new HtmlElement(By.CssSelector(AddToWishlistButtonId));
+			
 		}
 
 		public bool ItemDetailsPageLoaded()
@@ -86,6 +92,11 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void OpenEmptyReviews()
 		{
 			EmptyReviewsElement.Click();
+		}
+
+		public void AddToWishlist()
+		{
+			AddToWishlistButtonElement.Click();
 		}
 	}
 }

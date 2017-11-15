@@ -14,7 +14,7 @@ Scenario:  Verify Register with all fields
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "naccexam+{{5::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |
@@ -142,7 +142,7 @@ Scenario:  Verify Register without First Name
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newaccexam+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           |                    |
@@ -168,7 +168,7 @@ Scenario:  Verify Register without Last Name
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newaccexam+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |
@@ -194,7 +194,7 @@ Scenario:  Verify Register without matching Email and Confirm Email
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newaccexam+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |
@@ -220,7 +220,7 @@ Scenario:  Verify Register without Password
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newaccexam+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |
@@ -246,7 +246,7 @@ Scenario:  Verify Register without Confirm Password
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newaccexam+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |
@@ -272,7 +272,7 @@ Scenario:  Verify Register with short Password
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "newaccexample+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newaccexam+{{3::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |

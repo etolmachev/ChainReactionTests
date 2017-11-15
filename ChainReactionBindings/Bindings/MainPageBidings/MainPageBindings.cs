@@ -35,5 +35,6 @@ namespace ChainReactionBindings.Bindings.MainPageBidings
 		{
 			page.SearchClick();
 		}
+
 	}
 }
