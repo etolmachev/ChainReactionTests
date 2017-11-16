@@ -86,5 +86,38 @@ namespace ChainReactionBindings.Bindings
 		{
 			page.ConfirmDelete();
 		}
+
+		[Then(@"I see empty wishlist with message ""(.*)""")]
+		public void ThenISeeEmptyWishlist(string message)
+		{
+			Assert.AreEqual(message, page.EmptyWishlistElement.Text);
+		}
+
+		[Then(@"I see ""(.*)"" items in wishlist")]
+		public void SeeItemsInWishlist(int count)
+		{
+			Assert.AreEqual(count, page.WishlistContainerElement.FindElements(By.ClassName("wishlist_product_container")).Count);
+		}
+
+		[When(@"I click Remove button on item with name ""(.*)""")]
+		public void ClickRemoveButtonOnItemWithName(string name)
+		{
+			var el = page.FindItem(name);
+			page.RemoveItem(el);
+		}
+
+		[When(@"I enter quantity ""(.*)"" in first item and click Update button")]
+		public void EnterQuantityInFirstItemAndClickUpdateButton(string count)
+		{
+			page.QuantityElement.Clear();
+			page.QuantityElement.SendKeys(count);
+			page.UpdateQuantities();
+		}
+
+		[Then(@"I see ""(.*)"" quantity")]
+		public void SeeQuantity(string count)
+		{
+			Assert.AreEqual(count,page.QuantityElement.GetAttribute("value"));
+		}
 	}
 }

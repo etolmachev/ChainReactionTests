@@ -14,7 +14,7 @@ Scenario: Verify search by name of goods
 	When I enter "bike" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "1210 results for 'bike'" message on search page
+	And I see "1222 results for 'bike'" message on search page
 
 Scenario: Verify equal names of search text and result text
 
@@ -56,7 +56,7 @@ Scenario Template: Verify equal names of search text and result text - by name
 		| SearchValue | Amount | ResultValue |
 		| animal bike | 17     | Animal Bike |
 		| ANIMAL BikE | 17     | Animal Bike |
-		|   auto      |   4    |      Auto   |
+		|   auto      |   3    |      Auto   |
 
 #Need to implement
 Scenario Template: Verify equal names of search text and result text - by category

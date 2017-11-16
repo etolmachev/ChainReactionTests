@@ -12,6 +12,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		private string ItemsTitleId = "h4";
 		private string PriceId = ".fromamt";
 		private string DeleteConfirmButtonId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.deleteGiftlist']";
+		private string WishlistContainerId = ".wishlist_container";
+		private string FindItemId = "//div[@class='wishlist_product_container' and ./div/ul/li/a/h4[text()='{0}']]";
+		private string QuantityId = "#updateQtygi22350114";
+		private string UpdateQuantitiesId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.updateGiftlistItems'";
 
 		public HtmlElement WishlistHeaderElement;
 		public HtmlElement EmptyWishlistElement;
@@ -20,6 +24,9 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement ItemsTitleElement;
 		public HtmlElement PriceElement;
 		public HtmlElement DeleteConfirmElement;
+		public HtmlElement WishlistContainerElement;
+		public HtmlElement QuantityElement;
+		public HtmlElement UpdateQuantitiesElement;
 
 		public WishlistPage()
 		{
@@ -30,6 +37,9 @@ namespace ChainReactionBindings.TestBase.Pages
 			ItemsTitleElement = new HtmlElement(By.CssSelector(ItemsTitleId));
 			PriceElement = new HtmlElement(By.CssSelector(PriceId));
 			DeleteConfirmElement = new HtmlElement(By.CssSelector(DeleteConfirmButtonId));
+			WishlistContainerElement = new HtmlElement(By.CssSelector(WishlistContainerId));
+			QuantityElement = new HtmlElement(By.CssSelector(QuantityId));
+			UpdateQuantitiesElement = new HtmlElement(By.CssSelector(UpdateQuantitiesId));
 		}
 
 		public bool WishlistPageLoaded()
@@ -68,6 +78,23 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			var element = el.FindElement(By.CssSelector(CountItemsId));
 			return element;
+		}
+
+		public HtmlElement FindItem(string name)
+		{
+			var element = new HtmlElement(By.XPath(string.Format(FindItemId, name)));
+			return element;
+		}
+
+		public void RemoveItem(HtmlElement el)
+		{
+			var element = el.FindElement(By.ClassName("remove_wishlist1"));
+			element.Click();
+		}
+
+		public void UpdateQuantities()
+		{
+			UpdateQuantitiesElement.Click();
 		}
 	}
 }

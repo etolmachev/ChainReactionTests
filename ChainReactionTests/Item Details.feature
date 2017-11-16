@@ -35,9 +35,9 @@ Scenario Template: Verify Item Details of bike product
 		| Wheel Size | <WheelSize> |
 
 	Scenarios: 
-		| Name                                                     | Price         | Rating  | Colour         | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.6 / 5 | Black - Grey   | 27.5" (650b) |
-		| Intense Spider 275C NM Expert Bike                         | 171999.00 RUB - 191999.00 RUB | 5 / 5 | Silver | 27.5" (650b) |
+		| Name                                                     | Price                         | Rating  | Colour       | WheelSize    |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB                 | 4.6 / 5 | Black - Grey | 27.5" (650b) |
+		| Intense Spider 275C NM Expert Bike                       | 171999.00 RUB - 191999.00 RUB | 5 / 5   | Silver       | 27.5" (650b) |
 
 Scenario Template: Verify Item Details of water bottle product
 
@@ -54,9 +54,9 @@ Scenario Template: Verify Item Details of water bottle product
 	| Size    |  <Size>  |
 
 	Scenarios:
-	| Name                             | Price                    | Rating | Size  |
-	| Camelbak Podium Bottle 710ml     | 489.49 RUB               | 4.7 / 5    | 710ml |
-	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.1 / 5    | 610ml |
+	| Name                             | Price                    | Rating  | Size  |
+	| Camelbak Podium Bottle 710ml     | 489.49 RUB               | 4.7 / 5 | 710ml |
+	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.1 / 5 | 610ml |
 
 Scenario Template: Verify change options of products
 
@@ -76,7 +76,7 @@ Scenario Template: Verify change options of products
 		| Name                                                     | Option     | Value        |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 43cm (17")   |
 		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Carbon |
-		| Gore Bike Wear Element Urban GWS Hoody AW17              | Size       | M            |
+		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | M            |
 
 Scenario Template: Verify Reviews summary of product
 	When I enter "<Product>" in the search text
@@ -111,9 +111,9 @@ Scenario Template: Verify product without rating summary and reviewes
 	And I see Write A Review button
 
 	Scenarios: 
-		| Product                                     |
-		| Animal Bikes T1 BMX Tyre                    |
-		| Gore Bike Wear Element Urban GWS Hoody AW17 |
+		| Product                                |
+		| Animal Bikes T1 BMX Tyre               |
+		| Under Armour Streaker 1-4 Zip Top AW16 |
 
 Scenario Template: Verify open Size Chart for product
 	When I enter "<Product>" in the search text
