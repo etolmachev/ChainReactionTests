@@ -53,7 +53,7 @@ Scenario: Verify add good in wishlist
 	Then I see "1" wishlists
 	And I see "1" items in wishlist with name "My Wishlist"
 
-	#update?
+
 Scenario: Verify see details of goods in wishlist
 	When I set following parameters on Sign In page
 		| Name     | Value                |
@@ -68,6 +68,7 @@ Scenario: Verify see details of goods in wishlist
 
 	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
 	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	Then I wait for "1" seconds
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded

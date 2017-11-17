@@ -129,4 +129,4 @@ Scenario Template: Verify open Size Chart for product
 	Scenarios: 
 		| Product                                                  |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 |
-		| Gore Bike Wear Element Urban GWS Hoody AW17              |
+		| Under Armour Streaker 1-4 Zip Top AW16                   |
