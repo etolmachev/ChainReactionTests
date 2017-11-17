@@ -12,6 +12,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string SelectLanguageId = "select[name='/atg/userprofiling/ProfileFormHandler.value.language']";
 		public string UpdateButtonId = "input[name='/atg/userprofiling/ProfileFormHandler.updateLocaleInfo']";
 		public string WishlistButtonId = ".crcHeaderWishlist";
+		public string BasketId = ".cart_container";
 
 		public HtmlElement ShopByCategoryElement;
 		public HtmlElement BrandsElement;
@@ -21,6 +22,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public SelectElement EnglishLanguagElement;
 		public HtmlElement UpdateButtonElement;
 		public HtmlElement WishlistButtonElement;
+		public HtmlElement BasketElement;
 
 		public TopMenu()
 		{
@@ -29,6 +31,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			SignInElement = new HtmlElement(By.CssSelector(SignInId));
 			RubRubElement = new HtmlElement(By.CssSelector(RubRubId));
 			WishlistButtonElement = new HtmlElement(By.CssSelector(WishlistButtonId));
+			BasketElement = new HtmlElement(By.CssSelector(BasketId));
 		}
 
 		public void ClickSignIn()
@@ -43,9 +46,13 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			UpdateButtonElement.Click();
 		}
-		public void WishlistClick()
+		public void OpenWishlist()
 		{
 			WishlistButtonElement.Click();
+		}
+		public void OpenBasket()
+		{
+			BasketElement.Click();
 		}
 	}
 }

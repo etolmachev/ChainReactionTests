@@ -35,22 +35,20 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see ""(.*)"" wishlists")]
 		public void SeeWishlistInListOfWishlist(int count)
 		{
-			Assert.AreEqual(count, page.TableOfWishlistElement.FindElements(By.ClassName("wishlist_col2")).Count);
+			Assert.AreEqual(count, page.GetWishlists());
 		}
 
 		[Then(@"I see ""(.*)"" items in wishlist with name ""(.*)""")]
 		public void SeeItemsInWishlistWithName(string count, string name)
 		{
-			var el = page.FindWishlist(name);
-			var countItems = page.GetCountItems(el);
+			var countItems = page.GetCountItems(name);
 			Assert.AreEqual(count, countItems.Text);
 		}
 
 		[When(@"I click View List button on wishlist with name ""(.*)""")]
 		public void ClickViewListButtonOnWishlistWithName(string name)
 		{
-			var el = page.FindWishlist(name);
-			page.ViewList(el);
+			page.ViewList(name);
 		}
 
 		[Then(@"I see details of goods in wishlist")]
@@ -77,8 +75,7 @@ namespace ChainReactionBindings.Bindings
 		[When(@"I click Delete button on wishlist with name ""(.*)""")]
 		public void ClickDeleteButtonOnWishlistWithName(string name)
 		{
-			var el = page.FindWishlist(name);
-			page.DeleteWishlist(el);
+			page.DeleteWishlist(name);
 		}
 
 		[When(@"I click Confirm button")]
@@ -96,14 +93,13 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see ""(.*)"" items in wishlist")]
 		public void SeeItemsInWishlist(int count)
 		{
-			Assert.AreEqual(count, page.WishlistContainerElement.FindElements(By.ClassName("wishlist_product_container")).Count);
+			Assert.AreEqual(count, page.GetItemsFromWishlist());
 		}
 
 		[When(@"I click Remove button on item with name ""(.*)""")]
 		public void ClickRemoveButtonOnItemWithName(string name)
 		{
-			var el = page.FindItem(name);
-			page.RemoveItem(el);
+			page.RemoveItem(name);
 		}
 
 		[When(@"I enter quantity ""(.*)"" in first item and click Update button")]

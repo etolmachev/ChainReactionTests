@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using System.CodeDom;
+using System.Collections.Generic;
+using OpenQA.Selenium;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -47,20 +49,16 @@ namespace ChainReactionBindings.TestBase.Pages
 			return PageLoaded(WishlistHeaderElement);
 		}
 
-		public HtmlElement FindWishlist(string name)
+		public void ViewList(string name)
 		{
-			var element = new HtmlElement(By.XPath(string.Format(FindWishlistId,name)));
-			return element;
-		}
-
-		public void ViewList(HtmlElement el)
-		{
+			var el = new HtmlElement(By.XPath(string.Format(FindWishlistId, name)));
 			var element = el.FindElement(By.ClassName("blue_btn2"));
 			element.Click();
 		}
 
-		public void DeleteWishlist(HtmlElement el)
+		public void DeleteWishlist(string name)
 		{
+			var el = new HtmlElement(By.XPath(string.Format(FindWishlistId, name)));
 			var element = el.FindElement(By.ClassName("wishlist_remove"));
 			element.Click();
 		}
@@ -71,23 +69,17 @@ namespace ChainReactionBindings.TestBase.Pages
 		}
 		public IWebElement GetViewButton(HtmlElement el)
 		{
-			var element = el.FindElement(By.ClassName("blue_btn2"));
-			return element;
+			return el.FindElement(By.ClassName("blue_btn2"));
 		}
-		public IWebElement GetCountItems(HtmlElement el)
+		public IWebElement GetCountItems(string name)
 		{
-			var element = el.FindElement(By.CssSelector(CountItemsId));
-			return element;
-		}
-
-		public HtmlElement FindItem(string name)
-		{
-			var element = new HtmlElement(By.XPath(string.Format(FindItemId, name)));
-			return element;
+			var el = new HtmlElement(By.XPath(string.Format(FindWishlistId, name)));
+			return el.FindElement(By.CssSelector(CountItemsId));
 		}
 
-		public void RemoveItem(HtmlElement el)
+		public void RemoveItem(string name)
 		{
+			var el = new HtmlElement(By.XPath(string.Format(FindItemId, name)));
 			var element = el.FindElement(By.ClassName("remove_wishlist1"));
 			element.Click();
 		}
@@ -95,6 +87,16 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void UpdateQuantities()
 		{
 			UpdateQuantitiesElement.Click();
+		}
+
+		public int GetItemsFromWishlist()
+		{
+			return WishlistContainerElement.FindElements(By.ClassName("wishlist_product_container")).Count;
+		}
+
+		public int GetWishlists()
+		{
+			return TableOfWishlistElement.FindElements(By.ClassName("wishlist_col2")).Count;
 		}
 	}
 }
