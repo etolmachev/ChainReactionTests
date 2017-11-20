@@ -98,9 +98,9 @@ Scenario: Verify create new wishlist
 #given account with 1 wishlist
 Scenario: Verify add good in wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value                |
-		| email    | otbtguukb@emltmp.com |
-		| password | 123123123            |
+		| Name     | Value               |
+		| email    | qvxzkgmj@emlhub.com |
+		| password | 1234rewq            |
 	And I click Sign In button
 	Then I see the main page is loaded
 
@@ -128,7 +128,7 @@ Scenario: Verify add good in wishlist
 	Then I see "1" wishlists
 	And I see "1" items in wishlist with name "My Wishlist"
 
-#given account with 2 wishlists
+#given account without wishlist
 Scenario: Verify select wishlist to add new good
 	When I set following parameters on Sign In page
 		| Name     | Value                |
@@ -205,9 +205,9 @@ Scenario: Verify select wishlist to add new good
 #given account with 1 wishlist
 Scenario: Verify see details of goods in wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value                |
-		| email    | otbtguukb@emltmp.com |
-		| password | 123123123            |
+		| Name     | Value               |
+		| email    | qvxzkgmj@emlhub.com |
+		| password | 1234rewq            |
 	And I click Sign In button
 	Then I see the main page is loaded
 
@@ -242,7 +242,7 @@ Scenario: Verify see details of goods in wishlist
 	| Title   | Camelbak Podium Bottle 710ml |
 	| Price   | From RUB489.49               |
 
-#given account with 1 wishlist
+#given account without wishlist
 Scenario: Verify delete wishilist
 	When I set following parameters on Sign In page
 		| Name     | Value                |

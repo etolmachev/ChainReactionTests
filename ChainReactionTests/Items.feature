@@ -23,9 +23,9 @@ Background:
 
 Scenario: Verify add good in wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value                |
-		| email    | otbtguukb@emltmp.com |
-		| password | 123123123            |
+		| Name     | Value               |
+		| email    | qvxzkgmj@emlhub.com |
+		| password | 1234rewq            |
 	And I click Sign In button
 	Then I see the main page is loaded
 
@@ -56,9 +56,9 @@ Scenario: Verify add good in wishlist
 
 Scenario: Verify see details of goods in wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value                |
-		| email    | otbtguukb@emltmp.com |
-		| password | 123123123            |
+		| Name     | Value               |
+		| email    | qvxzkgmj@emlhub.com |
+		| password | 1234rewq            |
 	And I click Sign In button
 	Then I see the main page is loaded
 
@@ -96,9 +96,9 @@ Scenario: Verify see details of goods in wishlist
 
 Scenario: Verify delete items from wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value                |
-		| email    | otbtguukb@emltmp.com |
-		| password | 123123123            |
+		| Name     | Value               |
+		| email    | qvxzkgmj@emlhub.com |
+		| password | 1234rewq            |
 	And I click Sign In button
 	Then I see the main page is loaded
 
@@ -171,9 +171,9 @@ Scenario: Verify see empty wishlist
 
 Scenario: Verify update quantity on item in wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value                |
-		| email    | otbtguukb@emltmp.com |
-		| password | 123123123            |
+		| Name     | Value               |
+		| email    | qvxzkgmj@emlhub.com |
+		| password | 1234rewq            |
 	And I click Sign In button
 	Then I see the main page is loaded
 
