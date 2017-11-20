@@ -16,7 +16,7 @@ namespace ChainReactionBindings.CommonBindings
 			if (!Browser.IsInitialized)
 			{
 				Browser.BuildBrowser();
-				Browser.Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
+				Browser.Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(20));
 			}
 		}
 

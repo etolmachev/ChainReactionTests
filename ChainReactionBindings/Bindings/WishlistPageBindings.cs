@@ -35,22 +35,20 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see ""(.*)"" wishlists")]
 		public void SeeWishlistInListOfWishlist(int count)
 		{
-			Assert.AreEqual(count, page.TableOfWishlistElement.FindElements(By.ClassName("wishlist_col2")).Count);
+			Assert.AreEqual(count, page.GetWishlists());
 		}
 
 		[Then(@"I see ""(.*)"" items in wishlist with name ""(.*)""")]
 		public void SeeItemsInWishlistWithName(string count, string name)
 		{
-			var el = page.FindWishlist(name);
-			var countItems = page.GetCountItems(el);
+			var countItems = page.GetCountItems(name);
 			Assert.AreEqual(count, countItems.Text);
 		}
 
 		[When(@"I click View List button on wishlist with name ""(.*)""")]
 		public void ClickViewListButtonOnWishlistWithName(string name)
 		{
-			var el = page.FindWishlist(name);
-			page.ViewList(el);
+			page.ViewList(name);
 		}
 
 		[Then(@"I see details of goods in wishlist")]
@@ -77,14 +75,45 @@ namespace ChainReactionBindings.Bindings
 		[When(@"I click Delete button on wishlist with name ""(.*)""")]
 		public void ClickDeleteButtonOnWishlistWithName(string name)
 		{
-			var el = page.FindWishlist(name);
-			page.DeleteWishlist(el);
+			page.DeleteWishlist(name);
 		}
 
 		[When(@"I click Confirm button")]
 		public void WhenIClickConfirmButton()
 		{
 			page.ConfirmDelete();
+		}
+
+		[Then(@"I see empty wishlist with message ""(.*)""")]
+		public void ThenISeeEmptyWishlist(string message)
+		{
+			Assert.AreEqual(message, page.EmptyWishlistElement.Text);
+		}
+
+		[Then(@"I see ""(.*)"" items in wishlist")]
+		public void SeeItemsInWishlist(int count)
+		{
+			Assert.AreEqual(count, page.GetItemsFromWishlist());
+		}
+
+		[When(@"I click Remove button on item with name ""(.*)""")]
+		public void ClickRemoveButtonOnItemWithName(string name)
+		{
+			page.RemoveItem(name);
+		}
+
+		[When(@"I enter quantity ""(.*)"" in first item and click Update button")]
+		public void EnterQuantityInFirstItemAndClickUpdateButton(string count)
+		{
+			page.QuantityElement.Clear();
+			page.QuantityElement.SendKeys(count);
+			page.UpdateQuantities();
+		}
+
+		[Then(@"I see ""(.*)"" quantity")]
+		public void SeeQuantity(string count)
+		{
+			Assert.AreEqual(count,page.QuantityElement.GetAttribute("value"));
 		}
 	}
 }

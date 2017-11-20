@@ -98,7 +98,7 @@ this.FeatureBackground();
 #line 16
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
- testRunner.And("I see \"1210 results for \'bike\'\" message on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"1219 results for \'bike\'\" message on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -176,7 +176,7 @@ this.FeatureBackground();
         [NUnit.Framework.DescriptionAttribute("Verify equal names of search text and result text - by name")]
         [NUnit.Framework.TestCaseAttribute("animal bike", "17", "Animal Bike", null)]
         [NUnit.Framework.TestCaseAttribute("ANIMAL BikE", "17", "Animal Bike", null)]
-        [NUnit.Framework.TestCaseAttribute("auto", "4", "Auto", null)]
+        [NUnit.Framework.TestCaseAttribute("auto", "3", "Auto", null)]
         public virtual void VerifyEqualNamesOfSearchTextAndResultText_ByName(string searchValue, string amount, string resultValue, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify equal names of search text and result text - by name", exampleTags);
@@ -192,9 +192,9 @@ this.FeatureBackground();
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
  testRunner.And(string.Format("I see \"{0} results for \'{1}\'\" message on search page", amount, searchValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 51
  testRunner.And(string.Format("I see \"{0}\" items on search page", amount), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 52
  testRunner.And(string.Format("I see items name include \"{0}\"", resultValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -207,21 +207,21 @@ this.FeatureBackground();
         public virtual void VerifyEqualNamesOfSearchTextAndResultText_ByCategory(string searchValue, string amount, string resultValue, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify equal names of search text and result text - by category", exampleTags);
-#line 62
+#line 61
 this.ScenarioSetup(scenarioInfo);
 #line 3
 this.FeatureBackground();
-#line 63
+#line 62
  testRunner.When(string.Format("I enter \"{0}\" in the search text", searchValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 63
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
+#line 64
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 66
+#line 65
  testRunner.And(string.Format("I see \"{0}\" on search page", resultValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 67
  testRunner.And(string.Format("I see \"{0}\" items on search page", amount), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 69
+#line 68
  testRunner.And(string.Format("I see items name include \"{0}\"", resultValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

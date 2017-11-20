@@ -29,7 +29,7 @@ namespace ChainReactionBindings.TestBase
 			Driver.Quit();
 		}
 
-		public static void WaitReadyState(int timeout = 30)
+		public static void WaitReadyState(int timeout = 50)
 		{
 			int t = timeout;
 			while (!IsReadyState() || t == 0)

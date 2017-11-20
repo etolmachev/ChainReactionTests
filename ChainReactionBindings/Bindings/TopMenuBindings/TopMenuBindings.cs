@@ -35,7 +35,13 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 		[When(@"I click Wishlist button on Top menu")]
 		public void WhenIClickWishlistButton()
 		{
-			page.WishlistClick();
+			page.OpenWishlist();
+		}
+
+		[When(@"I click Basket button")]
+		public void ClickBasketButton()
+		{
+			page.OpenBasket();
 		}
 
 	}
