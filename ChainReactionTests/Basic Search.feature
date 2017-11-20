@@ -48,7 +48,6 @@ Scenario Template: Verify equal names of search text and result text - by name
 	Then I see the search page is loaded
 	And I see "<Amount> results for '<SearchValue>'" message on search page
 
-	# Need to fix the following step to work with more than 3 items (one row)
 	And I see "<Amount>" items on search page
 	And I see items name include "<ResultValue>"
 
