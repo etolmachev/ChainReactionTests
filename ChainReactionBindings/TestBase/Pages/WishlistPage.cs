@@ -16,7 +16,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		private string DeleteConfirmButtonId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.deleteGiftlist']";
 		private string WishlistContainerId = ".wishlist_container";
 		private string FindItemId = "//div[@class='wishlist_product_container' and ./div/ul/li/a/h4[text()='{0}']]";
-		private string QuantityId = "#updateQtygi22350114";
+		private string QuantityId = ".wishlist_qty_desired input";
 		private string UpdateQuantitiesId = "input[name='/atg/commerce/gifts/GiftlistFormHandler.updateGiftlistItems'";
 
 		public HtmlElement WishlistHeaderElement;
