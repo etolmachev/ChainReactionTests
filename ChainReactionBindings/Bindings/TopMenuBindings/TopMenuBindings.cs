@@ -1,6 +1,8 @@
 ﻿using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using TechTalk.SpecFlow;
 
@@ -44,5 +46,16 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 			page.OpenBasket();
 		}
 
+		[When(@"I hover to Basket button")]
+		public void HoverToBasketButon()
+		{
+			page.Hover();
+		}
+
+		[Then(@"I see basket popup is open")]
+		public void SeeBasketPopupIsOpen()
+		{
+			Assert.IsTrue(page.CloseBasketElement.Displayed);
+		}
 	}
 }
