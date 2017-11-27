@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using TechTalk.SpecFlow;
+using System.Threading;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -167,6 +168,7 @@ namespace ChainReactionBindings.Bindings
 		public void ClickAddToBasketButtonOnItemPage()
 		{
 			page.AddToBasket();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
 		}
 
 		[When(@"I set ""(.*)"" as quantity on item page")]

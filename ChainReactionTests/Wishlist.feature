@@ -52,7 +52,7 @@ Scenario: Verify unable to add good in nonexisten wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I click Add To List button
@@ -79,7 +79,7 @@ Scenario: Verify create new wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "My Wishlist" in the create text
@@ -115,7 +115,7 @@ Scenario: Verify add good in wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -148,7 +148,7 @@ Scenario: Verify select wishlist to add new good
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "First Wishlist" in the create text
@@ -161,7 +161,7 @@ Scenario: Verify select wishlist to add new good
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "Second Wishlist" in the create text
@@ -181,7 +181,7 @@ Scenario: Verify select wishlist to add new good
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "2.4" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "Second Wishlist"
@@ -222,7 +222,7 @@ Scenario: Verify see details of goods in wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -262,7 +262,7 @@ Scenario: Verify delete wishilist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Carbon" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "My Wishlist" in the create text

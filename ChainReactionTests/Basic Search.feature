@@ -14,7 +14,7 @@ Scenario: Verify search by name of goods
 	When I enter "bike" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "1219 results for 'bike'" message on search page
+	And I see "1229 results for 'bike'" message on search page
 
 Scenario: Verify equal names of search text and result text
 

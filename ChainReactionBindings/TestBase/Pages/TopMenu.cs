@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Threading;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -69,10 +71,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			HtmlElement element = new HtmlElement(By.CssSelector("#miniCartDiv"));
 			Actions act = new Actions(Browser.Driver);
-			act.MoveToElement(element.FindElement(By.ClassName("cart_container")));
+			var hover = element.FindElement(By.ClassName("cart_container"));
+			act.MoveToElement(hover);
 			act.Build();
 			act.Perform();
-
 		}
 	}
 }

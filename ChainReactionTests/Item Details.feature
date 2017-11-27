@@ -36,7 +36,7 @@ Scenario Template: Verify Item Details of bike product
 
 	Scenarios: 
 		| Name                                                     | Price                         | Rating  | Colour       | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB                 | 4.6 / 5 | Black - Grey | 27.5" (650b) |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB                 | 4.7 / 5 | Black - Grey | 27.5" (650b) |
 		| Intense Spider 275C NM Expert Bike                       | 171999.00 RUB - 191999.00 RUB | 5 / 5   | Silver       | 27.5" (650b) |
 
 Scenario Template: Verify Item Details of water bottle product
@@ -56,7 +56,7 @@ Scenario Template: Verify Item Details of water bottle product
 	Scenarios:
 	| Name                             | Price                    | Rating  | Size  |
 	| Camelbak Podium Bottle 710ml     | 489.49 RUB               | 4.7 / 5 | 710ml |
-	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1258.49 RUB | 4.1 / 5 | 610ml |
+	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1468.49 RUB | 4.1 / 5 | 610ml |
 
 Scenario Template: Verify change options of products
 
@@ -67,14 +67,14 @@ Scenario Template: Verify change options of products
 	When I click on product with name "<Name>" from search results
 	Then I see the product page for "<Name>" is loaded
 
-	When I select second option on product page
+	When  I select option "<Value>" on product page
 	Then I see new details on product page
 		| Details  | Value    |
 		| <Option> | <Value>  |
 
 	Scenarios: 
 		| Name                                                     | Option     | Value        |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 43cm (17")   |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 48cm (19")   |
 		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Carbon |
 		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | M            |
 
@@ -94,7 +94,7 @@ Scenario Template: Verify Reviews summary of product
 
 	Scenarios: 
 		| Product                                                  | Count | Rating  |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 5     | 4.6 / 5 |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 6     | 4.7 / 5 |
 		| Pedros Chain Pig Machine Kit                             | 4     | 2.8 / 5 |
 	 
 Scenario Template: Verify product without rating summary and reviewes
