@@ -115,5 +115,17 @@ namespace ChainReactionBindings.Bindings
 		{
 			Assert.AreEqual(count,page.QuantityElement.GetAttribute("value"));
 		}
+
+		[When(@"I click Add To Basket button for item ""(.*)"" on wishlist page")]
+		public void ClickAddToBasketButtonForItemOnWishlistPage(string name)
+		{
+			page.AddToBasket(name);
+		}
+
+		[Then(@"I make sure that exist wishlist with name ""(.*)""")]
+		public void MakeSureThatExistWishlistWithName(string name)
+		{
+			page.FindWishlist(name);
+		}
 	}
 }

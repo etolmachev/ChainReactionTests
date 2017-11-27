@@ -79,6 +79,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Bindings\BasketPageBindings.cs" />
     <Compile Include="Bindings\CreateAccountPageBindings.cs" />
     <Compile Include="Bindings\ItemDetailsPageBindings.cs" />
     <Compile Include="Bindings\MainPageBidings\MainPageBindings.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="TestBase\Cleanup.cs" />
     <Compile Include="TestBase\HtmlElement.cs" />
     <Compile Include="TestBase\Pages\BasePage.cs" />
+    <Compile Include="TestBase\Pages\BasketPage.cs" />
     <Compile Include="TestBase\Pages\CreateAccountPage.cs" />
     <Compile Include="TestBase\Pages\ItemDetailsPage.cs" />
     <Compile Include="TestBase\Pages\MainPage.cs" />

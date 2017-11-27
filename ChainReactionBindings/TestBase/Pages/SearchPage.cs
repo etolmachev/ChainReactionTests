@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -10,6 +11,8 @@ namespace ChainReactionBindings.TestBase.Pages
 		private string NotFoundMessageId = ".page_head";
 		private string CategoryResultId = ".page_heading";
 		private string ProductDescriptionId = "li.description";
+		private string SelectOptionId = ".selectboxit-text";
+		private string BuyButtonId = ".widget_active_btn";
 
 		public HtmlElement ViewLabelElement;
 		public HtmlElement ItemsCountElement;
@@ -17,6 +20,8 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement NotFoundMessageElement;
 		public HtmlElement CategoryResultElement;
 		public HtmlElement ProductDescriptionElement;
+		public HtmlElement SelectOptionElement;
+		public HtmlElement BuyButtonElement;
 
 		public SearchPage()
 		{
@@ -26,6 +31,8 @@ namespace ChainReactionBindings.TestBase.Pages
 			NotFoundMessageElement = new HtmlElement(By.CssSelector(NotFoundMessageId));
 			CategoryResultElement = new HtmlElement(By.CssSelector(CategoryResultId));
 			ProductDescriptionElement = new HtmlElement(By.CssSelector(ProductDescriptionId));
+			SelectOptionElement = new HtmlElement(By.CssSelector(SelectOptionId));
+			BuyButtonElement = new HtmlElement(By.CssSelector(BuyButtonId));
 		}
 
 		public bool SearchPageLoaded()
@@ -38,7 +45,16 @@ namespace ChainReactionBindings.TestBase.Pages
 		}
 		public void GoToDetails()
 		{
-			ProductDescriptionElement.Click();	
+			ProductDescriptionElement.Click();
+		}
+		public void OpenSelect()
+		{
+			SelectOptionElement.Click();
+		}
+
+		public void Buy()
+		{
+			BuyButtonElement.Click();
 		}
 	}
 }

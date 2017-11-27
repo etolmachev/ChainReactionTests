@@ -15,6 +15,8 @@ namespace ChainReactionBindings.TestBase.Pages
 		private string SuccessMessageId = ".suc_msg";
 		private string CloseButtonId = ".blue_btn.cancel";
 		private string SelectWishlistId = "select[name='/atg/commerce/gifts/GiftlistFormHandler.giftlistId'";
+		private string FindGoodId = "//tr[contains(@class,'pdp-list-item') and ./td/span[contains(text(),'{0}')]]";
+		private string ListContentId = ".list_content";
 
 		public HtmlElement AddPopupElement;
 		public HtmlElement AddToWishlistInPopElement;
@@ -27,6 +29,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement CloseButtonElement;
 		public HtmlElement SelectWishlistElement;
 		public SelectElement MyWishlistElement;
+		public HtmlElement ListContentElement;
 
 		public WishlistPopupPage()
 		{
@@ -40,6 +43,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			SuccessMessageElement = new HtmlElement(By.CssSelector(SuccessMessageId));
 			CloseButtonElement = new HtmlElement(By.CssSelector(CloseButtonId));
 			SelectWishlistElement = new HtmlElement(By.CssSelector(SelectWishlistId));
+			ListContentElement = new HtmlElement(By.CssSelector(ListContentId));
 		}
 
 		public bool WishlistPopupPageLoaded()
@@ -61,6 +65,12 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void ClosePopup()
 		{
 			CloseButtonElement.Click();
+		}
+
+		public void AddToWishlistInPop(string name)
+		{
+			var el = ListContentElement.FindElement(By.XPath(string.Format(FindGoodId, name)));
+			el.FindElement(By.CssSelector(AddToWishlistInPopId)).Click();
 		}
 	}
 }

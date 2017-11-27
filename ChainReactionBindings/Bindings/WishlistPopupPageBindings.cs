@@ -3,6 +3,7 @@ using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Support.UI;
 using TechTalk.SpecFlow;
+using System.Threading;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -15,6 +16,7 @@ namespace ChainReactionBindings.Bindings
 		public void ThenISeeAddToWishlistPopupIsLoaded()
 		{
 			page.WishlistPopupPageLoaded();
+			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
 		[When(@"I choose first good and click Add To Wishlist button")]
@@ -68,6 +70,7 @@ namespace ChainReactionBindings.Bindings
 		public void WhenIClickCloseButton()
 		{
 			page.ClosePopup();
+			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
 		[When(@"I select wishlist with name ""(.*)""")]
@@ -75,6 +78,12 @@ namespace ChainReactionBindings.Bindings
 		{
 			page.MyWishlistElement = new SelectElement(page.SelectWishlistElement);
 			page.MyWishlistElement.SelectByText(wishlist);
+		}
+
+		[When(@"I choose good with option ""(.*)"" and click Add To Wishlist button")]
+		public void ChooseGoodWithOptionAndClickAddToWishlistButton(string option)
+		{
+			page.AddToWishlistInPop(option);
 		}
 
 	}

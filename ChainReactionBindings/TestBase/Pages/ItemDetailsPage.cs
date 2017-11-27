@@ -23,7 +23,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		private string WriteReviewButtonId = "//div[@class='BVRRDisplayContentNoReviews']/a[@name='BV_TrackingTag_Review_Display_WriteReview']";
 		private string NoReviewsId = "#BVRRDisplayContentNoReviewsID";
 		private string AddToWishlistButtonId = ".crcLoggedIn";
-		
+		private string AddToBasketButtonId = ".crcButtonIconBasket";
+		private string PlusButtonId = ".plus.active";
+		private string FindOptionId = "//div[@class='crcPDPVariantOption' and @data-value='{0}']";
+		private string OptionContentId = ".crcPDPVariants";
 
 		public HtmlElement ProductTitileElement;
 		public HtmlElement PriceElement;
@@ -44,7 +47,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement NewSizeElement;
 		public HtmlElement NoReviewsElement;
 		public HtmlElement AddToWishlistButtonElement;
-		
+		public HtmlElement AddToBasketButtonElement;
+		public HtmlElement PlusButtonElement;
+		public HtmlElement OptionContentElement;
+
 		public ItemDetailsPage()
 		{
 			ProductTitileElement = new HtmlElement(By.CssSelector(ProductTitleId));
@@ -66,9 +72,11 @@ namespace ChainReactionBindings.TestBase.Pages
 			NoReviewsElement = new HtmlElement(By.CssSelector(NoReviewsId));
 			WriteReviewButtonElement = new HtmlElement(By.XPath(WriteReviewButtonId));
 			AddToWishlistButtonElement = new HtmlElement(By.CssSelector(AddToWishlistButtonId));
-			
-		}
+			AddToBasketButtonElement = new HtmlElement(By.CssSelector(AddToBasketButtonId));
+			PlusButtonElement = new HtmlElement(By.CssSelector(PlusButtonId));
+			OptionContentElement = new HtmlElement(By.CssSelector(OptionContentId));
 
+		}
 		public bool ItemDetailsPageLoaded()
 		{
 			return PageLoaded(ProductTitileElement);
@@ -97,6 +105,20 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void AddToWishlist()
 		{
 			AddToWishlistButtonElement.Click();
+		}
+
+		public void AddToBasket()
+		{
+			AddToBasketButtonElement.Click();
+		}
+		public void PlusOne()
+		{
+			PlusButtonElement.Click();
+		}
+		public void ChangeOption(string option)
+		{
+			var el = OptionContentElement.FindElement(By.XPath(string.Format(FindOptionId, option)));
+			el.Click();
 		}
 	}
 }

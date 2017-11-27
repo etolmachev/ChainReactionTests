@@ -3,6 +3,10 @@ using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Interactions;
+using ChainReactionBindings.TestBase;
+using System.Threading;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -90,6 +94,25 @@ namespace ChainReactionBindings.Bindings
 					page.GoToDetails();
 				}
 			}
+		}
+
+		[When(@"I select ""(.*)"" option in item dropdown")]
+		public void SelectOptionInItemDropdown(string option)
+		{
+			page.OpenSelect();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
+			Actions action = new Actions(Browser.Driver);
+			action.SendKeys(Keys.ArrowDown);
+			action.Perform();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
+			action.SendKeys(Keys.Enter);
+			action.Perform();
+		}
+
+		[When(@"I click Buy button on item")]
+		public void ClickBuyButtonOnItem()
+		{
+			page.Buy();
 		}
 
 	}

@@ -57,6 +57,12 @@ namespace ChainReactionBindings.Bindings
 			page.ChangeOption();
 		}
 
+		[When(@"I select option ""(.*)"" on product page")]
+		public void SelectOptionOnProductPage(string option)
+		{
+			page.ChangeOption(option);
+		}
+
 		[Then(@"I see new details on product page")]
 		public void ThenISeeNewDetailsOnProductPage(Table table)
 		{
@@ -75,10 +81,13 @@ namespace ChainReactionBindings.Bindings
 					case "Size":
 						Assert.AreEqual(page.NewSizeElement.Text, fieldValue);
 						break;
+					case "Width":
+						Assert.AreEqual(page.NewFrameSizeElement.Text, fieldValue);
+						break;
 					default:
 						throw new Exception(string.Format("Field {0} is not implemented", fieldName));
 				}
-				
+
 			}
 		}
 
@@ -154,5 +163,19 @@ namespace ChainReactionBindings.Bindings
 			page.AddToWishlist();
 		}
 
+		[When(@"I click Add To Basket button on item page")]
+		public void ClickAddToBasketButtonOnItemPage()
+		{
+			page.AddToBasket();
+		}
+
+		[When(@"I set ""(.*)"" as quantity on item page")]
+		public void SetAsQuantityOnItemPage(int count)
+		{
+			for (int i = 1; i < count; i++)
+			{
+				page.PlusOne();
+			}
+		}
 	}
 }

@@ -93,10 +93,20 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			return WishlistContainerElement.FindElements(By.ClassName("wishlist_product_container")).Count;
 		}
-
 		public int GetWishlists()
 		{
 			return TableOfWishlistElement.FindElements(By.ClassName("wishlist_col2")).Count;
+		}
+		public void AddToBasket(string name)
+		{
+			var el = new HtmlElement(By.XPath(string.Format(FindItemId, name)));
+			var element = el.FindElement(By.ClassName("blue_btn_add"));
+			element.Click();
+		}
+
+		public void FindWishlist(string name)
+		{
+			var el = new HtmlElement(By.XPath(string.Format(FindWishlistId, name)));
 		}
 	}
 }
