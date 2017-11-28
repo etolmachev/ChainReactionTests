@@ -73,10 +73,10 @@ Scenario Template: Verify change options of products
 		| <Option> | <Value>  |
 
 	Scenarios: 
-		| Name                                                     | Option     | Value        |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 48cm (19")   |
-		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Carbon |
-		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | M            |
+		| Name                                                     | Option     | Value      |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 48cm (19") |
+		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Blue |
+		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | M          |
 
 Scenario Template: Verify Reviews summary of product
 	When I enter "<Product>" in the search text

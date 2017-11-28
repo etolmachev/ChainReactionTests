@@ -113,6 +113,7 @@ namespace ChainReactionBindings.Bindings
 		public void ClickBuyButtonOnItem()
 		{
 			page.Buy();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
 		}
 
 	}

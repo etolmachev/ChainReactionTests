@@ -66,5 +66,10 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
+		[When(@"I click Logo on Top menu")]
+		public void ClickLogoOnTopMenu()
+		{
+			page.LogoClick();
+		}
 	}
 }

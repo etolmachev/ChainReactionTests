@@ -27,6 +27,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		private string PlusButtonId = ".plus.active";
 		private string FindOptionId = "//div[@class='crcPDPVariantOption' and @data-value='{0}']";
 		private string OptionContentId = ".crcPDPVariants";
+		private string CloseSizeChartButtonId = "#fancybox-close";
 
 		public HtmlElement ProductTitileElement;
 		public HtmlElement PriceElement;
@@ -50,6 +51,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement AddToBasketButtonElement;
 		public HtmlElement PlusButtonElement;
 		public HtmlElement OptionContentElement;
+		public HtmlElement CloseSizeChartButtonElement;
 
 		public ItemDetailsPage()
 		{
@@ -75,6 +77,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			AddToBasketButtonElement = new HtmlElement(By.CssSelector(AddToBasketButtonId));
 			PlusButtonElement = new HtmlElement(By.CssSelector(PlusButtonId));
 			OptionContentElement = new HtmlElement(By.CssSelector(OptionContentId));
+			CloseSizeChartButtonElement = new HtmlElement(By.CssSelector(CloseSizeChartButtonId));
 
 		}
 		public bool ItemDetailsPageLoaded()
@@ -119,6 +122,11 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			var el = OptionContentElement.FindElement(By.XPath(string.Format(FindOptionId, option)));
 			el.Click();
+		}
+
+		public void CloseSizeChart()
+		{
+			CloseSizeChartButtonElement.Click();
 		}
 	}
 }

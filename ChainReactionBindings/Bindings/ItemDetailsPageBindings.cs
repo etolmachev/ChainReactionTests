@@ -96,6 +96,7 @@ namespace ChainReactionBindings.Bindings
 		public void WhenIClickOnReadAllReviews()
 		{
 			page.SeeReviews();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
 		}
 
 		[When(@"I click on Empty Reviews")]
@@ -146,6 +147,15 @@ namespace ChainReactionBindings.Bindings
 			act.Perform();
 		}
 
+		[When(@"I scroll to name of product")]
+		public void ThenIScrollToNameOfProduct()
+		{
+			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPTitle"));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
+		}
+
 		[Then(@"I don't see Ratings summary on product page")]
 		public void ThenIDoNotSeeRatingsSummary()
 		{
@@ -179,5 +189,12 @@ namespace ChainReactionBindings.Bindings
 				page.PlusOne();
 			}
 		}
+
+		[When(@"I close Size Chart")]
+		public void CloseSizeChart()
+		{
+			page.CloseSizeChart();
+		}
+
 	}
 }

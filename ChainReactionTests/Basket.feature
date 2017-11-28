@@ -65,10 +65,10 @@ Scenario: Verify add goods with different quantity in basket
 	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
 	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
 
-	When I select second option on product page
+	When I select option "Clear Blue" on product page
 	Then I see new details on product page
-		| Details | Value        |
-		| Colour  | Clear Carbon |
+		| Details | Value      |
+		| Colour  | Clear Blue |
 
 	When I set "3" as quantity on item page
 	And I click Add To Basket button on item page
@@ -77,8 +77,8 @@ Scenario: Verify add goods with different quantity in basket
 	When I click Basket button on Top menu
 	Then I see "1" items in basket 
 	Then I see following items in basket
-		| Name                         | Quantity | Price         | Option              |
-		| Camelbak Podium Bottle 710ml | 3        | Now 489.49RUB | Clear Carbon, 710ml |
+		| Name                         | Quantity | Price         | Option            |
+		| Camelbak Podium Bottle 710ml | 3        | Now 489.49RUB | Clear Blue, 710ml |
 	And I see "1468.47RUB" subtotal cost on basket page
 
 Scenario: Verify add goods in basket from wishlist
@@ -125,10 +125,10 @@ Scenario: Verify add a few goods in basket with continue shopping
 	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
 	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
 
-	When I select option "Clear Carbon" on product page
+	When I select option "Clear Blue" on product page
 	Then I see new details on product page
 		| Details | Value        |
-		| Colour  | Clear Carbon |
+		| Colour  | Clear Blue |
 
 	When I click Add To Basket button on item page
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
@@ -181,7 +181,7 @@ Scenario: Verify add a few goods in basket with continue shopping
 	| Name                             | Quantity | Price          | Option               |
 	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
 	| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB  | Electric Blue, 610ml |
-	| Camelbak Podium Bottle 710ml     | 1        | Now 489.49RUB  | Clear Carbon, 710ml  |
+	| Camelbak Podium Bottle 710ml     | 1        | Now 489.49RUB  | Clear Blue, 710ml    |
 	And I see "3916.97RUB" subtotal cost on basket page
 
 

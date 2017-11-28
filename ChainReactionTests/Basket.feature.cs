@@ -202,14 +202,14 @@ this.FeatureBackground();
 #line 66
  testRunner.Then("I see the product page for \"Camelbak Podium Bottle 710ml\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 68
- testRunner.When("I select second option on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select option \"Clear Blue\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table3.AddRow(new string[] {
                         "Colour",
-                        "Clear Carbon"});
+                        "Clear Blue"});
 #line 69
  testRunner.Then("I see new details on product page", ((string)(null)), table3, "Then ");
 #line 73
@@ -232,7 +232,7 @@ this.FeatureBackground();
                         "Camelbak Podium Bottle 710ml",
                         "3",
                         "Now 489.49RUB",
-                        "Clear Carbon, 710ml"});
+                        "Clear Blue, 710ml"});
 #line 79
  testRunner.Then("I see following items in basket", ((string)(null)), table4, "Then ");
 #line 82
@@ -335,14 +335,14 @@ this.FeatureBackground();
 #line 126
  testRunner.Then("I see the product page for \"Camelbak Podium Bottle 710ml\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 128
- testRunner.When("I select option \"Clear Carbon\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select option \"Clear Blue\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table6.AddRow(new string[] {
                         "Colour",
-                        "Clear Carbon"});
+                        "Clear Blue"});
 #line 129
  testRunner.Then("I see new details on product page", ((string)(null)), table6, "Then ");
 #line 133
@@ -440,7 +440,7 @@ this.FeatureBackground();
                         "Camelbak Podium Bottle 710ml",
                         "1",
                         "Now 489.49RUB",
-                        "Clear Carbon, 710ml"});
+                        "Clear Blue, 710ml"});
 #line 180
  testRunner.And("I see following items in basket", ((string)(null)), table9, "And ");
 #line 185

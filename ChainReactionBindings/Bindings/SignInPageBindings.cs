@@ -2,6 +2,7 @@
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
+using ChainReactionBindings.TestBase;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -26,7 +27,7 @@ namespace ChainReactionBindings.Bindings
 			foreach (var row in table.Rows)
 			{
 				var fieldName = row["Name"];
-				var fieldValue = row["Value"];
+				var fieldValue = Utils.ResolveExpression(row["Value"]); ;
 
 				switch (fieldName)
 				{
