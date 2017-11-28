@@ -46,15 +46,15 @@ Scenario: Verify add goods in basket from seach page
 	And I click Search button
 	Then I see the search page is loaded
 	
-	When I select "Clear Carbon, 700ml" option in item dropdown
+	When I select "Clear Blue, 700ml" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
 	When I click Basket button on Top menu
 	Then I see "1" items in basket
 	And I see following items in basket
-		| Name                         | Quantity | Price         | Option              |
-		| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB | Clear Carbon, 710ml |
+		| Name                         | Quantity | Price         | Option            |
+		| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB | Clear Blue, 710ml |
 	And I see "489.49RUB" subtotal cost on basket page
 
 Scenario: Verify add goods with different quantity in basket
@@ -190,7 +190,7 @@ Scenario: Verify delete goods from basket
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I select "Clear Carbon, 700ml" option in item dropdown
+	When I select "Clear Blue, 700ml" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
@@ -212,9 +212,9 @@ Scenario: Verify delete goods from basket
 	Then I see the basket page is loaded
 	And I see "2" items in basket
 	And I see following items in basket
-	| Name                         | Quantity | Price          | Option              |
-	| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB  | Clear Carbon, 710ml |
-	| Animal Bikes T1 BMX Tyre     | 1        | Now 2517.99RUB | Black, 20", 2.4",   |
+	| Name                         | Quantity | Price          | Option            |
+	| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB  | Clear Blue, 710ml |
+	| Animal Bikes T1 BMX Tyre     | 1        | Now 2517.99RUB | Black, 20", 2.4", |
 	And I see "3007.48RUB" subtotal cost on basket page
 
 	When I click Remove button on item in basket with name "Camelbak Podium Bottle 710ml"

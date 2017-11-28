@@ -154,7 +154,7 @@ this.FeatureBackground();
 #line 47
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
- testRunner.When("I select \"Clear Carbon, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select \"Clear Blue, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 50
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
@@ -173,7 +173,7 @@ this.FeatureBackground();
                         "Camelbak Podium Bottle 710ml",
                         "1",
                         "Now 489.49RUB",
-                        "Clear Carbon, 710ml"});
+                        "Clear Blue, 710ml"});
 #line 55
  testRunner.And("I see following items in basket", ((string)(null)), table2, "And ");
 #line 58
@@ -465,7 +465,7 @@ this.FeatureBackground();
 #line 191
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 193
- testRunner.When("I select \"Clear Carbon, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select \"Clear Blue, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 194
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 195
@@ -506,7 +506,7 @@ this.FeatureBackground();
                         "Camelbak Podium Bottle 710ml",
                         "1",
                         "Now 489.49RUB",
-                        "Clear Carbon, 710ml"});
+                        "Clear Blue, 710ml"});
             table10.AddRow(new string[] {
                         "Animal Bikes T1 BMX Tyre",
                         "1",
