@@ -108,5 +108,11 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			var el = new HtmlElement(By.XPath(string.Format(FindWishlistId, name)));
 		}
+
+		public string GetItemTitle(string name)
+		{
+			var el = new HtmlElement(By.XPath(string.Format(FindItemId, name)));
+			return el.FindElement(By.CssSelector(ItemsTitleId)).Text;
+		}
 	}
 }

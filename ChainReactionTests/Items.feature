@@ -40,7 +40,7 @@ Scenario: Verify add good in wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -74,7 +74,7 @@ Scenario: Verify see details of goods in wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -113,7 +113,7 @@ Scenario: Verify delete items from wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -133,7 +133,7 @@ Scenario: Verify delete items from wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "2.4" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -152,6 +152,9 @@ Scenario: Verify delete items from wishlist
 
 	When I click Remove button on item with name "Animal Bikes T1 BMX Tyre"
 	Then I see "1" items in wishlist
+
+	When I click Remove button on item with name "Camelbak Podium Bottle 710m"
+	Then  I see empty wishlist with message "YOU HAVE NO ITEMS ON YOUR WISH LIST.MY WISHLIST"
 
 #account without items in wishlist
 Scenario: Verify see empty wishlist
@@ -188,7 +191,7 @@ Scenario: Verify update quantity on item in wishlist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose first good and click Add To Wishlist button
+	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"

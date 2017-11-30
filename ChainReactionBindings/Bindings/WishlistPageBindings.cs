@@ -61,7 +61,7 @@ namespace ChainReactionBindings.Bindings
 				switch (fieldName)
 				{
 					case "Title":
-						Assert.AreEqual(fieldValue,page.ItemsTitleElement.Text);
+						Assert.AreEqual(fieldValue,page.GetItemTitle(fieldValue));
 						break;
 					case "Price":
 						Assert.AreEqual(fieldValue, page.PriceElement.Text);

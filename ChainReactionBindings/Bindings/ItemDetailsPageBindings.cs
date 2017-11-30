@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -20,6 +19,7 @@ namespace ChainReactionBindings.Bindings
 		{
 			page.ItemDetailsPageLoaded();
 			Assert.AreEqual(name, page.ProductTitileElement.Text);
+			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
 		[Then(@"I see details on product page")]

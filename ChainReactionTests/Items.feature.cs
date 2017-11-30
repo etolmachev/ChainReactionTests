@@ -136,7 +136,7 @@ this.FeatureBackground();
 #line 41
  testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 43
- testRunner.When("I choose first good and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I choose good with option \"Clear Blue\" and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
  testRunner.Then("I see select wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 46
@@ -203,7 +203,7 @@ this.FeatureBackground();
 #line 75
  testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 77
- testRunner.When("I choose first good and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I choose good with option \"Clear Blue\" and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 78
  testRunner.Then("I see select wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 80
@@ -284,7 +284,7 @@ this.FeatureBackground();
 #line 114
  testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 116
- testRunner.When("I choose first good and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I choose good with option \"Clear Blue\" and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 117
  testRunner.Then("I see select wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 119
@@ -314,7 +314,7 @@ this.FeatureBackground();
 #line 134
  testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 136
- testRunner.When("I choose first good and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I choose good with option \"2.4\" and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 137
  testRunner.Then("I see select wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 139
@@ -343,6 +343,11 @@ this.FeatureBackground();
  testRunner.When("I click Remove button on item with name \"Animal Bikes T1 BMX Tyre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 154
  testRunner.Then("I see \"1\" items in wishlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 156
+ testRunner.When("I click Remove button on item with name \"Camelbak Podium Bottle 710m\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 157
+ testRunner.Then("I see empty wishlist with message \"YOU HAVE NO ITEMS ON YOUR WISH LIST.MY WISHLIS" +
+                    "T\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -352,7 +357,7 @@ this.FeatureBackground();
         public virtual void VerifySeeEmptyWishlist()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify see empty wishlist", ((string[])(null)));
-#line 157
+#line 160
 this.ScenarioSetup(scenarioInfo);
 #line 12
 this.FeatureBackground();
@@ -366,21 +371,21 @@ this.FeatureBackground();
             table5.AddRow(new string[] {
                         "password",
                         "123ewqasd"});
-#line 158
+#line 161
  testRunner.When("I set following parameters on Sign In page", ((string)(null)), table5, "When ");
-#line 162
- testRunner.And("I click Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 163
- testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 165
- testRunner.When("I click Wishlist button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 166
- testRunner.Then("I see \"1\" wishlists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
- testRunner.And("I see \"0\" items in wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 168
+ testRunner.When("I click Wishlist button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 169
- testRunner.When("I click View List button on wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I see \"1\" wishlists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 170
+ testRunner.And("I see \"0\" items in wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 172
+ testRunner.When("I click View List button on wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 173
  testRunner.Then("I see empty wishlist with message \"YOU HAVE NO ITEMS ON YOUR WISH LIST.MY WISHLIS" +
                     "T\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -392,7 +397,7 @@ this.FeatureBackground();
         public virtual void VerifyUpdateQuantityOnItemInWishlist()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify update quantity on item in wishlist", ((string[])(null)));
-#line 172
+#line 175
 this.ScenarioSetup(scenarioInfo);
 #line 12
 this.FeatureBackground();
@@ -406,55 +411,55 @@ this.FeatureBackground();
             table6.AddRow(new string[] {
                         "password",
                         "1234rewq"});
-#line 173
+#line 176
  testRunner.When("I set following parameters on Sign In page", ((string)(null)), table6, "When ");
-#line 177
- testRunner.And("I click Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
- testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 180
- testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 181
- testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 182
- testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 183
+ testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 184
- testRunner.When("I click on product with name \"Camelbak Podium Bottle 710ml\" from search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 185
- testRunner.Then("I see the product page for \"Camelbak Podium Bottle 710ml\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 187
- testRunner.When("I click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on product with name \"Camelbak Podium Bottle 710ml\" from search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 188
- testRunner.Then("I see add to wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 189
- testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the product page for \"Camelbak Podium Bottle 710ml\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 190
+ testRunner.When("I click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 191
- testRunner.When("I choose first good and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I see add to wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 192
- testRunner.Then("I see select wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 194
- testRunner.When("I select wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 195
- testRunner.And("I click Add To List button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 196
- testRunner.Then("I see \"Item added to wishlist\" message on wishlist popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 197
- testRunner.And("I click Close button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 198
  testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 194
+ testRunner.When("I choose good with option \"Clear Blue\" and click Add To Wishlist button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 195
+ testRunner.Then("I see select wishlist popup is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 197
+ testRunner.When("I select wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 198
+ testRunner.And("I click Add To List button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 199
+ testRunner.Then("I see \"Item added to wishlist\" message on wishlist popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 200
- testRunner.When("I click Wishlist button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click Close button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 201
- testRunner.Then("I see \"1\" wishlists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 202
- testRunner.And("I see \"1\" items in wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I wait for \"1\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 203
+ testRunner.When("I click Wishlist button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 204
- testRunner.When("I click View List button on wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I see \"1\" wishlists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 205
- testRunner.Then("I see the wishlist page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I see \"1\" items in wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 207
- testRunner.When("I enter quantity \"15\" in first item and click Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click View List button on wishlist with name \"My Wishlist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 208
+ testRunner.Then("I see the wishlist page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 210
+ testRunner.When("I enter quantity \"15\" in first item and click Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 211
  testRunner.Then("I see \"15\" quantity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
