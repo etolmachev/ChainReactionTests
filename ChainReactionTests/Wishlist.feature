@@ -262,7 +262,7 @@ Scenario: Verify delete wishilist
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "My Wishlist" in the create text

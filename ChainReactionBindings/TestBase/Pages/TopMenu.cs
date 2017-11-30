@@ -15,7 +15,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string SelectLanguageId = "select[name='/atg/userprofiling/ProfileFormHandler.value.language']";
 		public string UpdateButtonId = "input[name='/atg/userprofiling/ProfileFormHandler.updateLocaleInfo']";
 		public string WishlistButtonId = ".crcHeaderWishlist";
-		public string BasketId = ".cart_container";
+		public string BasketId = "div.cart_container a";
 		public string CloseBasketId = ".minicart_close";
 		public string BasketMessageId = ".basket-head-title";
 		public string LogoId = ".crc_logo";
