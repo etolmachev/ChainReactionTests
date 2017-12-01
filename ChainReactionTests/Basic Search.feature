@@ -69,6 +69,6 @@ Scenario Template: Verify equal names of search text and result text - by catego
 
 	Scenarios: 
 		| SearchValue | Amount | ResultValue |
-		| Bike Cave   | 2      | Bike Cave   |
-		| BiKE CavE   | 2      | Bike Cave   |
+		| Bike Cave   | 1      | Bike Cave   |
+		| BiKE CavE   | 1      | Bike Cave   |
 

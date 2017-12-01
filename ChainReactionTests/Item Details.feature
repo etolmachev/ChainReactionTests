@@ -55,7 +55,7 @@ Scenario Template: Verify Item Details of water bottle product
 
 	Scenarios:
 	| Name                             | Price                    | Rating  | Size  |
-	| Camelbak Podium Bottle 710ml     | 489.49 RUB               | 4.7 / 5 | 710ml |
+	| Camelbak Podium Bottle 710ml     | 489.49RUB               | 4.7 / 5 | 710ml |
 	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1468.49 RUB | 4.1 / 5 | 610ml |
 
 Scenario Template: Verify change options of products
@@ -75,8 +75,8 @@ Scenario Template: Verify change options of products
 	Scenarios: 
 		| Name                                                     | Option     | Value      |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 43cm (17") |
-		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Blue |
-		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | M          |
+		| Camelbak Podium Ice Water Bottle                         | Colour     | Snow       |
+		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | S          |
 
 Scenario Template: Verify Reviews summary of product
 	When I enter "<Product>" in the search text

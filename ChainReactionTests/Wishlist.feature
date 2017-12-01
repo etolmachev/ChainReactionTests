@@ -238,9 +238,9 @@ Scenario: Verify see details of goods in wishlist
 	When I click View List button on wishlist with name "My Wishlist"
 	Then I see the wishlist page is loaded
 	And I see details of goods in wishlist
-	| Details | Value                        |
-	| Title   | Camelbak Podium Bottle 710ml |
-	| Price   | From RUB489.49               |
+	| Details | Value                            |
+	| Title   | Camelbak Podium Ice Water Bottle |
+	| Price   | From RUB1468.49                  |
 
 #given account without wishlist
 Scenario: Verify delete wishilist

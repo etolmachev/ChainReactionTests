@@ -202,8 +202,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify equal names of search text and result text - by category")]
-        [NUnit.Framework.TestCaseAttribute("Bike Cave", "2", "Bike Cave", null)]
-        [NUnit.Framework.TestCaseAttribute("BiKE CavE", "2", "Bike Cave", null)]
+        [NUnit.Framework.TestCaseAttribute("Bike Cave", "1", "Bike Cave", null)]
+        [NUnit.Framework.TestCaseAttribute("BiKE CavE", "1", "Bike Cave", null)]
         public virtual void VerifyEqualNamesOfSearchTextAndResultText_ByCategory(string searchValue, string amount, string resultValue, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify equal names of search text and result text - by category", exampleTags);

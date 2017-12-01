@@ -136,7 +136,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of water bottle product")]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "489.49 RUB", "4.7 / 5", "710ml", null)]
+        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "489.49RUB", "4.7 / 5", "710ml", null)]
         [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "909.49 RUB - 1468.49 RUB", "4.1 / 5", "610ml", null)]
         public virtual void VerifyItemDetailsOfWaterBottleProduct(string name, string price, string rating, string size, string[] exampleTags)
         {
@@ -177,8 +177,8 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify change options of products")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "Frame Size", "43cm (17\")", null)]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "Colour", "Clear Blue", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", "Size", "M", null)]
+        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "Colour", "Snow", null)]
+        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", "Size", "S", null)]
         public virtual void VerifyChangeOptionsOfProducts(string name, string option, string value, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify change options of products", exampleTags);
