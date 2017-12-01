@@ -42,11 +42,11 @@ Scenario: Verify see an empty basket
 	And I see the "There are no items in your basket." message on the basket page
 
 Scenario: Verify add goods in basket from seach page
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 	
-	When I select "Clear Blue, 700ml" option in item dropdown
+	When I select "Cosmic Blue, 610ml" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
@@ -54,21 +54,21 @@ Scenario: Verify add goods in basket from seach page
 	Then I see "1" items in basket
 	And I see following items in basket
 		| Name                         | Quantity | Price         | Option            |
-		| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB | Clear Blue, 710ml |
+		| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB | Cosmic Blue, 610ml|
 	And I see "489.49RUB" subtotal cost on basket page
 
 Scenario: Verify add goods with different quantity in basket
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
-	When I select option "Clear Blue" on product page
+	When I select option "Snow" on product page
 	Then I see new details on product page
 		| Details | Value      |
-		| Colour  | Clear Blue |
+		| Colour  | Snow |
 
 	When I set "3" as quantity on item page
 	And I click Add To Basket button on item page
@@ -77,9 +77,9 @@ Scenario: Verify add goods with different quantity in basket
 	When I click Basket button on Top menu
 	Then I see "1" items in basket 
 	Then I see following items in basket
-		| Name                         | Quantity | Price         | Option            |
-		| Camelbak Podium Bottle 710ml | 3        | Now 489.49RUB | Clear Blue, 710ml |
-	And I see "1468.47RUB" subtotal cost on basket page
+		| Name                             | Quantity | Price          | Option      |
+		| Camelbak Podium Ice Water Bottle | 3        | Now 1468.49RUB | Snow, 610ml |
+	And I see "4405.47RUB" subtotal cost on basket page
 
 Scenario: Verify add goods in basket from wishlist
 	When I enter "Animal Bikes T1 BMX Tyre" in the search text
@@ -118,17 +118,17 @@ Scenario: Verify add goods in basket from wishlist
 	And I see "2517.99RUB" subtotal cost on basket page
 
 Scenario: Verify add a few goods in basket with continue shopping
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
-	When I select option "Clear Blue" on product page
+	When I select option "Snow" on product page
 	Then I see new details on product page
 		| Details | Value        |
-		| Colour  | Clear Blue |
+		| Colour  | Snow |
 
 	When I click Add To Basket button on item page
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
@@ -181,16 +181,16 @@ Scenario: Verify add a few goods in basket with continue shopping
 	| Name                             | Quantity | Price          | Option               |
 	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
 	| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB  | Electric Blue, 610ml |
-	| Camelbak Podium Bottle 710ml     | 1        | Now 489.49RUB  | Clear Blue, 710ml    |
+	| Camelbak Podium Ice Water Bottle | 1        | Now 1468.49RUB | Snow, 710ml          |
 	And I see "3916.97RUB" subtotal cost on basket page
 
 
 Scenario: Verify delete goods from basket
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I select "Clear Blue, 700ml" option in item dropdown
+	When I select "Cosmic Blue, 610ml" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
@@ -212,12 +212,12 @@ Scenario: Verify delete goods from basket
 	Then I see the basket page is loaded
 	And I see "2" items in basket
 	And I see following items in basket
-	| Name                         | Quantity | Price          | Option            |
-	| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB  | Clear Blue, 710ml |
-	| Animal Bikes T1 BMX Tyre     | 1        | Now 2517.99RUB | Black, 20", 2.4", |
-	And I see "3007.48RUB" subtotal cost on basket page
+	| Name                             | Quantity | Price          | Option             |
+	| Camelbak Podium Ice Water Bottle | 1        | Now 1468.49RUB  | Cosmic Blue, 610ml |
+	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",  |
+	And I see "3986.48RUB" subtotal cost on basket page
 
-	When I click Remove button on item in basket with name "Camelbak Podium Bottle 710ml"
+	When I click Remove button on item in basket with name "Camelbak Podium Ice Water Bottle"
 	Then I see "1" items in basket
 	And I see following items in basket
 	| Name                         | Quantity | Price          | Option              |

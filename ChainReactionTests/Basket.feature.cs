@@ -148,13 +148,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
 #line 45
- testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 46
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
- testRunner.When("I select \"Clear Blue, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select \"Cosmic Blue, 610ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 50
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
@@ -173,7 +173,7 @@ this.FeatureBackground();
                         "Camelbak Podium Bottle 710ml",
                         "1",
                         "Now 489.49RUB",
-                        "Clear Blue, 710ml"});
+                        "Cosmic Blue, 610ml"});
 #line 55
  testRunner.And("I see following items in basket", ((string)(null)), table2, "And ");
 #line 58
@@ -192,24 +192,25 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
 #line 61
- testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 62
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 63
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 65
- testRunner.When("I click on product with name \"Camelbak Podium Bottle 710ml\" from search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on product with name \"Camelbak Podium Ice Water Bottle\" from search resul" +
+                    "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 66
- testRunner.Then("I see the product page for \"Camelbak Podium Bottle 710ml\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the product page for \"Camelbak Podium Ice Water Bottle\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 68
- testRunner.When("I select option \"Clear Blue\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select option \"Snow\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table3.AddRow(new string[] {
                         "Colour",
-                        "Clear Blue"});
+                        "Snow"});
 #line 69
  testRunner.Then("I see new details on product page", ((string)(null)), table3, "Then ");
 #line 73
@@ -229,14 +230,14 @@ this.FeatureBackground();
                         "Price",
                         "Option"});
             table4.AddRow(new string[] {
-                        "Camelbak Podium Bottle 710ml",
+                        "Camelbak Podium Ice Water Bottle",
                         "3",
-                        "Now 489.49RUB",
-                        "Clear Blue, 710ml"});
+                        "Now 1468.49RUB",
+                        "Snow, 610ml"});
 #line 79
  testRunner.Then("I see following items in basket", ((string)(null)), table4, "Then ");
 #line 82
- testRunner.And("I see \"1468.47RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"4405.47RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -325,24 +326,25 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
 #line 121
- testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 122
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 123
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 125
- testRunner.When("I click on product with name \"Camelbak Podium Bottle 710ml\" from search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on product with name \"Camelbak Podium Ice Water Bottle\" from search resul" +
+                    "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 126
- testRunner.Then("I see the product page for \"Camelbak Podium Bottle 710ml\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the product page for \"Camelbak Podium Ice Water Bottle\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 128
- testRunner.When("I select option \"Clear Blue\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select option \"Snow\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table6.AddRow(new string[] {
                         "Colour",
-                        "Clear Blue"});
+                        "Snow"});
 #line 129
  testRunner.Then("I see new details on product page", ((string)(null)), table6, "Then ");
 #line 133
@@ -437,10 +439,10 @@ this.FeatureBackground();
                         "Now 909.49RUB",
                         "Electric Blue, 610ml"});
             table9.AddRow(new string[] {
-                        "Camelbak Podium Bottle 710ml",
+                        "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 489.49RUB",
-                        "Clear Blue, 710ml"});
+                        "Now 1468.49RUB",
+                        "Snow, 710ml"});
 #line 180
  testRunner.And("I see following items in basket", ((string)(null)), table9, "And ");
 #line 185
@@ -459,13 +461,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
 #line 189
- testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 190
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 191
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 193
- testRunner.When("I select \"Clear Blue, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select \"Cosmic Blue, 610ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 194
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 195
@@ -503,10 +505,10 @@ this.FeatureBackground();
                         "Price",
                         "Option"});
             table10.AddRow(new string[] {
-                        "Camelbak Podium Bottle 710ml",
+                        "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 489.49RUB",
-                        "Clear Blue, 710ml"});
+                        "Now 1468.49RUB",
+                        "Cosmic Blue, 610ml"});
             table10.AddRow(new string[] {
                         "Animal Bikes T1 BMX Tyre",
                         "1",
@@ -515,9 +517,10 @@ this.FeatureBackground();
 #line 214
  testRunner.And("I see following items in basket", ((string)(null)), table10, "And ");
 #line 218
- testRunner.And("I see \"3007.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"3986.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 220
- testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Bottle 710ml\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Ice Water Bott" +
+                    "le\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 221
  testRunner.Then("I see \"1\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
