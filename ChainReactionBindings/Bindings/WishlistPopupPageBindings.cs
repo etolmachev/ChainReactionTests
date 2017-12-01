@@ -15,7 +15,7 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see add to wishlist popup is loaded")]
 		public void ThenISeeAddToWishlistPopupIsLoaded()
 		{
-			page.WishlistPopupPageLoaded();
+			page.AddPopupElement.WaitElementAppears(10);
 			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 

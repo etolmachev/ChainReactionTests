@@ -74,7 +74,7 @@ Scenario Template: Verify change options of products
 
 	Scenarios: 
 		| Name                                                     | Option     | Value      |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 48cm (19") |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 43cm (17") |
 		| Camelbak Podium Bottle 710ml                             | Colour     | Clear Blue |
 		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | M          |
 

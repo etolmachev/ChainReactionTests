@@ -114,5 +114,10 @@ namespace ChainReactionBindings.TestBase.Pages
 			var el = new HtmlElement(By.XPath(string.Format(FindItemId, name)));
 			return el.FindElement(By.CssSelector(ItemsTitleId)).Text;
 		}
+
+		public void RemoveItemBackground()
+		{
+			WishlistContainerElement.FindElement(By.XPath("//div[@class='wishlist_product_col3']/ul/form/li/a/span")).Click();
+		}
 	}
 }

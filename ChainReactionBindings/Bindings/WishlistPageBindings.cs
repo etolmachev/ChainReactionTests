@@ -127,5 +127,21 @@ namespace ChainReactionBindings.Bindings
 		{
 			page.FindWishlist(name);
 		}
+
+		[Then(@"I make sure that wishlist is empty")]
+		public void MakeSureThatBasketIsEmpty()
+		{
+
+			if (page.GetItemsFromWishlist() != 0)
+			{
+				int count = page.GetItemsFromWishlist();
+				for (int i = count; i >= 1; i--)
+				{
+					page.RemoveItemBackground();
+				}
+			}
+
+			Assert.IsTrue(page.EmptyWishlistElement.Displayed);
+		}
 	}
 }

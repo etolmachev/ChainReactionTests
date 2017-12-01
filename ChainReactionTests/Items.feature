@@ -21,26 +21,34 @@ Background:
 	When I click on Sign In on top menu
 	Then I see the Sign In page is loaded
 
-Scenario: Verify add good in wishlist
 	When I set following parameters on Sign In page
-		| Name     | Value               |
-		| email    | qvxzkgmj@emlhub.com |
-		| password | 1234rewq            |
+		| Name     | Value                       |
+		| email    | xigorreguz-2914@yopmail.com |
+		| password | 123ewqasd                   |
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I click Wishlist button on Top menu
+	Then I make sure that exist wishlist with name "My Wishlist" 
+
+	When I click View List button on wishlist with name "My Wishlist"
+	Then I make sure that wishlist is empty
+
+Scenario: Verify add good in wishlist
+
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
+
+	When  I select option "Snow" on product page
+	Then I see new details on product page
+		| Details | Value |
+		| Colour  | Snow  |
 
 	When I click Add To Wishlist button
-	Then I see add to wishlist popup is loaded
-	Then I wait for "1" seconds
-
-	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -55,33 +63,26 @@ Scenario: Verify add good in wishlist
 
 
 Scenario: Verify see details of goods in wishlist
-	When I set following parameters on Sign In page
-		| Name     | Value               |
-		| email    | qvxzkgmj@emlhub.com |
-		| password | 1234rewq            |
-	And I click Sign In button
-	Then I see the main page is loaded
-
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 	Then I wait for "1" seconds
+
+	When  I select option "Snow" on product page
+	Then I see new details on product page
+		| Details | Value |
+		| Colour  | Snow  |
 
 	When I click Add To Wishlist button
-	Then I see add to wishlist popup is loaded
-	Then I wait for "1" seconds
-
-	When I choose good with option "Clear Blue" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
 	And I click Add To List button
 	Then I see "Item added to wishlist" message on wishlist popup
 	And I click Close button
-	Then I wait for "1" seconds
 
 	When I click Wishlist button on Top menu
 	Then I see "1" wishlists
@@ -90,30 +91,23 @@ Scenario: Verify see details of goods in wishlist
 	When I click View List button on wishlist with name "My Wishlist"
 	Then I see the wishlist page is loaded
 	And I see details of goods in wishlist
-	| Details | Value                        |
-	| Title   | Camelbak Podium Bottle 710ml |
-	| Price   | From RUB489.49               |
+	| Details | Value                            |
+	| Title   | Camelbak Podium Ice Water Bottle |
+	| Price   | From RUB1468.49                  |
 
 Scenario: Verify delete items from wishlist
-	When I set following parameters on Sign In page
-		| Name     | Value               |
-		| email    | qvxzkgmj@emlhub.com |
-		| password | 1234rewq            |
-	And I click Sign In button
-	Then I see the main page is loaded
-
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Blue" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -153,17 +147,11 @@ Scenario: Verify delete items from wishlist
 	When I click Remove button on item with name "Animal Bikes T1 BMX Tyre"
 	Then I see "1" items in wishlist
 
-	When I click Remove button on item with name "Camelbak Podium Bottle 710m"
+	When I click Remove button on item with name "Camelbak Podium Ice Water Bottle"
 	Then  I see empty wishlist with message "YOU HAVE NO ITEMS ON YOUR WISH LIST.MY WISHLIST"
 
 #account without items in wishlist
 Scenario: Verify see empty wishlist
-	When I set following parameters on Sign In page
-		| Name     | Value                       |
-		| email    | xigorreguz-2914@yopmail.com |
-		| password | 123ewqasd                   |
-	And I click Sign In button
-	Then I see the main page is loaded
 
 	When I click Wishlist button on Top menu
 	Then I see "1" wishlists
@@ -173,25 +161,19 @@ Scenario: Verify see empty wishlist
 	Then I see empty wishlist with message "YOU HAVE NO ITEMS ON YOUR WISH LIST.MY WISHLIST"
 
 Scenario: Verify update quantity on item in wishlist
-	When I set following parameters on Sign In page
-		| Name     | Value               |
-		| email    | qvxzkgmj@emlhub.com |
-		| password | 1234rewq            |
-	And I click Sign In button
-	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Blue" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"

@@ -41,18 +41,18 @@ Scenario: Verify unable to add good in nonexisten wishlist
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I click Add To List button
@@ -68,18 +68,18 @@ Scenario: Verify create new wishlist
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "My Wishlist" in the create text
@@ -104,18 +104,18 @@ Scenario: Verify add good in wishlist
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottlel" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -137,18 +137,18 @@ Scenario: Verify select wishlist to add new good
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "First Wishlist" in the create text
@@ -161,7 +161,7 @@ Scenario: Verify select wishlist to add new good
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "Second Wishlist" in the create text
@@ -211,18 +211,18 @@ Scenario: Verify see details of goods in wishlist
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Carbon" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I select wishlist with name "My Wishlist"
@@ -251,18 +251,18 @@ Scenario: Verify delete wishilist
 	And I click Sign In button
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "Camelbak Podium Bottle 710ml" from search results
-	Then I see the product page for "Camelbak Podium Bottle 710ml" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 
 	When I click Add To Wishlist button
 	Then I see add to wishlist popup is loaded
 	Then I wait for "1" seconds
 
-	When I choose good with option "Clear Blue" and click Add To Wishlist button
+	When I choose good with option "Snow" and click Add To Wishlist button
 	Then I see select wishlist popup is loaded
 
 	When I enter name of wishlist "My Wishlist" in the create text
