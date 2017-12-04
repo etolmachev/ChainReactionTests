@@ -25,7 +25,7 @@ Scenario Template: Verify search with option Gender
 	Then I see the search page is loaded
 	And I see "<Result> results for '<Product>'" message on search page
 
-	When I click gender "<Gender> <Count>" on search page
+	When I click gender "<Gender>" on search page
 	Then I see "<Count> results for '<Product>'" message on search page
 
 	Scenarios: 
@@ -40,10 +40,10 @@ Scenario Template: Verify search with option Gender and Brand
 	Then I see the search page is loaded
 	And I see "<Result> results for '<Product>'" message on search page
 
-	When I click gender "<Gender> <CountGender>" on search page
+	When I click gender "<Gender>" on search page
 	Then I see "<CountGender> results for '<Product>'" message on search page
 
-	When I click brand "<Brand> <CountBrand>" on search page
+	When I click brand "<Brand>" on search page
 	Then I see "<CountBrand> results for '<Product>'" message on search page
 
 	And I see "<CountBrand>" items on search page
@@ -101,8 +101,8 @@ Scenario Template:  Verify find 0 items with incorrect option Price
 	And I see "<CountColour>" items on search page
 	And I see items include colour "<Colour>"
 
-	When I choose price from "<From>" to "<To>" on search page and click Go button
-	Then I see "No products found – please change your price range" message on search page
+	When I enter price from "<From>" to "<To>" on search page and click Go button
+	Then I see message "No products found – please change your price range" after filter on search page
 
 	Scenarios: 
 	| Product | Gender | Result | CountGender | Brand      | CountBrand | Colour | CountColour | From | To   |
@@ -129,13 +129,13 @@ Scenario Template:  Verify delete option fron filter
 	And I see "<CountColour>" items on search page
 	And I see items include colour "<Colour>"
 
-	When I choose price from "<From>" to "<To>" on search page and click Go button
-	Then I see "No products found – please change your price range" message on search page
+	When I enter price from "<From>" to "<To>" on search page and click Go button
+	Then I see message "No products found – please change your price range" after filter on search page
 
 	When I delete price from filter
-	Then I see I see "<CountColour> results for '<Product>'" message on search page
+	Then I see "<CountColour> results for '<Product>'" message on search page
 
-	When I delete option "<Colour>" from filter
+	When I delete colour from filter
 	Then I see "<CountBrand> results for '<Product>'" message on search page
 	And I see "<CountBrand>" items on search page
 	And I see items name include "<Brand>"

@@ -116,5 +116,60 @@ namespace ChainReactionBindings.Bindings
 			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
+		[When(@"I click gender ""(.*)"" on search page")]
+		public void ClickGenderOnSearchPage(string gender)
+		{
+			page.GenderClick(gender);
+		}
+
+		[When(@"I click brand ""(.*)"" on search page")]
+		public void ClickBrandOnSearchPage(string brand)
+		{
+			page.BrandClick(brand);
+		}
+
+		[When(@"I click colour ""(.*)"" on search page")]
+		public void ClickColourOnSearchPage(string colour)
+		{
+			page.ColourClick(colour);
+		}
+
+		[Then(@"I see items include colour ""(.*)""")]
+		public void ThenISeeItemsIncludeColour(string colour)
+		{
+			var itemsDesc = page.ItemsCountElement.FindElements(By.ClassName(colour.ToLower()));
+		}
+
+		[When(@"I enter price from ""(.*)"" to ""(.*)"" on search page and click Go button")]
+		public void EnterPriceFromToOnSearchRageAndClickGoButton(string from, string to)
+		{
+			page.FromElement.SendKeys(from);
+			page.ToElement.SendKeys(to);
+			page.GoButtonElement.Click();
+		}
+
+		[Then(@"I see message ""(.*)"" after filter on search page")]
+		public void ThenISeeMessageAfterFilterOnSearchPage(string text)
+		{
+			Assert.AreEqual(text, page.NoResultsFilterMessageElement.Text);
+		}
+
+		[When(@"I delete price from filter")]
+		public void DeletePriceFromFilter()
+		{
+			page.DeletePrice();
+		}
+
+		[When(@"I delete colour from filter")]
+		public void DeleteColourFromFilter()
+		{
+			page.DeleteColour();
+		}
+
+		[When(@"I delete option ""(.*)"" from filter")]
+		public void DeleteOptionFromFilter(string option)
+		{
+			page.DeleteOption(option);
+		}
 	}
 }

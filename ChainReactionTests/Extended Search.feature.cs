@@ -110,7 +110,7 @@ this.FeatureBackground();
 #line 26
  testRunner.And(string.Format("I see \"{0} results for \'{1}\'\" message on search page", result, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
- testRunner.When(string.Format("I click gender \"{0} {1}\" on search page", gender, count), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I click gender \"{0}\" on search page", gender), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
  testRunner.Then(string.Format("I see \"{0} results for \'{1}\'\" message on search page", count, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -138,11 +138,11 @@ this.FeatureBackground();
 #line 41
  testRunner.And(string.Format("I see \"{0} results for \'{1}\'\" message on search page", result, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 43
- testRunner.When(string.Format("I click gender \"{0} {1}\" on search page", gender, countGender), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I click gender \"{0}\" on search page", gender), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
  testRunner.Then(string.Format("I see \"{0} results for \'{1}\'\" message on search page", countGender, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 46
- testRunner.When(string.Format("I click brand \"{0} {1}\" on search page", brand, countBrand), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I click brand \"{0}\" on search page", brand), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 47
  testRunner.Then(string.Format("I see \"{0} results for \'{1}\'\" message on search page", countBrand, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
@@ -236,10 +236,10 @@ this.FeatureBackground();
 #line 102
  testRunner.And(string.Format("I see items include colour \"{0}\"", colour), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 104
- testRunner.When(string.Format("I choose price from \"{0}\" to \"{1}\" on search page and click Go button", from, to), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter price from \"{0}\" to \"{1}\" on search page and click Go button", from, to), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 105
- testRunner.Then("I see \"No products found – please change your price range\" message on search page" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see message \"No products found – please change your price range\" after filter o" +
+                    "n search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -284,16 +284,16 @@ this.FeatureBackground();
 #line 130
  testRunner.And(string.Format("I see items include colour \"{0}\"", colour), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 132
- testRunner.When(string.Format("I choose price from \"{0}\" to \"{1}\" on search page and click Go button", from, to), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter price from \"{0}\" to \"{1}\" on search page and click Go button", from, to), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 133
- testRunner.Then("I see \"No products found – please change your price range\" message on search page" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see message \"No products found – please change your price range\" after filter o" +
+                    "n search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 135
  testRunner.When("I delete price from filter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 136
- testRunner.Then(string.Format("I see I see \"{0} results for \'{1}\'\" message on search page", countColour, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I see \"{0} results for \'{1}\'\" message on search page", countColour, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 138
- testRunner.When(string.Format("I delete option \"{0}\" from filter", colour), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I delete colour from filter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 139
  testRunner.Then(string.Format("I see \"{0} results for \'{1}\'\" message on search page", countBrand, product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 140
