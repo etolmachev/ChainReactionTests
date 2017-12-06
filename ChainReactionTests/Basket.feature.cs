@@ -172,12 +172,12 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 1468.49RUB",
-                        "Cosmic Blue, 610ml"});
+                        "Now 909.49RUB",
+                        "Electric Blue, 610ml"});
 #line 55
  testRunner.And("I see following items in basket", ((string)(null)), table2, "And ");
 #line 58
- testRunner.And("I see \"1468.49RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"909.49RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -325,128 +325,89 @@ this.FeatureBackground();
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
-#line 121
- testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 122
- testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I enter \"Animal Bikes T1 BMX Tyre\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 123
+ testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 124
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 125
- testRunner.When("I click on product with name \"Camelbak Podium Ice Water Bottle\" from search resul" +
-                    "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 126
- testRunner.Then("I see the product page for \"Camelbak Podium Ice Water Bottle\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 128
- testRunner.When("I select option \"Snow\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on product with name \"Animal Bikes T1 BMX Tyre\" from search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 127
+ testRunner.Then("I see the product page for \"Animal Bikes T1 BMX Tyre\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 129
+ testRunner.When("I select option \"2.4\"\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table6.AddRow(new string[] {
-                        "Colour",
-                        "Snow"});
-#line 129
+                        "Width",
+                        "2.4\""});
+#line 130
  testRunner.Then("I see new details on product page", ((string)(null)), table6, "Then ");
-#line 133
- testRunner.When("I click Add To Basket button on item page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 134
+ testRunner.When("I click Add To Basket button on item page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
  testRunner.Then("I see message \"ITEM ADDED TO BASKET\" in basket popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 136
- testRunner.When("I click Basket button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 137
+ testRunner.When("I click Basket button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 138
  testRunner.Then("I see \"1\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 139
- testRunner.When("I click Continue Shopping button on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 140
+ testRunner.When("I click Continue Shopping button on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 141
  testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 142
- testRunner.When("I enter \"Animal Bikes T1 BMX Tyre\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 143
- testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 144
+ testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 145
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 146
- testRunner.When("I click on product with name \"Animal Bikes T1 BMX Tyre\" from search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 147
- testRunner.Then("I see the product page for \"Animal Bikes T1 BMX Tyre\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 149
- testRunner.When("I select option \"2.4\"\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on product with name \"Camelbak Podium Ice Water Bottle\" from search resul" +
+                    "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 148
+ testRunner.Then("I see the product page for \"Camelbak Podium Ice Water Bottle\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 150
+ testRunner.When("I select option \"Electric Blue\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table7.AddRow(new string[] {
-                        "Width",
-                        "2.4\""});
-#line 150
- testRunner.Then("I see new details on product page", ((string)(null)), table7, "Then ");
-#line 154
- testRunner.When("I click Add To Basket button on item page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 155
- testRunner.Then("I see message \"ITEM ADDED TO BASKET\" in basket popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 157
- testRunner.When("I click Basket button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 158
- testRunner.Then("I see \"2\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 160
- testRunner.When("I click Continue Shopping button on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 161
- testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 163
- testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
- testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
- testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
- testRunner.When("I click on product with name \"Camelbak Podium Ice Water Bottle\" from search resul" +
-                    "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
- testRunner.Then("I see the product page for \"Camelbak Podium Ice Water Bottle\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 170
- testRunner.When("I select option \"Electric Blue\" on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Details",
-                        "Value"});
-            table8.AddRow(new string[] {
                         "Colour",
                         "Electric Blue"});
-#line 171
- testRunner.Then("I see new details on product page", ((string)(null)), table8, "Then ");
-#line 175
+#line 151
+ testRunner.Then("I see new details on product page", ((string)(null)), table7, "Then ");
+#line 155
  testRunner.When("I click Add To Basket button on item page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 176
+#line 156
  testRunner.Then("I see message \"ITEM ADDED TO BASKET\" in basket popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 178
+#line 158
  testRunner.When("I click Basket button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 179
- testRunner.Then("I see \"3\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 159
+ testRunner.Then("I see \"2\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Quantity",
                         "Price",
                         "Option"});
-            table9.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "Animal Bikes T1 BMX Tyre",
                         "1",
                         "Now 2517.99RUB",
                         "Black, 20\", 2.4\","});
-            table9.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 1468.49RUB",
+                        "Now 909.49RUB",
                         "Electric Blue, 610ml"});
-            table9.AddRow(new string[] {
-                        "Camelbak Podium Ice Water Bottle",
-                        "1",
-                        "Now 1468.49RUB",
-                        "Snow, 610ml"});
-#line 180
- testRunner.And("I see following items in basket", ((string)(null)), table9, "And ");
-#line 185
- testRunner.And("I see \"3916.97RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 160
+ testRunner.And("I see following items in basket", ((string)(null)), table8, "And ");
+#line 164
+ testRunner.And("I see \"3427.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -456,48 +417,73 @@ this.FeatureBackground();
         public virtual void VerifyDeleteGoodsFromBasket()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify delete goods from basket", ((string[])(null)));
-#line 188
+#line 167
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
-#line 189
+#line 168
  testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 190
+#line 169
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 191
+#line 170
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 193
- testRunner.When("I select \"Cosmic Blue, 610ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 194
+#line 172
+ testRunner.When("I select \"Electric Blue, 610ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 173
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 195
+#line 174
  testRunner.Then("I see message \"ITEM ADDED TO BASKET\" in basket popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 197
+#line 176
  testRunner.When("I click Basket button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 198
+#line 177
  testRunner.Then("I see \"1\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 200
+#line 179
  testRunner.When("I click Continue Shopping button on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 201
+#line 180
  testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 203
+#line 182
  testRunner.When("I enter \"Animal Bikes T1 BMX Tyre\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 204
+#line 183
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 205
+#line 184
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 207
+#line 186
  testRunner.When("I select \"Black, 20\", 2.4\"\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 208
+#line 187
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 209
+#line 188
  testRunner.Then("I see message \"ITEM ADDED TO BASKET\" in basket popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 211
+#line 190
  testRunner.When("I click Basket button on Top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 212
+#line 191
  testRunner.Then("I see the basket page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 213
+#line 192
  testRunner.And("I see \"2\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Quantity",
+                        "Price",
+                        "Option"});
+            table9.AddRow(new string[] {
+                        "Camelbak Podium Ice Water Bottle",
+                        "1",
+                        "Now 909.49RUB",
+                        "Electric Blue, 610ml"});
+            table9.AddRow(new string[] {
+                        "Animal Bikes T1 BMX Tyre",
+                        "1",
+                        "Now 2517.99RUB",
+                        "Black, 20\", 2.4\","});
+#line 193
+ testRunner.And("I see following items in basket", ((string)(null)), table9, "And ");
+#line 197
+ testRunner.And("I see \"3427.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 199
+ testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Ice Water Bott" +
+                    "le\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 200
+ testRunner.Then("I see \"1\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
@@ -505,44 +491,19 @@ this.FeatureBackground();
                         "Price",
                         "Option"});
             table10.AddRow(new string[] {
-                        "Camelbak Podium Ice Water Bottle",
-                        "1",
-                        "Now 1468.49RUB",
-                        "Cosmic Blue, 610ml"});
-            table10.AddRow(new string[] {
                         "Animal Bikes T1 BMX Tyre",
                         "1",
                         "Now 2517.99RUB",
                         "Black, 20\", 2.4\","});
-#line 214
+#line 201
  testRunner.And("I see following items in basket", ((string)(null)), table10, "And ");
-#line 218
- testRunner.And("I see \"3986.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 220
- testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Ice Water Bott" +
-                    "le\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 221
- testRunner.Then("I see \"1\" items in basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name",
-                        "Quantity",
-                        "Price",
-                        "Option"});
-            table11.AddRow(new string[] {
-                        "Animal Bikes T1 BMX Tyre",
-                        "1",
-                        "Now 2517.99RUB",
-                        "Black, 20\", 2.4\","});
-#line 222
- testRunner.And("I see following items in basket", ((string)(null)), table11, "And ");
-#line 225
+#line 204
  testRunner.And("I see \"2517.99RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 227
+#line 206
  testRunner.When("I click Remove button on item in basket with name \"Animal Bikes T1 BMX Tyre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 228
+#line 207
  testRunner.Then("I see the \"There are no items in your basket.\" message on the basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 229
+#line 208
  testRunner.And("I see \"0.00RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

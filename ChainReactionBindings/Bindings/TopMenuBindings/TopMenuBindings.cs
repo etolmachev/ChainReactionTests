@@ -48,12 +48,6 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 			page.OpenBasket();
 		}
 
-		[When(@"I hover to Basket button")]
-		public void HoverToBasketButon()
-		{
-			page.Hover();
-		}
-
 		[Then(@"I see basket popup is open")]
 		public void SeeBasketPopupIsOpen()
 		{

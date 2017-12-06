@@ -53,9 +53,9 @@ Scenario: Verify add goods in basket from seach page
 	When I click Basket button on Top menu
 	Then I see "1" items in basket
 	And I see following items in basket
-		| Name                             | Quantity | Price          | Option             |
-		| Camelbak Podium Ice Water Bottle | 1        | Now 1468.49RUB | Cosmic Blue, 610ml |
-	And I see "1468.49RUB" subtotal cost on basket page
+		| Name                             | Quantity | Price         | Option               |
+		| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB | Electric Blue, 610ml |
+	And I see "909.49RUB" subtotal cost on basket page
 
 Scenario: Verify add goods with different quantity in basket
 	When I enter "Camelbak Podium Ice Water Bottle" in the search text
@@ -118,26 +118,6 @@ Scenario: Verify add goods in basket from wishlist
 	And I see "2517.99RUB" subtotal cost on basket page
 
 Scenario: Verify add a few goods in basket with continue shopping
-	When I enter "Camelbak Podium Ice Water Bottle" in the search text
-	And I click Search button
-	Then I see the search page is loaded
-
-	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
-	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
-
-	When I select option "Snow" on product page
-	Then I see new details on product page
-		| Details | Value        |
-		| Colour  | Snow |
-
-	When I click Add To Basket button on item page
-	Then I see message "ITEM ADDED TO BASKET" in basket popup
-
-	When I click Basket button on Top menu
-	Then I see "1" items in basket
-
-	When I click Continue Shopping button on basket page
-	Then I see the main page is loaded
 
 	When I enter "Animal Bikes T1 BMX Tyre" in the search text
 	And I click Search button
@@ -155,7 +135,7 @@ Scenario: Verify add a few goods in basket with continue shopping
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
 	When I click Basket button on Top menu
-	Then I see "2" items in basket
+	Then I see "1" items in basket
 
 	When I click Continue Shopping button on basket page
 	Then I see the main page is loaded
@@ -176,13 +156,12 @@ Scenario: Verify add a few goods in basket with continue shopping
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
 	When I click Basket button on Top menu
-	Then I see "3" items in basket
+	Then I see "2" items in basket
 	And I see following items in basket
 	| Name                             | Quantity | Price          | Option               |
 	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
-	| Camelbak Podium Ice Water Bottle | 1        | Now 1468.49RUB  | Electric Blue, 610ml|
-	| Camelbak Podium Ice Water Bottle | 1        | Now 1468.49RUB | Snow, 610ml          |
-	And I see "3916.97RUB" subtotal cost on basket page
+	| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB  | Electric Blue, 610ml |
+	And I see "3427.48RUB" subtotal cost on basket page
 
 
 Scenario: Verify delete goods from basket
@@ -190,7 +169,7 @@ Scenario: Verify delete goods from basket
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I select "Cosmic Blue, 610ml" option in item dropdown
+	When I select "Electric Blue, 610ml" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
@@ -212,10 +191,10 @@ Scenario: Verify delete goods from basket
 	Then I see the basket page is loaded
 	And I see "2" items in basket
 	And I see following items in basket
-	| Name                             | Quantity | Price          | Option             |
-	| Camelbak Podium Ice Water Bottle | 1        | Now 1468.49RUB | Cosmic Blue, 610ml |
-	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",  |
-	And I see "3986.48RUB" subtotal cost on basket page
+	| Name                             | Quantity | Price          | Option               |
+	| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB  | Electric Blue, 610ml |
+	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
+	And I see "3427.48RUB" subtotal cost on basket page
 
 	When I click Remove button on item in basket with name "Camelbak Podium Ice Water Bottle"
 	Then I see "1" items in basket

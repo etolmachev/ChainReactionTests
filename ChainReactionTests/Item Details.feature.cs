@@ -136,7 +136,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of water bottle product")]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "489.49RUB", "4.7 / 5", "710ml", null)]
+        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 610ml", "454.49RUB", "4.3 / 5", "One Size", null)]
         [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "909.49 RUB - 1468.49 RUB", "4.1 / 5", "610ml", null)]
         public virtual void VerifyItemDetailsOfWaterBottleProduct(string name, string price, string rating, string size, string[] exampleTags)
         {
@@ -213,7 +213,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Reviews summary of product")]
-        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "6", "4.7 / 5", null)]
+        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "7", "4.7 / 5", null)]
         [NUnit.Framework.TestCaseAttribute("Pedros Chain Pig Machine Kit", "4", "2.8 / 5", null)]
         public virtual void VerifyReviewsSummaryOfProduct(string product, string count, string rating, string[] exampleTags)
         {

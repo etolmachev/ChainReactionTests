@@ -70,15 +70,6 @@ namespace ChainReactionBindings.TestBase.Pages
 		{
 			BasketElement.Click();
 		}
-		public void Hover()
-		{
-			HtmlElement element = new HtmlElement(By.CssSelector("#miniCartDiv"));
-			Actions act = new Actions(Browser.Driver);
-			var hover = element.FindElement(By.ClassName("cart_container"));
-			act.MoveToElement(hover);
-			act.Build();
-			act.Perform();
-		}
 
 		public void LogoClick()
 		{
