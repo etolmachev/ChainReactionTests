@@ -36,7 +36,7 @@ Scenario: E2E test
 	When I enter "Bike Cave" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "2" items on search page
+	And I see "1" items on search page
 	And I see items name include "Bike Cave"
 
 	When I enter "Vitus Bikes Escarpe Suspension Bike - Deore 2017" in the search text

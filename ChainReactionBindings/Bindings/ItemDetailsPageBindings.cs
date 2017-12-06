@@ -141,19 +141,13 @@ namespace ChainReactionBindings.Bindings
 		[When(@"I scroll to element")]
 		public void ThenIScrollToElement()
 		{
-			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPList"));
-			Actions act = new Actions(Browser.Driver);
-			act.MoveToElement(element);
-			act.Perform();
+			page.ScrollToElement();
 		}
 
 		[When(@"I scroll to name of product")]
 		public void ThenIScrollToNameOfProduct()
 		{
-			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPTitle"));
-			Actions act = new Actions(Browser.Driver);
-			act.MoveToElement(element);
-			act.Perform();
+			page.ScrollToNameOfProduct();
 		}
 
 		[Then(@"I don't see Ratings summary on product page")]

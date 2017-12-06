@@ -36,27 +36,22 @@ Scenario Template: Verify Item Details of bike product
 
 	Scenarios: 
 		| Name                                                     | Price                         | Rating  | Colour       | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB                 | 4.7 / 5 | Black - Grey | 27.5" (650b) |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB                 | 4.8 / 5 | Black - Grey | 27.5" (650b) |
 		| Intense Spider 275C NM Expert Bike                       | 171999.00 RUB - 191999.00 RUB | 5 / 5   | Silver       | 27.5" (650b) |
 
-Scenario Template: Verify Item Details of water bottle product
+Scenario: Verify Item Details of water bottle product
 
-	When I enter "<Name>" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "<Name>" from search results
-	Then I see the product page for "<Name>" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 	And I see details on product page
-	| Details | Value   |
-	| Price   | <Price> |
-	| Rating  | <Rating> |
-	| Size    |  <Size>  |
-
-	Scenarios:
-	| Name                             | Price                    | Rating  | Size     |
-	| Camelbak Podium Bottle 610ml     | 454.49RUB                | 4.3 / 5 | One Size |
-	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1468.49 RUB | 4.1 / 5 | 610ml    |
+	| Details | Value                    |
+	| Price   | 909.49 RUB - 1468.49 RUB |
+	| Rating  | 4.1 / 5                  |
+	| Size    | 610ml                    |
 
 Scenario Template: Verify change options of products
 
@@ -94,7 +89,7 @@ Scenario Template: Verify Reviews summary of product
 
 	Scenarios: 
 		| Product                                                  | Count | Rating  |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 7     | 4.7 / 5 |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 7     | 4.8 / 5 |
 		| Pedros Chain Pig Machine Kit                             | 4     | 2.8 / 5 |
 	 
 Scenario Template: Verify product without rating summary and reviewes

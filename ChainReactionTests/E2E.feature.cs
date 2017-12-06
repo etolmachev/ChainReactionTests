@@ -141,7 +141,7 @@ this.FeatureBackground();
 #line 38
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 39
- testRunner.And("I see \"2\" items on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"1\" items on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
  testRunner.And("I see items name include \"Bike Cave\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42

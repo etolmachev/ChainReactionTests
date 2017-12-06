@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -127,6 +128,22 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void CloseSizeChart()
 		{
 			CloseSizeChartButtonElement.Click();
+		}
+
+		public void ScrollToElement()
+		{
+			var element = ContainerElement.FindElement(By.ClassName("crcPDPList"));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
+		}
+
+		public void ScrollToNameOfProduct()
+		{
+			var element = ContainerElement.FindElement(By.ClassName("crcPDPTitle"));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
 		}
 	}
 }

@@ -106,5 +106,10 @@ namespace ChainReactionBindings.TestBase.Pages
 			var el = LeftMenuElement.FindElement(By.XPath(string.Format(OptionId, option)));
 			el.FindElement(By.TagName("a")).Click();
 		}
+
+		public int GetCountItems()
+		{
+			return ItemsCountElement.FindElements(By.ClassName("products_details_container")).Count;
+		}
 	}
 }
