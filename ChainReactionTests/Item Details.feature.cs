@@ -212,7 +212,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Reviews summary of product")]
-        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "7", "4.8 / 5", null)]
+        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "8", "4.8 / 5", null)]
         [NUnit.Framework.TestCaseAttribute("Pedros Chain Pig Machine Kit", "4", "2.8 / 5", null)]
         public virtual void VerifyReviewsSummaryOfProduct(string product, string count, string rating, string[] exampleTags)
         {

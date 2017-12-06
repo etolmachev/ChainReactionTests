@@ -89,7 +89,7 @@ Scenario Template: Verify Reviews summary of product
 
 	Scenarios: 
 		| Product                                                  | Count | Rating  |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 7     | 4.8 / 5 |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 8     | 4.8 / 5 |
 		| Pedros Chain Pig Machine Kit                             | 4     | 2.8 / 5 |
 	 
 Scenario Template: Verify product without rating summary and reviewes
