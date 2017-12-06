@@ -98,7 +98,7 @@ this.FeatureBackground();
 #line 16
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
- testRunner.And("I see \"1219 results for \'bike\'\" message on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"1184 results for \'bike\'\" message on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -119,7 +119,7 @@ this.FeatureBackground();
 #line 23
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
- testRunner.And("I see \"2\" items on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"1\" items on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
  testRunner.And("I see items name include \"Bike Cave\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -202,8 +202,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify equal names of search text and result text - by category")]
-        [NUnit.Framework.TestCaseAttribute("Bike Cave", "2", "Bike Cave", null)]
-        [NUnit.Framework.TestCaseAttribute("BiKE CavE", "2", "Bike Cave", null)]
+        [NUnit.Framework.TestCaseAttribute("Bike Cave", "1", "Bike Cave", null)]
+        [NUnit.Framework.TestCaseAttribute("BiKE CavE", "1", "Bike Cave", null)]
         public virtual void VerifyEqualNamesOfSearchTextAndResultText_ByCategory(string searchValue, string amount, string resultValue, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify equal names of search text and result text - by category", exampleTags);

@@ -27,6 +27,7 @@ namespace ChainReactionBindings.Bindings.MainPageBidings
 		[When(@"I enter ""(.*)"" in the search text")]
 		public void WhenIEnterSearchKeywordInTheSearchText(string text)
 		{
+			page.InputTextElement.Clear();
 			page.InputTextElement.SendKeys(text);
 		}
 

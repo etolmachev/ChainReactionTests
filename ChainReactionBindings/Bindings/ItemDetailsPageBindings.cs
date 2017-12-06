@@ -1,11 +1,11 @@
 ﻿using System;
-using System.ComponentModel;
 using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using TechTalk.SpecFlow;
+using System.Threading;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -19,6 +19,7 @@ namespace ChainReactionBindings.Bindings
 		{
 			page.ItemDetailsPageLoaded();
 			Assert.AreEqual(name, page.ProductTitileElement.Text);
+			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
 		[Then(@"I see details on product page")]
@@ -57,6 +58,12 @@ namespace ChainReactionBindings.Bindings
 			page.ChangeOption();
 		}
 
+		[When(@"I select option ""(.*)"" on product page")]
+		public void SelectOptionOnProductPage(string option)
+		{
+			page.ChangeOption(option);
+		}
+
 		[Then(@"I see new details on product page")]
 		public void ThenISeeNewDetailsOnProductPage(Table table)
 		{
@@ -75,10 +82,13 @@ namespace ChainReactionBindings.Bindings
 					case "Size":
 						Assert.AreEqual(page.NewSizeElement.Text, fieldValue);
 						break;
+					case "Width":
+						Assert.AreEqual(page.NewFrameSizeElement.Text, fieldValue);
+						break;
 					default:
 						throw new Exception(string.Format("Field {0} is not implemented", fieldName));
 				}
-				
+
 			}
 		}
 
@@ -86,6 +96,7 @@ namespace ChainReactionBindings.Bindings
 		public void WhenIClickOnReadAllReviews()
 		{
 			page.SeeReviews();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
 		}
 
 		[When(@"I click on Empty Reviews")]
@@ -136,6 +147,15 @@ namespace ChainReactionBindings.Bindings
 			act.Perform();
 		}
 
+		[When(@"I scroll to name of product")]
+		public void ThenIScrollToNameOfProduct()
+		{
+			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPTitle"));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
+		}
+
 		[Then(@"I don't see Ratings summary on product page")]
 		public void ThenIDoNotSeeRatingsSummary()
 		{
@@ -152,6 +172,28 @@ namespace ChainReactionBindings.Bindings
 		public void WhenIClickAddToWishlistButton()
 		{
 			page.AddToWishlist();
+		}
+
+		[When(@"I click Add To Basket button on item page")]
+		public void ClickAddToBasketButtonOnItemPage()
+		{
+			page.AddToBasket();
+			Thread.Sleep(TimeSpan.FromMilliseconds(500));
+		}
+
+		[When(@"I set ""(.*)"" as quantity on item page")]
+		public void SetAsQuantityOnItemPage(int count)
+		{
+			for (int i = 1; i < count; i++)
+			{
+				page.PlusOne();
+			}
+		}
+
+		[When(@"I close Size Chart")]
+		public void CloseSizeChart()
+		{
+			page.CloseSizeChart();
 		}
 
 	}

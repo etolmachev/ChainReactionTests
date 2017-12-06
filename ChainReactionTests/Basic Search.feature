@@ -14,14 +14,14 @@ Scenario: Verify search by name of goods
 	When I enter "bike" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "1219 results for 'bike'" message on search page
+	And I see "1184 results for 'bike'" message on search page
 
 Scenario: Verify equal names of search text and result text
 
 	When I enter "Bike Cave" in the search text
 	And I click Search button
 	Then I see the search page is loaded
-	And I see "2" items on search page
+	And I see "1" items on search page
 	And I see items name include "Bike Cave"
 
 Scenario: Verify result for nonexisten goods
@@ -68,7 +68,7 @@ Scenario Template: Verify equal names of search text and result text - by catego
 	And I see items name include "<ResultValue>"
 
 	Scenarios: 
-		| SearchValue  | Amount | ResultValue  |
-		| Bike Cave    | 2      | Bike Cave    |
-		| BiKE CavE   | 2      | Bike Cave   |
+		| SearchValue | Amount | ResultValue |
+		| Bike Cave   | 1      | Bike Cave   |
+		| BiKE CavE   | 1      | Bike Cave   |
 

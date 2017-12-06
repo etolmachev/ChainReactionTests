@@ -1,5 +1,8 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Threading;
 
 namespace ChainReactionBindings.TestBase.Pages
 {
@@ -12,7 +15,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string SelectLanguageId = "select[name='/atg/userprofiling/ProfileFormHandler.value.language']";
 		public string UpdateButtonId = "input[name='/atg/userprofiling/ProfileFormHandler.updateLocaleInfo']";
 		public string WishlistButtonId = ".crcHeaderWishlist";
-		public string BasketId = ".cart_container";
+		public string BasketId = "div.cart_container a";
+		public string CloseBasketId = ".minicart_close";
+		public string BasketMessageId = ".basket-head-title";
+		public string LogoId = ".crc_logo";
 
 		public HtmlElement ShopByCategoryElement;
 		public HtmlElement BrandsElement;
@@ -23,6 +29,9 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement UpdateButtonElement;
 		public HtmlElement WishlistButtonElement;
 		public HtmlElement BasketElement;
+		public HtmlElement CloseBasketElement;
+		public HtmlElement BasketMessageElement;
+		public HtmlElement LogoElement;
 
 		public TopMenu()
 		{
@@ -32,27 +41,48 @@ namespace ChainReactionBindings.TestBase.Pages
 			RubRubElement = new HtmlElement(By.CssSelector(RubRubId));
 			WishlistButtonElement = new HtmlElement(By.CssSelector(WishlistButtonId));
 			BasketElement = new HtmlElement(By.CssSelector(BasketId));
+			CloseBasketElement = new HtmlElement(By.CssSelector(CloseBasketId));
+			BasketMessageElement = new HtmlElement(By.CssSelector(BasketMessageId));
+			LogoElement = new HtmlElement(By.CssSelector(LogoId));
 		}
 
 		public void ClickSignIn()
 		{
 			SignInElement.Click();
 		}
+
 		public void OpenRub()
 		{
 			RubRubElement.Click();
 		}
+
 		public void Update()
 		{
 			UpdateButtonElement.Click();
 		}
+
 		public void OpenWishlist()
 		{
 			WishlistButtonElement.Click();
 		}
+
 		public void OpenBasket()
 		{
 			BasketElement.Click();
+		}
+		public void Hover()
+		{
+			HtmlElement element = new HtmlElement(By.CssSelector("#miniCartDiv"));
+			Actions act = new Actions(Browser.Driver);
+			var hover = element.FindElement(By.ClassName("cart_container"));
+			act.MoveToElement(hover);
+			act.Build();
+			act.Perform();
+		}
+
+		public void LogoClick()
+		{
+			LogoElement.Click();
 		}
 	}
 }

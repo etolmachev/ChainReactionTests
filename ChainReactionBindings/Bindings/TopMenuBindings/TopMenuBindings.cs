@@ -1,7 +1,10 @@
 ﻿using ChainReactionBindings.TestBase;
 using ChainReactionBindings.TestBase.Pages;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace ChainReactionBindings.Bindings.TopMenuBindings
@@ -38,11 +41,35 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 			page.OpenWishlist();
 		}
 
-		[When(@"I click Basket button")]
+		[When(@"I click Basket button on Top menu")]
 		public void ClickBasketButton()
 		{
+			Thread.Sleep(TimeSpan.FromSeconds(2));
 			page.OpenBasket();
 		}
 
+		[When(@"I hover to Basket button")]
+		public void HoverToBasketButon()
+		{
+			page.Hover();
+		}
+
+		[Then(@"I see basket popup is open")]
+		public void SeeBasketPopupIsOpen()
+		{
+			Assert.IsTrue(page.CloseBasketElement.Displayed);
+		}
+
+		[Then(@"I see message ""(.*)"" in basket popup")]
+		public void SeeMessageInBasketPopup(string message)
+		{
+			Assert.AreEqual(message, page.BasketMessageElement.Text);
+		}
+
+		[When(@"I click Logo on Top menu")]
+		public void ClickLogoOnTopMenu()
+		{
+			page.LogoClick();
+		}
 	}
 }

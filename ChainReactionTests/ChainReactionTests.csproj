@@ -69,6 +69,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Basic Search.feature</DependentUpon>
     </Compile>
+    <Compile Include="Basket.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Basket.feature</DependentUpon>
+    </Compile>
+    <Compile Include="E2E.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>E2E.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Extended Search.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Extended Search.feature</DependentUpon>
+    </Compile>
     <Compile Include="Item Details.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +114,18 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Basket.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Basket.feature.cs</LastGenOutput>
+    </None>
+    <None Include="E2E.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>E2E.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Extended Search.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Extended Search.feature.cs</LastGenOutput>
     </None>
     <None Include="Item Details.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

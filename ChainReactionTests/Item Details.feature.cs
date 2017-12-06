@@ -93,7 +93,7 @@ Model/Size", ProgrammingLanguage.CSharp, ((string[])(null)));
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of bike product")]
-        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "138999.00 RUB", "4.6 / 5", "Black - Grey", "27.5\" (650b)", null)]
+        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "138999.00 RUB", "4.7 / 5", "Black - Grey", "27.5\" (650b)", null)]
         [NUnit.Framework.TestCaseAttribute("Intense Spider 275C NM Expert Bike", "171999.00 RUB - 191999.00 RUB", "5 / 5", "Silver", "27.5\" (650b)", null)]
         public virtual void VerifyItemDetailsOfBikeProduct(string name, string price, string rating, string colour, string wheelSize, string[] exampleTags)
         {
@@ -136,8 +136,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of water bottle product")]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "489.49 RUB", "4.7 / 5", "710ml", null)]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "909.49 RUB - 1258.49 RUB", "4.1 / 5", "610ml", null)]
+        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "489.49RUB", "4.7 / 5", "710ml", null)]
+        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "909.49 RUB - 1468.49 RUB", "4.1 / 5", "610ml", null)]
         public virtual void VerifyItemDetailsOfWaterBottleProduct(string name, string price, string rating, string size, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Item Details of water bottle product", exampleTags);
@@ -177,8 +177,8 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify change options of products")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "Frame Size", "43cm (17\")", null)]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "Colour", "Clear Carbon", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", "Size", "M", null)]
+        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "Colour", "Snow", null)]
+        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", "Size", "S", null)]
         public virtual void VerifyChangeOptionsOfProducts(string name, string option, string value, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify change options of products", exampleTags);
@@ -197,7 +197,7 @@ this.FeatureBackground();
 #line 68
  testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
- testRunner.When("I select second option on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I select option \"{0}\" on product page", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
@@ -213,7 +213,7 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Reviews summary of product")]
-        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "5", "4.6 / 5", null)]
+        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "6", "4.7 / 5", null)]
         [NUnit.Framework.TestCaseAttribute("Pedros Chain Pig Machine Kit", "4", "2.8 / 5", null)]
         public virtual void VerifyReviewsSummaryOfProduct(string product, string count, string rating, string[] exampleTags)
         {

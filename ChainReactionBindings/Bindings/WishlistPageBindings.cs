@@ -61,7 +61,7 @@ namespace ChainReactionBindings.Bindings
 				switch (fieldName)
 				{
 					case "Title":
-						Assert.AreEqual(fieldValue,page.ItemsTitleElement.Text);
+						Assert.AreEqual(fieldValue,page.GetItemTitle(fieldValue));
 						break;
 					case "Price":
 						Assert.AreEqual(fieldValue, page.PriceElement.Text);
@@ -114,6 +114,34 @@ namespace ChainReactionBindings.Bindings
 		public void SeeQuantity(string count)
 		{
 			Assert.AreEqual(count,page.QuantityElement.GetAttribute("value"));
+		}
+
+		[When(@"I click Add To Basket button for item ""(.*)"" on wishlist page")]
+		public void ClickAddToBasketButtonForItemOnWishlistPage(string name)
+		{
+			page.AddToBasket(name);
+		}
+
+		[Then(@"I make sure that exist wishlist with name ""(.*)""")]
+		public void MakeSureThatExistWishlistWithName(string name)
+		{
+			page.FindWishlist(name);
+		}
+
+		[Then(@"I make sure that wishlist is empty")]
+		public void MakeSureThatBasketIsEmpty()
+		{
+
+			if (page.GetItemsFromWishlist() != 0)
+			{
+				int count = page.GetItemsFromWishlist();
+				for (int i = count; i >= 1; i--)
+				{
+					page.RemoveItemBackground();
+				}
+			}
+
+			Assert.IsTrue(page.EmptyWishlistElement.Displayed);
 		}
 	}
 }
