@@ -44,7 +44,6 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 		[When(@"I click Basket button on Top menu")]
 		public void ClickBasketButton()
 		{
-			Thread.Sleep(TimeSpan.FromSeconds(2));
 			page.OpenBasket();
 		}
 
@@ -58,6 +57,7 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 		public void SeeMessageInBasketPopup(string message)
 		{
 			Assert.AreEqual(message, page.BasketMessageElement.Text);
+			Thread.Sleep(TimeSpan.FromSeconds(3));
 		}
 
 		[When(@"I click Logo on Top menu")]
