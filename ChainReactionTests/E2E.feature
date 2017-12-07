@@ -158,10 +158,10 @@ Scenario: E2E test
 	When I click Basket button on Top menu
 	Then I see "2" items in basket
 	And I see following items in basket
-		| Name                             | Quantity | Price         | Option               |
-		| Camelbak Podium Bottle 710ml     | 1        | Now 489.49RUB | Clear Blue, 710ml    |
-		| Camelbak Podium Ice Water Bottle | 3        | Now 909.49RUB | Electric Blue, 610ml |
-	And I see "3217.96RUB" subtotal cost on basket page
+		| Name                             | Quantity | Price           | Option               |
+		| Camelbak Podium Bottle 710ml     | 1        | Now 489.49RUB   | Clear Blue, 710ml    |
+		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Electric Blue, 610ml  |
+	And I see "4371.46RUB" subtotal cost on basket page
 
 	When I click Remove button on item in basket with name "Camelbak Podium Ice Water Bottle"
 	Then I see "1" items in basket
