@@ -53,9 +53,9 @@ Scenario: Verify add goods in basket from seach page
 	When I click Basket button on Top menu
 	Then I see "1" items in basket
 	And I see following items in basket
-		| Name                             | Quantity | Price         | Option               |
-		| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB | Electric Blue, 610ml |
-	And I see "909.49RUB" subtotal cost on basket page
+		| Name                             | Quantity | Price          | Option               |
+		| Camelbak Podium Ice Water Bottle | 1        | Now 1293.99RUB | Electric Blue, 610ml |
+	And I see "1293.99RUB" subtotal cost on basket page
 
 Scenario: Verify add goods with different quantity in basket
 	When I enter "Camelbak Podium Ice Water Bottle" in the search text
@@ -78,8 +78,8 @@ Scenario: Verify add goods with different quantity in basket
 	Then I see "1" items in basket 
 	Then I see following items in basket
 		| Name                             | Quantity | Price          | Option      |
-		| Camelbak Podium Ice Water Bottle | 3        | Now 1468.49RUB | Snow, 610ml |
-	And I see "4405.47RUB" subtotal cost on basket page
+		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Snow, 610ml |
+	And I see "3881.97RUB" subtotal cost on basket page
 
 Scenario: Verify add goods in basket from wishlist
 	When I enter "Animal Bikes T1 BMX Tyre" in the search text
@@ -160,8 +160,8 @@ Scenario: Verify add a few goods in basket with continue shopping
 	And I see following items in basket
 	| Name                             | Quantity | Price          | Option               |
 	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
-	| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB  | Electric Blue, 610ml |
-	And I see "3427.48RUB" subtotal cost on basket page
+	| Camelbak Podium Ice Water Bottle | 1        | Now 1293.99RUB | Electric Blue, 610ml |
+	And I see "3811.98RUB" subtotal cost on basket page
 
 
 Scenario: Verify delete goods from basket
@@ -192,9 +192,9 @@ Scenario: Verify delete goods from basket
 	And I see "2" items in basket
 	And I see following items in basket
 	| Name                             | Quantity | Price          | Option               |
-	| Camelbak Podium Ice Water Bottle | 1        | Now 909.49RUB  | Electric Blue, 610ml |
+	| Camelbak Podium Ice Water Bottle | 1        | Now 1293.99RUB | Electric Blue, 610ml |
 	| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
-	And I see "3427.48RUB" subtotal cost on basket page
+	And I see "3811.98RUB" subtotal cost on basket page
 
 	When I click Remove button on item in basket with name "Camelbak Podium Ice Water Bottle"
 	Then I see "1" items in basket

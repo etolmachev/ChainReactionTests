@@ -172,12 +172,12 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 909.49RUB",
+                        "Now 1293.99RUB",
                         "Electric Blue, 610ml"});
 #line 55
  testRunner.And("I see following items in basket", ((string)(null)), table2, "And ");
 #line 58
- testRunner.And("I see \"909.49RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"1293.99RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -232,12 +232,12 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "3",
-                        "Now 1468.49RUB",
+                        "Now 1293.99RUB",
                         "Snow, 610ml"});
 #line 79
  testRunner.Then("I see following items in basket", ((string)(null)), table4, "Then ");
 #line 82
- testRunner.And("I see \"4405.47RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"3881.97RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -402,12 +402,12 @@ this.FeatureBackground();
             table8.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 909.49RUB",
+                        "Now 1293.99RUB",
                         "Electric Blue, 610ml"});
 #line 160
  testRunner.And("I see following items in basket", ((string)(null)), table8, "And ");
 #line 164
- testRunner.And("I see \"3427.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"3811.98RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -468,7 +468,7 @@ this.FeatureBackground();
             table9.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "1",
-                        "Now 909.49RUB",
+                        "Now 1293.99RUB",
                         "Electric Blue, 610ml"});
             table9.AddRow(new string[] {
                         "Animal Bikes T1 BMX Tyre",
@@ -478,7 +478,7 @@ this.FeatureBackground();
 #line 193
  testRunner.And("I see following items in basket", ((string)(null)), table9, "And ");
 #line 197
- testRunner.And("I see \"3427.48RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"3811.98RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 199
  testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Ice Water Bott" +
                     "le\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

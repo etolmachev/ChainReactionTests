@@ -160,7 +160,7 @@ this.FeatureBackground();
                         "Value"});
             table2.AddRow(new string[] {
                         "Price",
-                        "909.49 RUB - 1468.49 RUB"});
+                        "1293.99 RUB"});
             table2.AddRow(new string[] {
                         "Rating",
                         "4.1 / 5"});
