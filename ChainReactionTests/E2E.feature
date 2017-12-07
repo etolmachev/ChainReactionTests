@@ -140,9 +140,9 @@ Scenario: E2E test
 	When I click Basket button on Top menu
 	Then I see "1" items in basket 
 	Then I see following items in basket
-		| Name                             | Quantity | Price         | Option               |
-		| Camelbak Podium Ice Water Bottle | 3        | Now 909.49RUB | Electric Blue, 610ml |
-	And I see "2728.47RUB" subtotal cost on basket page
+		| Name                             | Quantity | Price          | Option               |
+		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Electric Blue, 610ml |
+	And I see "3881.97RUB" subtotal cost on basket page
 
 	When I click Continue Shopping button on basket page
 	Then I see the main page is loaded
