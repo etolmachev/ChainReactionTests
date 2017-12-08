@@ -51,12 +51,12 @@ namespace ChainReactionBindings.TestBase
 			return ScenarioContext.Current.Get<string>(key);
 		}
 
-		public static void TakeScreenshot(string title)
+		public static void TakeScreenshot(string scenario, string feature)
 		{
 			try
 			{
 				Screenshot ss = ((ITakesScreenshot)Browser.Driver).GetScreenshot();
-				ss.SaveAsFile(@"D:\Screenshots\" + title+ ".jpg",ScreenshotImageFormat.Jpeg);
+				ss.SaveAsFile(@"C:\Screenshots\" + feature + scenario+ ".jpg",ScreenshotImageFormat.Jpeg);
 			}
 			catch (Exception e)
 			{

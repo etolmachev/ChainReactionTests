@@ -43,7 +43,7 @@ namespace ChainReactionBindings.CommonBindings
 		{
 			if (ScenarioContext.Current.TestError != null)
 			{
-				Utils.TakeScreenshot(ScenarioContext.Current.ScenarioInfo.Title);
+				Utils.TakeScreenshot(ScenarioContext.Current.ScenarioInfo.Title, FeatureContext.Current.FeatureInfo.Title);
 			}
 		}
 
