@@ -92,8 +92,8 @@ testRunner.Given("I open browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify search with option Gender")]
-        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1184", "466", null)]
-        [NUnit.Framework.TestCaseAttribute("Jacket", "Female", "245", "74", null)]
+        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1272", "516", null)]
+        [NUnit.Framework.TestCaseAttribute("Jacket", "Female", "315", "97", null)]
         public virtual void VerifySearchWithOptionGender(string product, string gender, string result, string count, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify search with option Gender", exampleTags);
@@ -119,9 +119,9 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify search with option Gender and Brand")]
-        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1184", "466", "Colnago", "4", null)]
-        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "245", "74", "Fox Racing", "2", null)]
-        [NUnit.Framework.TestCaseAttribute("COM", "Male", "109", "53", "Ergon", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1272", "516", "Colnago", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "315", "97", "Fox Racing", "2", null)]
+        [NUnit.Framework.TestCaseAttribute("COM", "Male", "121", "61", "Ergon", "4", null)]
         public virtual void VerifySearchWithOptionGenderAndBrand(string product, string gender, string result, string countGender, string brand, string countBrand, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify search with option Gender and Brand", exampleTags);
@@ -155,8 +155,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify search with three options")]
-        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1184", "466", "Dawes", "8", "Blue", "3", null)]
-        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "245", "74", "Fox Racing", "2", "Black", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1272", "516", "Dawes", "6", "Blue", "2", null)]
+        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "315", "97", "Fox Racing", "2", "Black", "1", null)]
         public virtual void VerifySearchWithThreeOptions(string product, string gender, string result, string countGender, string brand, string countBrand, string colour, string countColour, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify search with three options", exampleTags);
@@ -198,8 +198,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify find 0 items with incorrect option Price")]
-        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1184", "466", "Dawes", "8", "Blue", "3", "1000", "1500", null)]
-        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "245", "74", "Fox Racing", "2", "Black", "1", "5000", "8000", null)]
+        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1272", "516", "Dawes", "6", "Blue", "2", "1000", "1500", null)]
+        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "315", "97", "Fox Racing", "2", "Black", "1", "5000", "8000", null)]
         public virtual void VerifyFind0ItemsWithIncorrectOptionPrice(string product, string gender, string result, string countGender, string brand, string countBrand, string colour, string countColour, string from, string to, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify find 0 items with incorrect option Price", exampleTags);
@@ -246,8 +246,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify delete option fron filter")]
-        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1184", "466", "Dawes", "8", "Blue", "3", "1000", "1500", null)]
-        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "245", "74", "Fox Racing", "2", "Black", "1", "5000", "8000", null)]
+        [NUnit.Framework.TestCaseAttribute("bike", "Male", "1272", "516", "Dawes", "6", "Blue", "2", "1000", "1500", null)]
+        [NUnit.Framework.TestCaseAttribute("JaCKet", "Female", "315", "97", "Fox Racing", "2", "Black", "1", "5000", "8000", null)]
         public virtual void VerifyDeleteOptionFronFilter(string product, string gender, string result, string countGender, string brand, string countBrand, string colour, string countColour, string from, string to, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify delete option fron filter", exampleTags);

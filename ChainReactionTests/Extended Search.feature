@@ -30,8 +30,8 @@ Scenario Template: Verify search with option Gender
 
 	Scenarios: 
 	| Product | Gender | Result | Count |
-	| bike    | Male   | 1184   | 466   |
-	| Jacket  | Female | 245    | 74    |
+	| bike    | Male   | 1272   | 516   |
+	| Jacket  | Female | 315    | 97    |
 
 Scenario Template: Verify search with option Gender and Brand
 
@@ -51,9 +51,9 @@ Scenario Template: Verify search with option Gender and Brand
 
 	Scenarios: 
 	| Product | Gender | Result | CountGender | Brand      | CountBrand |
-	| bike    | Male   | 1184   | 466         | Colnago    | 4          |
-	| JaCKet  | Female | 245    | 74          | Fox Racing | 2          |
-	| COM     | Male   | 109    | 53          | Ergon      | 4          |
+	| bike    | Male   | 1272   | 516         | Colnago    | 4          |
+	| JaCKet  | Female | 315    | 97          | Fox Racing | 2          |
+	| COM     | Male   | 121    | 61          | Ergon      | 4          |
 
 Scenario Template:  Verify search with three options
 	
@@ -78,8 +78,8 @@ Scenario Template:  Verify search with three options
 
 	Scenarios: 
 	| Product | Gender | Result | CountGender | Brand      | CountBrand | Colour | CountColour |
-	| bike    | Male   | 1184   | 466         | Dawes      | 8          | Blue   | 3           |
-	| JaCKet  | Female | 245    | 74          | Fox Racing | 2          | Black  | 1           |
+	| bike    | Male   | 1272   | 516         | Dawes      | 6          | Blue   | 2           |
+	| JaCKet  | Female | 315    | 97          | Fox Racing | 2          | Black  | 1           |
 
 Scenario Template:  Verify find 0 items with incorrect option Price
 	
@@ -106,8 +106,8 @@ Scenario Template:  Verify find 0 items with incorrect option Price
 
 	Scenarios: 
 	| Product | Gender | Result | CountGender | Brand      | CountBrand | Colour | CountColour | From | To   |
-	| bike    | Male   | 1184   | 466         | Dawes      | 8          | Blue   | 3           | 1000 | 1500 |
-	| JaCKet  | Female | 245    | 74          | Fox Racing | 2          | Black  | 1           | 5000 | 8000 |
+	| bike    | Male   | 1272   | 516         | Dawes      | 6          | Blue   | 2           | 1000 | 1500 |
+	| JaCKet  | Female | 315    | 97          | Fox Racing | 2          | Black  | 1           | 5000 | 8000 |
 
 Scenario Template:  Verify delete option fron filter
 	
@@ -148,6 +148,6 @@ Scenario Template:  Verify delete option fron filter
 
 	Scenarios: 
 	| Product | Gender | Result | CountGender | Brand      | CountBrand | Colour | CountColour | From | To   |
-	| bike    | Male   | 1184   | 466         | Dawes      | 8          | Blue   | 3           | 1000 | 1500 |
-	| JaCKet  | Female | 245    | 74          | Fox Racing | 2          | Black  | 1           | 5000 | 8000 |
+	| bike    | Male   | 1272   | 516         | Dawes      | 6          | Blue   | 2           | 1000 | 1500 |
+	| JaCKet  | Female | 315    | 97          | Fox Racing | 2          | Black  | 1           | 5000 | 8000 |
 

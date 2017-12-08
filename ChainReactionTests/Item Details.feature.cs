@@ -94,7 +94,7 @@ Model/Size", ProgrammingLanguage.CSharp, ((string[])(null)));
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of bike product")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "138999.00 RUB", "4.8 / 5", "Black - Grey", "27.5\" (650b)", null)]
-        [NUnit.Framework.TestCaseAttribute("Intense Spider 275C NM Expert Bike", "171999.00 RUB - 191999.00 RUB", "5 / 5", "Silver", "27.5\" (650b)", null)]
+        [NUnit.Framework.TestCaseAttribute("Intense Spider 275C NM Expert Bike", "171999.00 RUB", "5 / 5", "Silver", "27.5\" (650b)", null)]
         public virtual void VerifyItemDetailsOfBikeProduct(string name, string price, string rating, string colour, string wheelSize, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Item Details of bike product", exampleTags);
@@ -177,7 +177,7 @@ this.FeatureBackground();
         [NUnit.Framework.DescriptionAttribute("Verify change options of products")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "Frame Size", "43cm (17\")", null)]
         [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "Colour", "Snow", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", "Size", "S", null)]
+        [NUnit.Framework.TestCaseAttribute("100% Geico Honda Factory Hoodie", "Size", "S", null)]
         public virtual void VerifyChangeOptionsOfProducts(string name, string option, string value, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify change options of products", exampleTags);
@@ -252,7 +252,7 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify product without rating summary and reviewes")]
         [NUnit.Framework.TestCaseAttribute("Animal Bikes T1 BMX Tyre", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", null)]
+        [NUnit.Framework.TestCaseAttribute("100% Geico Honda Factory Hoodie", null)]
         public virtual void VerifyProductWithoutRatingSummaryAndReviewes(string product, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify product without rating summary and reviewes", exampleTags);
@@ -271,7 +271,7 @@ this.FeatureBackground();
 #line 101
  testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 103
- testRunner.When("I scroll to element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I scroll to description of product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 104
  testRunner.When("I click on Empty Reviews", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 105
@@ -285,7 +285,7 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify open Size Chart for product")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", null)]
+        [NUnit.Framework.TestCaseAttribute("100% Geico Honda Factory Hoodie", null)]
         public virtual void VerifyOpenSizeChartForProduct(string product, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify open Size Chart for product", exampleTags);

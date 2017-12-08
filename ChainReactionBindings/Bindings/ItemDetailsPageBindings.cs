@@ -138,10 +138,10 @@ namespace ChainReactionBindings.Bindings
 			page.TopLogoElement.WaitElementAppears(30);
 		}
 
-		[When(@"I scroll to element")]
-		public void ThenIScrollToElement()
+		[When(@"I scroll to description of product")]
+		public void ThenIScrollToDescriptionOfProduct()
 		{
-			page.ScrollToElement();
+			page.ScrollToDescriptionOfProduct();
 		}
 
 		[When(@"I scroll to name of product")]

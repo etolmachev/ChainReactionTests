@@ -130,7 +130,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			CloseSizeChartButtonElement.Click();
 		}
 
-		public void ScrollToElement()
+		public void ScrollToDescriptionOfProduct()
 		{
 			var element = ContainerElement.FindElement(By.ClassName("crcPDPList"));
 			Actions act = new Actions(Browser.Driver);

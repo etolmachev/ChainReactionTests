@@ -1,12 +1,12 @@
 ﻿using System;
 using ChainReactionBindings.TestBase.Pages;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using ChainReactionBindings.TestBase;
 using System.Threading;
+using NUnit.Framework;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -58,7 +58,7 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see ""(.*)"" items on search page")]
 		public void ThenISeeItemsOnSearchPage(int count)
 		{
-			Assert.AreEqual(count, page.GetCountItems());
+			Assert.That(page.GetCountItems(), Is.EqualTo(count), "The expected count {0} and actial count {1} are not equal", page.GetCountItems(),count);
 		}
 
 		[Then(@"I see items name include ""(.*)""")]
@@ -135,21 +135,20 @@ namespace ChainReactionBindings.Bindings
 		[Then(@"I see items include colour ""(.*)""")]
 		public void ThenISeeItemsIncludeColour(string colour)
 		{
-			var itemsDesc = page.ItemsCountElement.FindElements(By.ClassName(colour.ToLower()));
+			page.ItemsCountElement.FindElements(By.ClassName(colour.ToLower()));
 		}
 
 		[When(@"I enter price from ""(.*)"" to ""(.*)"" on search page and click Go button")]
 		public void EnterPriceFromToOnSearchRageAndClickGoButton(string from, string to)
 		{
-			page.FromElement.SendKeys(from);
-			page.ToElement.SendKeys(to);
-			page.GoButtonElement.Click();
+			page.SetPrice(from, to);
 		}
 
 		[Then(@"I see message ""(.*)"" after filter on search page")]
 		public void ThenISeeMessageAfterFilterOnSearchPage(string text)
 		{
-			Assert.AreEqual(text, page.NoResultsFilterMessageElement.Text);
+			Assert.That(page.NoResultsFilterMessageElement.Text, Is.EqualTo(text), "The expected {0} and actual {1} results are not equal", page.NoResultsFilterMessageElement.Text,text);
+			
 		}
 
 		[When(@"I delete price from filter")]

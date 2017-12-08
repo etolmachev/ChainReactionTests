@@ -57,7 +57,6 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 		public void SeeMessageInBasketPopup(string message)
 		{
 			Assert.AreEqual(message, page.BasketMessageElement.Text);
-			Thread.Sleep(TimeSpan.FromSeconds(5));
 		}
 
 		[When(@"I click Logo on Top menu")]

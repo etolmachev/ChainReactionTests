@@ -73,6 +73,7 @@ Scenario: Verify add goods with different quantity in basket
 	When I set "3" as quantity on item page
 	And I click Add To Basket button on item page
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
+	And I wait for "5" seconds
 
 	When I click Basket button on Top menu
 	Then I see "1" items in basket 

@@ -100,16 +100,20 @@ namespace ChainReactionBindings.TestBase.Pages
 			var el = LeftMenuElement.FindElement(By.XPath("//li[@class='refine_filter_result_label' and ./span/div]"));
 			el.FindElement(By.TagName("a")).Click();
 		}
-
 		public void DeleteOption(string option)
 		{
 			var el = LeftMenuElement.FindElement(By.XPath(string.Format(OptionId, option)));
 			el.FindElement(By.TagName("a")).Click();
 		}
-
 		public int GetCountItems()
 		{
 			return ItemsCountElement.FindElements(By.ClassName("products_details_container")).Count;
+		}
+		public void SetPrice(string from, string to)
+		{
+			FromElement.SendKeys(from);
+			ToElement.SendKeys(to);
+			GoButtonElement.Click();
 		}
 	}
 }
