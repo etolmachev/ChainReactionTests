@@ -20,7 +20,7 @@ namespace ChainReactionTests
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("E2E")]
-    [NUnit.Framework.CategoryAttribute("test")]
+    [NUnit.Framework.CategoryAttribute("MyTag")]
     public partial class E2EFeature
     {
         
@@ -38,7 +38,7 @@ As a QA,
 I want to be able to test scope of the features connected in one test.
 A/C:
 1. e2e tests including registration, logout, login, create wishlist, search, add to wishlist, remove from wishlist, delete wishlist", ProgrammingLanguage.CSharp, new string[] {
-                        "test"});
+                        "MyTag"});
             testRunner.OnFeatureStart(featureInfo);
         }
         

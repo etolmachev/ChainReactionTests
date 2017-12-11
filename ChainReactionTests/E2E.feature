@@ -1,4 +1,4 @@
-﻿@test
+﻿@MyTag
 Feature: E2E
 	To make sure that the entire project works as one system and not just a set of features,
 As a QA,
