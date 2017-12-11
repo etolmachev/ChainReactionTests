@@ -48,7 +48,7 @@ Scenario: E2E test
 	And I see details on product page
 		| Details    | Value         |
 		| Price      | 87999.00 RUB  |
-		| Rating     | 4.3 / 5       |
+		| Rating     | 4.4 / 5       |
 		| Colour     | Blue - Orange |
 		| Wheel Size | 27.5" (650b)  |
 
@@ -61,8 +61,8 @@ Scenario: E2E test
 	When I click on Read all reviews 
 	Then I see the following values in Ratings summary on product page
 		| Field   | Value     |
-		| Rating  | 4.3 / 5   |
-		| Reviews | 6 reviews |
+		| Rating  | 4.4 / 5   |
+		| Reviews | 7 reviews |
 		
 	When I scroll to name of product 
 	When I select option "43cm (17")" on product page
@@ -125,7 +125,7 @@ Scenario: E2E test
 	And I see details on product page
 	| Details | Value       |
 	| Price   | 1293.99 RUB |
-	| Rating  | 4.1 / 5     |
+	| Rating  | 4.2 / 5     |
 	| Size    | 610ml       |
 
 	When  I select option "Electric Blue" on product page
@@ -147,29 +147,29 @@ Scenario: E2E test
 	When I click Continue Shopping button on basket page
 	Then I see the main page is loaded
 
-	When I enter "Camelbak Podium Bottle 710ml" in the search text
+	When I enter "Animal Bikes T1 BMX Tyre" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 	
-	When I select "Clear Blue, 700ml" option in item dropdown
+	When I select "Black, 20", 2.4"" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 
 	When I click Basket button on Top menu
 	Then I see "2" items in basket
 	And I see following items in basket
-		| Name                             | Quantity | Price           | Option               |
-		| Camelbak Podium Bottle 710ml     | 1        | Now 489.49RUB   | Clear Blue, 710ml    |
-		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Electric Blue, 610ml  |
-	And I see "4371.46RUB" subtotal cost on basket page
+		| Name                             | Quantity | Price          | Option               |
+		| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
+		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Electric Blue, 610ml |
+	And I see "6399.96RUB" subtotal cost on basket page
 
 	When I click Remove button on item in basket with name "Camelbak Podium Ice Water Bottle"
 	Then I see "1" items in basket
 	And I see following items in basket
-	| Name                         | Quantity | Price         | Option            |
-	| Camelbak Podium Bottle 710ml | 1        | Now 489.49RUB | Clear Blue, 710ml |
-	And I see "489.49RUB" subtotal cost on basket page
+	| Name                     | Quantity | Price          | Option            |
+	| Animal Bikes T1 BMX Tyre | 1        | Now 2517.99RUB | Black, 20", 2.4", |
+	And I see "2517.99RUB" subtotal cost on basket page
 
-	When I click Remove button on item in basket with name "Camelbak Podium Bottle 710ml"
+	When I click Remove button on item in basket with name "Animal Bikes T1 BMX Tyre"
 	Then I see the "There are no items in your basket." message on the basket page
 	And I see "0.00RUB" subtotal cost on basket page

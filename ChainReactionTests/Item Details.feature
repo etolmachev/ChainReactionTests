@@ -37,7 +37,7 @@ Scenario Template: Verify Item Details of bike product
 	Scenarios: 
 		| Name                                                     | Price         | Rating  | Colour       | WheelSize    |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.8 / 5 | Black - Grey | 27.5" (650b) |
-		| Intense Spider 275C NM Expert Bike                       | 171999.00 RUB | 5 / 5   | Silver       | 27.5" (650b) |
+		| Nukeproof Mega 275 Comp Bike 2018                        | 140000.00 RUB  | 4.5 / 5 | Red - Silver | 27.5" (650b)|
 
 Scenario: Verify Item Details of water bottle product
 
@@ -50,7 +50,7 @@ Scenario: Verify Item Details of water bottle product
 	And I see details on product page
 	| Details | Value       |
 	| Price   | 1293.99 RUB |
-	| Rating  | 4.1 / 5     |
+	| Rating  | 4.2 / 5     |
 	| Size    | 610ml       |
 
 Scenario Template: Verify change options of products

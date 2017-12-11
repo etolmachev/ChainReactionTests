@@ -94,7 +94,7 @@ Model/Size", ProgrammingLanguage.CSharp, ((string[])(null)));
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of bike product")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "138999.00 RUB", "4.8 / 5", "Black - Grey", "27.5\" (650b)", null)]
-        [NUnit.Framework.TestCaseAttribute("Intense Spider 275C NM Expert Bike", "171999.00 RUB", "5 / 5", "Silver", "27.5\" (650b)", null)]
+        [NUnit.Framework.TestCaseAttribute("Nukeproof Mega 275 Comp Bike 2018", "140000.00 RUB", "4.5 / 5", "Red - Silver", "27.5\" (650b)", null)]
         public virtual void VerifyItemDetailsOfBikeProduct(string name, string price, string rating, string colour, string wheelSize, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Item Details of bike product", exampleTags);
@@ -163,7 +163,7 @@ this.FeatureBackground();
                         "1293.99 RUB"});
             table2.AddRow(new string[] {
                         "Rating",
-                        "4.1 / 5"});
+                        "4.2 / 5"});
             table2.AddRow(new string[] {
                         "Size",
                         "610ml"});

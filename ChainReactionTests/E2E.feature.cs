@@ -165,7 +165,7 @@ this.FeatureBackground();
                         "87999.00 RUB"});
             table2.AddRow(new string[] {
                         "Rating",
-                        "4.3 / 5"});
+                        "4.4 / 5"});
             table2.AddRow(new string[] {
                         "Colour",
                         "Blue - Orange"});
@@ -191,10 +191,10 @@ this.FeatureBackground();
                         "Value"});
             table3.AddRow(new string[] {
                         "Rating",
-                        "4.3 / 5"});
+                        "4.4 / 5"});
             table3.AddRow(new string[] {
                         "Reviews",
-                        "6 reviews"});
+                        "7 reviews"});
 #line 62
  testRunner.Then("I see the following values in Ratings summary on product page", ((string)(null)), table3, "Then ");
 #line 67
@@ -310,7 +310,7 @@ this.FeatureBackground();
                         "1293.99 RUB"});
             table7.AddRow(new string[] {
                         "Rating",
-                        "4.1 / 5"});
+                        "4.2 / 5"});
             table7.AddRow(new string[] {
                         "Size",
                         "610ml"});
@@ -357,13 +357,13 @@ this.FeatureBackground();
 #line 148
  testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 150
- testRunner.When("I enter \"Camelbak Podium Bottle 710ml\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter \"Animal Bikes T1 BMX Tyre\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 151
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 152
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 154
- testRunner.When("I select \"Clear Blue, 700ml\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select \"Black, 20\", 2.4\"\" option in item dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 155
  testRunner.And("I click Buy button on item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 156
@@ -379,10 +379,10 @@ this.FeatureBackground();
                         "Price",
                         "Option"});
             table10.AddRow(new string[] {
-                        "Camelbak Podium Bottle 710ml",
+                        "Animal Bikes T1 BMX Tyre",
                         "1",
-                        "Now 489.49RUB",
-                        "Clear Blue, 710ml"});
+                        "Now 2517.99RUB",
+                        "Black, 20\", 2.4\","});
             table10.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "3",
@@ -391,7 +391,7 @@ this.FeatureBackground();
 #line 160
  testRunner.And("I see following items in basket", ((string)(null)), table10, "And ");
 #line 164
- testRunner.And("I see \"4371.46RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"6399.96RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 166
  testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Ice Water Bott" +
                     "le\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -404,16 +404,16 @@ this.FeatureBackground();
                         "Price",
                         "Option"});
             table11.AddRow(new string[] {
-                        "Camelbak Podium Bottle 710ml",
+                        "Animal Bikes T1 BMX Tyre",
                         "1",
-                        "Now 489.49RUB",
-                        "Clear Blue, 710ml"});
+                        "Now 2517.99RUB",
+                        "Black, 20\", 2.4\","});
 #line 168
  testRunner.And("I see following items in basket", ((string)(null)), table11, "And ");
 #line 171
- testRunner.And("I see \"489.49RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"2517.99RUB\" subtotal cost on basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 173
- testRunner.When("I click Remove button on item in basket with name \"Camelbak Podium Bottle 710ml\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click Remove button on item in basket with name \"Animal Bikes T1 BMX Tyre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 174
  testRunner.Then("I see the \"There are no items in your basket.\" message on the basket page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 175
