@@ -20,6 +20,7 @@ namespace ChainReactionTests
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("E2E")]
+    [NUnit.Framework.CategoryAttribute("test")]
     public partial class E2EFeature
     {
         
@@ -36,7 +37,8 @@ namespace ChainReactionTests
 As a QA,
 I want to be able to test scope of the features connected in one test.
 A/C:
-1. e2e tests including registration, logout, login, create wishlist, search, add to wishlist, remove from wishlist, delete wishlist", ProgrammingLanguage.CSharp, ((string[])(null)));
+1. e2e tests including registration, logout, login, create wishlist, search, add to wishlist, remove from wishlist, delete wishlist", ProgrammingLanguage.CSharp, new string[] {
+                        "test"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,32 +72,30 @@ A/C:
         
         public virtual void FeatureBackground()
         {
-#line 8
 #line 9
- testRunner.Given("I open browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.When("I navigate to the page \"http://www.chainreactioncycles.com/ru/en\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I open browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
+ testRunner.When("I navigate to the page \"http://www.chainreactioncycles.com/ru/en\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
  testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 13
- testRunner.When("I click on RubRub dropdown and I select language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
- testRunner.And("I click Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I click on RubRub dropdown and I select language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
+ testRunner.And("I click Update button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
  testRunner.Then("I see the main page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("E2E test")]
-        [NUnit.Framework.CategoryAttribute("test")]
         public virtual void E2ETest()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("E2E test", new string[] {
-                        "test"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("E2E test", ((string[])(null)));
 #line 18
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 9
 this.FeatureBackground();
 #line 19
  testRunner.When("I click on Sign In on top menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

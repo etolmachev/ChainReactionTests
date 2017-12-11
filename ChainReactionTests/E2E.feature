@@ -1,4 +1,5 @@
-﻿Feature: E2E
+﻿@test
+Feature: E2E
 	To make sure that the entire project works as one system and not just a set of features,
 As a QA,
 I want to be able to test scope of the features connected in one test.
@@ -14,7 +15,6 @@ Background:
 	And I click Update button
 	Then I see the main page is loaded
 
-	@test
 Scenario: E2E test
 	When I click on Sign In on top menu
 	Then I see the Sign In page is loaded
