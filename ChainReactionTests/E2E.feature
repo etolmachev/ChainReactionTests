@@ -14,6 +14,7 @@ Background:
 	And I click Update button
 	Then I see the main page is loaded
 
+	@test
 Scenario: E2E test
 	When I click on Sign In on top menu
 	Then I see the Sign In page is loaded
