@@ -98,7 +98,7 @@ this.FeatureBackground();
 #line 16
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
- testRunner.And("I see \"1184 results for \'bike\'\" message on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I see \"1272 results for \'bike\'\" message on search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -174,8 +174,8 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify equal names of search text and result text - by name")]
-        [NUnit.Framework.TestCaseAttribute("animal bike", "17", "Animal Bike", null)]
-        [NUnit.Framework.TestCaseAttribute("ANIMAL BikE", "17", "Animal Bike", null)]
+        [NUnit.Framework.TestCaseAttribute("animal bike", "18", "Animal Bike", null)]
+        [NUnit.Framework.TestCaseAttribute("ANIMAL BikE", "18", "Animal Bike", null)]
         [NUnit.Framework.TestCaseAttribute("auto", "3", "Auto", null)]
         public virtual void VerifyEqualNamesOfSearchTextAndResultText_ByName(string searchValue, string amount, string resultValue, string[] exampleTags)
         {

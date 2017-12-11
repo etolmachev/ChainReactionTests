@@ -93,7 +93,7 @@ Scenario: Verify see details of goods in wishlist
 	And I see details of goods in wishlist
 	| Details | Value                            |
 	| Title   | Camelbak Podium Ice Water Bottle |
-	| Price   | From RUB1468.49                  |
+	| Price   | From RUB1293.99                  |
 
 Scenario: Verify delete items from wishlist
 	When I enter "Camelbak Podium Ice Water Bottle" in the search text

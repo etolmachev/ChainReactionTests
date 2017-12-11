@@ -93,8 +93,8 @@ Model/Size", ProgrammingLanguage.CSharp, ((string[])(null)));
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of bike product")]
-        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "138999.00 RUB", "4.7 / 5", "Black - Grey", "27.5\" (650b)", null)]
-        [NUnit.Framework.TestCaseAttribute("Intense Spider 275C NM Expert Bike", "171999.00 RUB - 191999.00 RUB", "5 / 5", "Silver", "27.5\" (650b)", null)]
+        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "138999.00 RUB", "4.8 / 5", "Black - Grey", "27.5\" (650b)", null)]
+        [NUnit.Framework.TestCaseAttribute("Nukeproof Mega 275 Comp Bike 2018", "140000.00 RUB", "4.5 / 5", "Red - Silver", "27.5\" (650b)", null)]
         public virtual void VerifyItemDetailsOfBikeProduct(string name, string price, string rating, string colour, string wheelSize, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Item Details of bike product", exampleTags);
@@ -136,38 +136,37 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Item Details of water bottle product")]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Bottle 710ml", "489.49RUB", "4.7 / 5", "710ml", null)]
-        [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "909.49 RUB - 1468.49 RUB", "4.1 / 5", "610ml", null)]
-        public virtual void VerifyItemDetailsOfWaterBottleProduct(string name, string price, string rating, string size, string[] exampleTags)
+        public virtual void VerifyItemDetailsOfWaterBottleProduct()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Item Details of water bottle product", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Item Details of water bottle product", ((string[])(null)));
 #line 42
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
 #line 44
- testRunner.When(string.Format("I enter \"{0}\" in the search text", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter \"Camelbak Podium Ice Water Bottle\" in the search text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 45
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 48
- testRunner.When(string.Format("I click on product with name \"{0}\" from search results", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on product with name \"Camelbak Podium Ice Water Bottle\" from search resul" +
+                    "ts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 49
- testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the product page for \"Camelbak Podium Ice Water Bottle\" is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Details",
                         "Value"});
             table2.AddRow(new string[] {
                         "Price",
-                        string.Format("{0}", price)});
+                        "1293.99 RUB"});
             table2.AddRow(new string[] {
                         "Rating",
-                        string.Format("{0}", rating)});
+                        "4.2 / 5"});
             table2.AddRow(new string[] {
                         "Size",
-                        string.Format("{0}", size)});
+                        "610ml"});
 #line 50
  testRunner.And("I see details on product page", ((string)(null)), table2, "And ");
 #line hidden
@@ -178,25 +177,25 @@ this.FeatureBackground();
         [NUnit.Framework.DescriptionAttribute("Verify change options of products")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "Frame Size", "43cm (17\")", null)]
         [NUnit.Framework.TestCaseAttribute("Camelbak Podium Ice Water Bottle", "Colour", "Snow", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", "Size", "S", null)]
+        [NUnit.Framework.TestCaseAttribute("100% Geico Honda Factory Hoodie", "Size", "S", null)]
         public virtual void VerifyChangeOptionsOfProducts(string name, string option, string value, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify change options of products", exampleTags);
-#line 61
+#line 56
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
-#line 63
+#line 58
  testRunner.When(string.Format("I enter \"{0}\" in the search text", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 59
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
+#line 60
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 62
  testRunner.When(string.Format("I click on product with name \"{0}\" from search results", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 63
  testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
+#line 65
  testRunner.When(string.Format("I select option \"{0}\" on product page", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -205,7 +204,7 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         string.Format("{0}", option),
                         string.Format("{0}", value)});
-#line 71
+#line 66
  testRunner.Then("I see new details on product page", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -213,26 +212,26 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify Reviews summary of product")]
-        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "6", "4.7 / 5", null)]
+        [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", "8", "4.8 / 5", null)]
         [NUnit.Framework.TestCaseAttribute("Pedros Chain Pig Machine Kit", "4", "2.8 / 5", null)]
         public virtual void VerifyReviewsSummaryOfProduct(string product, string count, string rating, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Reviews summary of product", exampleTags);
-#line 81
+#line 76
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
-#line 82
+#line 77
  testRunner.When(string.Format("I enter \"{0}\" in the search text", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 83
+#line 78
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 79
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 86
+#line 81
  testRunner.When(string.Format("I click on product with name \"{0}\" from search results", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
+#line 82
  testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 89
+#line 84
  testRunner.When("I click on Read all reviews", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -244,7 +243,7 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "Reviews",
                         string.Format("{0} reviews", count)});
-#line 90
+#line 85
  testRunner.Then("I see the following values in Ratings summary on product page", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -253,31 +252,31 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify product without rating summary and reviewes")]
         [NUnit.Framework.TestCaseAttribute("Animal Bikes T1 BMX Tyre", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", null)]
+        [NUnit.Framework.TestCaseAttribute("100% Geico Honda Factory Hoodie", null)]
         public virtual void VerifyProductWithoutRatingSummaryAndReviewes(string product, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify product without rating summary and reviewes", exampleTags);
-#line 100
+#line 95
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
-#line 101
+#line 96
  testRunner.When(string.Format("I enter \"{0}\" in the search text", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 97
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 103
+#line 98
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 105
+#line 100
  testRunner.When(string.Format("I click on product with name \"{0}\" from search results", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
+#line 101
  testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 108
- testRunner.When("I scroll to element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 109
+#line 103
+ testRunner.When("I scroll to description of product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 104
  testRunner.When("I click on Empty Reviews", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
+#line 105
  testRunner.Then("I don\'t see Ratings summary on product page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 111
+#line 106
  testRunner.And("I see Write A Review button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -286,27 +285,27 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify open Size Chart for product")]
         [NUnit.Framework.TestCaseAttribute("Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017", null)]
-        [NUnit.Framework.TestCaseAttribute("Under Armour Streaker 1-4 Zip Top AW16", null)]
+        [NUnit.Framework.TestCaseAttribute("100% Geico Honda Factory Hoodie", null)]
         public virtual void VerifyOpenSizeChartForProduct(string product, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify open Size Chart for product", exampleTags);
-#line 118
+#line 113
 this.ScenarioSetup(scenarioInfo);
 #line 13
 this.FeatureBackground();
-#line 119
+#line 114
  testRunner.When(string.Format("I enter \"{0}\" in the search text", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 120
+#line 115
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 121
+#line 116
  testRunner.Then("I see the search page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 123
+#line 118
  testRunner.When(string.Format("I click on product with name \"{0}\" from search results", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 124
+#line 119
  testRunner.Then(string.Format("I see the product page for \"{0}\" is loaded", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 126
+#line 121
  testRunner.When("I click Size Chart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 127
+#line 122
  testRunner.Then("I see chart is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

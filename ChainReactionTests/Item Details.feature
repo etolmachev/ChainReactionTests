@@ -35,28 +35,23 @@ Scenario Template: Verify Item Details of bike product
 		| Wheel Size | <WheelSize> |
 
 	Scenarios: 
-		| Name                                                     | Price                         | Rating  | Colour       | WheelSize    |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB                 | 4.7 / 5 | Black - Grey | 27.5" (650b) |
-		| Intense Spider 275C NM Expert Bike                       | 171999.00 RUB - 191999.00 RUB | 5 / 5   | Silver       | 27.5" (650b) |
+		| Name                                                     | Price         | Rating  | Colour       | WheelSize    |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 138999.00 RUB | 4.8 / 5 | Black - Grey | 27.5" (650b) |
+		| Nukeproof Mega 275 Comp Bike 2018                        | 140000.00 RUB  | 4.5 / 5 | Red - Silver | 27.5" (650b)|
 
-Scenario Template: Verify Item Details of water bottle product
+Scenario: Verify Item Details of water bottle product
 
-	When I enter "<Name>" in the search text
+	When I enter "Camelbak Podium Ice Water Bottle" in the search text
 	And I click Search button
 	Then I see the search page is loaded
 
-	When I click on product with name "<Name>" from search results
-	Then I see the product page for "<Name>" is loaded
+	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
+	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 	And I see details on product page
-	| Details | Value   |
-	| Price   | <Price> |
-	| Rating  | <Rating> |
-	| Size    |  <Size>  |
-
-	Scenarios:
-	| Name                             | Price                    | Rating  | Size  |
-	| Camelbak Podium Bottle 710ml     | 489.49RUB               | 4.7 / 5 | 710ml |
-	| Camelbak Podium Ice Water Bottle | 909.49 RUB - 1468.49 RUB | 4.1 / 5 | 610ml |
+	| Details | Value       |
+	| Price   | 1293.99 RUB |
+	| Rating  | 4.2 / 5     |
+	| Size    | 610ml       |
 
 Scenario Template: Verify change options of products
 
@@ -76,7 +71,7 @@ Scenario Template: Verify change options of products
 		| Name                                                     | Option     | Value      |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | Frame Size | 43cm (17") |
 		| Camelbak Podium Ice Water Bottle                         | Colour     | Snow       |
-		| Under Armour Streaker 1-4 Zip Top AW16                   | Size       | S          |
+		| 100% Geico Honda Factory Hoodie                          | Size       | S          |
 
 Scenario Template: Verify Reviews summary of product
 	When I enter "<Product>" in the search text
@@ -94,7 +89,7 @@ Scenario Template: Verify Reviews summary of product
 
 	Scenarios: 
 		| Product                                                  | Count | Rating  |
-		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 6     | 4.7 / 5 |
+		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 | 8     | 4.8 / 5 |
 		| Pedros Chain Pig Machine Kit                             | 4     | 2.8 / 5 |
 	 
 Scenario Template: Verify product without rating summary and reviewes
@@ -105,15 +100,15 @@ Scenario Template: Verify product without rating summary and reviewes
 	When I click on product with name "<Product>" from search results
 	Then I see the product page for "<Product>" is loaded
 
-	When I scroll to element
+	When I scroll to description of product
 	When I click on Empty Reviews 
 	Then I don't see Ratings summary on product page
 	And I see Write A Review button
 
 	Scenarios: 
-		| Product                                |
-		| Animal Bikes T1 BMX Tyre               |
-		| Under Armour Streaker 1-4 Zip Top AW16 |
+		| Product                         |
+		| Animal Bikes T1 BMX Tyre        |
+		| 100% Geico Honda Factory Hoodie |
 
 Scenario Template: Verify open Size Chart for product
 	When I enter "<Product>" in the search text
@@ -129,4 +124,4 @@ Scenario Template: Verify open Size Chart for product
 	Scenarios: 
 		| Product                                                  |
 		| Vitus Bikes Sommet CR FS Bike - Carbon Sram X1 1x11 2017 |
-		| Under Armour Streaker 1-4 Zip Top AW16                   |
+		| 100% Geico Honda Factory Hoodie                          |

@@ -1,12 +1,12 @@
 ﻿using System;
 using ChainReactionBindings.TestBase.Pages;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using ChainReactionBindings.TestBase;
 using System.Threading;
+using NUnit.Framework;
 
 namespace ChainReactionBindings.Bindings
 {
@@ -48,19 +48,17 @@ namespace ChainReactionBindings.Bindings
 		public void ThenISeeMessageOnSearchPage(string text)
 		{
 			Assert.AreEqual(text.ToLower(), page.SearchResultElement.Text.ToLower());
-
 		}
 
 		[Then(@"I see ""(.*)"" on search page")]
 		public void ThenISeeOnSearchPage(string text)
 		{
 			Assert.AreEqual(text, page.CategoryResultElement.Text);
-
 		}
 		[Then(@"I see ""(.*)"" items on search page")]
 		public void ThenISeeItemsOnSearchPage(int count)
 		{
-			Assert.AreEqual(count, page.ItemsCountElement.FindElements(By.ClassName("products_details_container")).Count);
+			Assert.That(page.GetCountItems(), Is.EqualTo(count), "The expected count {0} and actial count {1} are not equal", page.GetCountItems(),count);
 		}
 
 		[Then(@"I see items name include ""(.*)""")]
@@ -116,5 +114,59 @@ namespace ChainReactionBindings.Bindings
 			Thread.Sleep(TimeSpan.FromSeconds(1));
 		}
 
+		[When(@"I click gender ""(.*)"" on search page")]
+		public void ClickGenderOnSearchPage(string gender)
+		{
+			page.GenderClick(gender);
+		}
+
+		[When(@"I click brand ""(.*)"" on search page")]
+		public void ClickBrandOnSearchPage(string brand)
+		{
+			page.BrandClick(brand);
+		}
+
+		[When(@"I click colour ""(.*)"" on search page")]
+		public void ClickColourOnSearchPage(string colour)
+		{
+			page.ColourClick(colour);
+		}
+
+		[Then(@"I see items include colour ""(.*)""")]
+		public void ThenISeeItemsIncludeColour(string colour)
+		{
+			page.ItemsCountElement.FindElements(By.ClassName(colour.ToLower()));
+		}
+
+		[When(@"I enter price from ""(.*)"" to ""(.*)"" on search page and click Go button")]
+		public void EnterPriceFromToOnSearchRageAndClickGoButton(string from, string to)
+		{
+			page.SetPrice(from, to);
+		}
+
+		[Then(@"I see message ""(.*)"" after filter on search page")]
+		public void ThenISeeMessageAfterFilterOnSearchPage(string text)
+		{
+			Assert.That(page.NoResultsFilterMessageElement.Text, Is.EqualTo(text), "The expected {0} and actual {1} results are not equal", page.NoResultsFilterMessageElement.Text,text);
+			
+		}
+
+		[When(@"I delete price from filter")]
+		public void DeletePriceFromFilter()
+		{
+			page.DeletePrice();
+		}
+
+		[When(@"I delete colour from filter")]
+		public void DeleteColourFromFilter()
+		{
+			page.DeleteColour();
+		}
+
+		[When(@"I delete option ""(.*)"" from filter")]
+		public void DeleteOptionFromFilter(string option)
+		{
+			page.DeleteOption(option);
+		}
 	}
 }

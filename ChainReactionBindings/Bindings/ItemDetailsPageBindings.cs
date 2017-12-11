@@ -138,22 +138,16 @@ namespace ChainReactionBindings.Bindings
 			page.TopLogoElement.WaitElementAppears(30);
 		}
 
-		[When(@"I scroll to element")]
-		public void ThenIScrollToElement()
+		[When(@"I scroll to description of product")]
+		public void ThenIScrollToDescriptionOfProduct()
 		{
-			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPList"));
-			Actions act = new Actions(Browser.Driver);
-			act.MoveToElement(element);
-			act.Perform();
+			page.ScrollToDescriptionOfProduct();
 		}
 
 		[When(@"I scroll to name of product")]
 		public void ThenIScrollToNameOfProduct()
 		{
-			var element = page.ContainerElement.FindElement(By.ClassName("crcPDPTitle"));
-			Actions act = new Actions(Browser.Driver);
-			act.MoveToElement(element);
-			act.Perform();
+			page.ScrollToNameOfProduct();
 		}
 
 		[Then(@"I don't see Ratings summary on product page")]

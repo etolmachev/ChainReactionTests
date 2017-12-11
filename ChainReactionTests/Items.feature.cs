@@ -237,7 +237,7 @@ this.FeatureBackground();
                         "Camelbak Podium Ice Water Bottle"});
             table4.AddRow(new string[] {
                         "Price",
-                        "From RUB1468.49"});
+                        "From RUB1293.99"});
 #line 93
  testRunner.And("I see details of goods in wishlist", ((string)(null)), table4, "And ");
 #line hidden

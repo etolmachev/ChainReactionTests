@@ -44,14 +44,7 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 		[When(@"I click Basket button on Top menu")]
 		public void ClickBasketButton()
 		{
-			Thread.Sleep(TimeSpan.FromSeconds(2));
 			page.OpenBasket();
-		}
-
-		[When(@"I hover to Basket button")]
-		public void HoverToBasketButon()
-		{
-			page.Hover();
 		}
 
 		[Then(@"I see basket popup is open")]
