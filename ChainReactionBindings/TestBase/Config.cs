@@ -8,7 +8,7 @@ namespace ChainReactionBindings.TestBase
 		public XElement document;
 		public Config()
 		{
-			 document = XElement.Load(@"C:\Users\ekustova\config.xml");
+			 document = XElement.Load(@"C:\Users\Evgeniya\config.xml");
 		}
 		public string ScreenshotFolder()
 		{
