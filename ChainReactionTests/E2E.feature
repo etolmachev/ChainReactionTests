@@ -138,8 +138,9 @@ Scenario: E2E test
 	And I click Add To Basket button on item page
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
 	And I wait for "5" seconds
-
-	When I click Basket button on Top menu
+	
+	When I scroll to Basket on Top menu
+	And I click Basket button on Top menu
 	Then I see "1" items in basket 
 	Then I see following items in basket
 		| Name                             | Quantity | Price          | Option               |
@@ -156,8 +157,10 @@ Scenario: E2E test
 	When I select "Black, 20", 2.4"" option in item dropdown
 	And I click Buy button on item
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
+	And I wait for "5" seconds
 
-	When I click Basket button on Top menu
+	When I scroll to Basket on Top menu
+	And I click Basket button on Top menu
 	Then I see "2" items in basket
 	And I see following items in basket
 		| Name                             | Quantity | Price          | Option               |

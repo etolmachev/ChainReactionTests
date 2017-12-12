@@ -64,5 +64,11 @@ namespace ChainReactionBindings.Bindings.TopMenuBindings
 		{
 			page.LogoClick();
 		}
+
+		[When(@"I scroll to Basket on Top menu")]
+		public void ScrollToBasketOnTopMenu()
+		{
+			page.ScrollToBasket();
+		}
 	}
 }

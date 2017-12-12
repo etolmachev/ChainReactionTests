@@ -108,7 +108,7 @@
     <Compile Include="TestBase\Pages\WishlistPage.cs" />
     <Compile Include="TestBase\Pages\WishlistPopupPage.cs" />
     <Compile Include="TestBase\Utils.cs" />
-    <Compile Include="TestBase\Xml.cs" />
+    <Compile Include="TestBase\Config.cs" />
   </ItemGroup>
   <ItemGroup />
   <Choose>

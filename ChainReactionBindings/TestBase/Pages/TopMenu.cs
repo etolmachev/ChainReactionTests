@@ -19,6 +19,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public string CloseBasketId = ".minicart_close";
 		public string BasketMessageId = ".basket-head-title";
 		public string LogoId = ".crc_logo";
+		public string HeaderId = ".header";
 
 		public HtmlElement ShopByCategoryElement;
 		public HtmlElement BrandsElement;
@@ -32,6 +33,7 @@ namespace ChainReactionBindings.TestBase.Pages
 		public HtmlElement CloseBasketElement;
 		public HtmlElement BasketMessageElement;
 		public HtmlElement LogoElement;
+		public HtmlElement HeaderElement;
 
 		public TopMenu()
 		{
@@ -44,6 +46,7 @@ namespace ChainReactionBindings.TestBase.Pages
 			CloseBasketElement = new HtmlElement(By.CssSelector(CloseBasketId));
 			BasketMessageElement = new HtmlElement(By.CssSelector(BasketMessageId));
 			LogoElement = new HtmlElement(By.CssSelector(LogoId));
+			HeaderElement = new HtmlElement(By.CssSelector(HeaderId));
 		}
 
 		public void ClickSignIn()
@@ -74,6 +77,13 @@ namespace ChainReactionBindings.TestBase.Pages
 		public void LogoClick()
 		{
 			LogoElement.Click();
+		}
+		public void ScrollToBasket()
+		{
+			var element = HeaderElement.FindElement(By.CssSelector(RubRubId));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
 		}
 	}
 }
