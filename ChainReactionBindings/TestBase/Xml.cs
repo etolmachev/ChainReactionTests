@@ -3,14 +3,14 @@ using System.Xml.Linq;
 
 namespace ChainReactionBindings.TestBase
 {
-	class Xml
+	class Config
 	{
 		public XElement document;
-		public Xml()
+		public Config()
 		{
-			 document = XElement.Load(@"D:\Git\ChainReactionTests\config.xml");
+			 document = XElement.Load(@"C:\Users\ekustova\config.xml");
 		}
-		public string GetFolder()
+		public string ScreenshotFolder()
 		{
 			var elem = document.Element("path").Value;
 			return elem;

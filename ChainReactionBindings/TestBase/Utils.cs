@@ -56,8 +56,8 @@ namespace ChainReactionBindings.TestBase
 			try
 			{
 				Screenshot ss = ((ITakesScreenshot)Browser.Driver).GetScreenshot();
-				Xml doc = new Xml();
-				string folder = doc.GetFolder();
+				Config config = new Config();
+				string folder = config.ScreenshotFolder();
 				ss.SaveAsFile(folder + feature + "_" + scenario + ".jpg",ScreenshotImageFormat.Jpeg);
 			}
 			catch (Exception e)
