@@ -14,7 +14,7 @@ Scenario:  Verify Register with all fields
 
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
-	When I add "naccexam+{{5::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "naccexamag+{{5::rnd}}@gmail.com" value with "email" key to Scenario Context
 	When I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |

@@ -109,7 +109,8 @@ Scenario Template:  Verify find 0 items with incorrect option Price
 	| bike    | Male   | 1272   | 516         | Dawes      | 6          | Blue   | 2           | 1000 | 1500 |
 	| JaCKet  | Female | 315    | 97          | Fox Racing | 2          | Black  | 1           | 5000 | 8000 |
 
-Scenario Template:  Verify delete option fron filter
+	@MyTag
+Scenario Template:  Verify delete option from filter
 	
 	When I enter "<Product>" in the search text
 	And I click Search button

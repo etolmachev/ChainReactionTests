@@ -22,7 +22,7 @@ Scenario: E2E test
 	When I click on Create Account button
 	Then I see the Create Account page is loaded
 
-	When I add "newestaccexam+{{5::rnd}}@gmail.com" value with "email" key to Scenario Context
+	When I add "newestaccexamag+{{5::rnd}}@gmail.com" value with "email" key to Scenario Context
 	And I set following parameters on Create Account page
 		| Name            | Value              |
 		| first           | test               |
@@ -137,6 +137,7 @@ Scenario: E2E test
 	When I set "3" as quantity on item page
 	And I click Add To Basket button on item page
 	Then I see message "ITEM ADDED TO BASKET" in basket popup
+	And I wait for "5" seconds
 
 	When I click Basket button on Top menu
 	Then I see "1" items in basket 

@@ -92,7 +92,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
  testRunner.Then("I see the Create Account page is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
- testRunner.When("I add \"naccexam+{{5::rnd}}@gmail.com\" value with \"email\" key to Scenario Context", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I add \"naccexamag+{{5::rnd}}@gmail.com\" value with \"email\" key to Scenario Contex" +
+                    "t", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
