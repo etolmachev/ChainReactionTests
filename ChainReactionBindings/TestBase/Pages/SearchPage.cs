@@ -77,6 +77,10 @@ namespace ChainReactionBindings.TestBase.Pages
 		}
 		public void GenderClick(string gender)
 		{
+			var element = LeftMenuElement.FindElement(By.XPath(string.Format(ColourId, "Black")));
+			Actions act = new Actions(Browser.Driver);
+			act.MoveToElement(element);
+			act.Perform();
 			LeftMenuElement.FindElement(By.XPath(string.Format(GenderId, gender))).Click();
 		}
 		public void BrandClick(string brand)
