@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Text.RegularExpressions;
 using System.Threading;
 using TechTalk.SpecFlow;
@@ -48,6 +49,22 @@ namespace ChainReactionBindings.TestBase
 		public static string GetFromContext(string key)
 		{
 			return ScenarioContext.Current.Get<string>(key);
+		}
+
+		public static void TakeScreenshot(string scenario, string feature)
+		{
+			try
+			{
+				Screenshot ss = ((ITakesScreenshot)Browser.Driver).GetScreenshot();
+				Config config = new Config();
+				string folder = config.ScreenshotFolder();
+				ss.SaveAsFile(folder + feature + "_" + scenario + ".jpg",ScreenshotImageFormat.Jpeg);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+				throw;
+			}
 		}
 	}
 }

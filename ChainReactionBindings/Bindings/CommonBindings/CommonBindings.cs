@@ -38,5 +38,14 @@ namespace ChainReactionBindings.CommonBindings
 			Thread.Sleep(TimeSpan.FromSeconds(seconds));
 		}
 
+		[AfterStep]
+		public void TakeScreenshot()
+		{
+			if (ScenarioContext.Current.TestError != null)
+			{
+				Utils.TakeScreenshot(ScenarioContext.Current.ScenarioInfo.Title, FeatureContext.Current.FeatureInfo.Title);
+			}
+		}
+
 	}
 }
