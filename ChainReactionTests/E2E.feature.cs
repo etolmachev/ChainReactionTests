@@ -309,7 +309,7 @@ this.FeatureBackground();
                         "Value"});
             table7.AddRow(new string[] {
                         "Price",
-                        "1048.49RUB"});
+                        "1048.49 RUB"});
             table7.AddRow(new string[] {
                         "Rating",
                         "4.2 / 5"});

@@ -124,10 +124,10 @@ Scenario: E2E test
 	When I click on product with name "Camelbak Podium Ice Water Bottle" from search results
 	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 	And I see details on product page
-	| Details | Value      |
-	| Price   | 1048.49RUB |
-	| Rating  | 4.2 / 5    |
-	| Size    | 610ml      |
+	| Details | Value       |
+	| Price   | 1048.49 RUB |
+	| Rating  | 4.2 / 5     |
+	| Size    | 610ml       |
 
 	When  I select option "Electric Blue" on product page
 	Then I see new details on product page
