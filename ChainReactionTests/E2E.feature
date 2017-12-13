@@ -125,7 +125,7 @@ Scenario: E2E test
 	Then I see the product page for "Camelbak Podium Ice Water Bottle" is loaded
 	And I see details on product page
 	| Details | Value       |
-	| Price   | 1293.99 RUB |
+	| Price   | 1048.49 RUB |
 	| Rating  | 4.2 / 5     |
 	| Size    | 610ml       |
 
@@ -144,7 +144,7 @@ Scenario: E2E test
 	Then I see "1" items in basket 
 	Then I see following items in basket
 		| Name                             | Quantity | Price          | Option               |
-		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Electric Blue, 610ml |
+		| Camelbak Podium Ice Water Bottle | 3        | Now 1048.49 RUB| Electric Blue, 610ml |
 	And I see "3881.97RUB" subtotal cost on basket page
 
 	When I click Continue Shopping button on basket page
@@ -165,8 +165,8 @@ Scenario: E2E test
 	And I see following items in basket
 		| Name                             | Quantity | Price          | Option               |
 		| Animal Bikes T1 BMX Tyre         | 1        | Now 2517.99RUB | Black, 20", 2.4",    |
-		| Camelbak Podium Ice Water Bottle | 3        | Now 1293.99RUB | Electric Blue, 610ml |
-	And I see "6399.96RUB" subtotal cost on basket page
+		| Camelbak Podium Ice Water Bottle | 3        |Now 1048.49 RUB | Electric Blue, 610ml |
+	And I see "5663.46RUB" subtotal cost on basket page
 
 	When I click Remove button on item in basket with name "Camelbak Podium Ice Water Bottle"
 	Then I see "1" items in basket
