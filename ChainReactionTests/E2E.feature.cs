@@ -309,7 +309,7 @@ this.FeatureBackground();
                         "Value"});
             table7.AddRow(new string[] {
                         "Price",
-                        "1048.49 RUB"});
+                        "1048.49RUB"});
             table7.AddRow(new string[] {
                         "Rating",
                         "4.2 / 5"});
@@ -352,7 +352,7 @@ this.FeatureBackground();
             table9.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "3",
-                        "Now 1048.49 RUB",
+                        "Now 1048.49RUB",
                         "Electric Blue, 610ml"});
 #line 145
  testRunner.Then("I see following items in basket", ((string)(null)), table9, "Then ");
@@ -396,7 +396,7 @@ this.FeatureBackground();
             table10.AddRow(new string[] {
                         "Camelbak Podium Ice Water Bottle",
                         "3",
-                        "Now 1048.49 RUB",
+                        "Now 1048.49RUB",
                         "Electric Blue, 610ml"});
 #line 165
  testRunner.And("I see following items in basket", ((string)(null)), table10, "And ");
